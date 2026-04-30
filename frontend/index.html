@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CollegeScope — Discover India's Best Colleges</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=Bricolage+Grotesque:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#06050a;--bg1:#0e0d14;--bg2:#15141e;--bg3:#1e1d2a;--bg4:#252438;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --text:#f0eee8;--muted:#6b6880;--muted2:#9c99b0;
+  --accent:#e8d5b7;--gold:#d4a843;--goldL:#f0c060;
+  --green:#3ddc84;--red:#ff6b6b;--blue:#5b9cf6;
+  --r:10px;--r2:16px;--r3:24px;
+}
+body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:2000;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;background:rgba(6,5,10,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;cursor:pointer;letter-spacing:-0.5px;color:var(--text)}
+.nav-logo em{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;gap:2px}
+.nl{padding:6px 13px;border-radius:var(--r);font-size:13px;font-weight:500;color:var(--muted2);cursor:pointer;border:none;background:none;font-family:'Bricolage Grotesque',sans-serif;transition:all .18s}
+.nl:hover{color:var(--text);background:var(--bg3)}
+.nl.on{color:var(--gold);background:rgba(212,168,67,0.1)}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#a07830);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;cursor:pointer;color:#fff;border:2px solid var(--bg4);transition:all .2s}
+.nav-avatar:hover{border-color:var(--gold)}
+.nav-login-btn{padding:7px 16px;border-radius:var(--r);font-size:13px;font-weight:600;background:var(--gold);color:#0a0800;border:none;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .18s}
+.nav-login-btn:hover{background:var(--goldL);transform:translateY(-1px)}
+
+/* PAGES */
+.pg{display:none;padding-top:58px;min-height:100vh}
+.pg.on{display:block}
+
+/* ═══ HOME ═══ */
+.hero{position:relative;overflow:hidden;padding:90px 1.5rem 70px;background:var(--bg1);border-bottom:1px solid var(--border)}
+.hero-noise{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-glow{position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(212,168,67,0.12) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:860px;margin:0 auto;text-align:center}
+.hero-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;border:1px solid rgba(212,168,67,0.25);background:rgba(212,168,67,0.07);font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.8px;text-transform:uppercase;margin-bottom:24px}
+.hero-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(38px,5.5vw,68px);font-weight:800;line-height:1.06;letter-spacing:-2px;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:15px;line-height:1.7;color:var(--muted2);max-width:520px;margin:0 auto 36px}
+.hero-search{max-width:520px;margin:0 auto 28px;position:relative}
+.hero-search input{width:100%;padding:14px 20px 14px 48px;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--border2);color:var(--text);font-size:15px;font-family:'Bricolage Grotesque',sans-serif;outline:none;transition:all .2s}
+.hero-search input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,168,67,0.1)}
+.hero-search input::placeholder{color:var(--muted)}
+.hero-search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none}
+.hero-search-btn{position:absolute;right:8px;top:50%;transform:translateY(-50%);padding:7px 16px;border-radius:var(--r);background:var(--gold);color:#0a0800;border:none;font-size:13px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-g{padding:12px 26px;border-radius:var(--r2);font-size:14px;font-weight:600;background:var(--gold);color:#0a0800;border:none;cursor:pointer;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif}
+.btn-g:hover{background:var(--goldL);transform:translateY(-2px)}
+.btn-o{padding:12px 26px;border-radius:var(--r2);font-size:14px;font-weight:600;background:transparent;color:var(--text);border:1px solid var(--border2);cursor:pointer;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif}
+.btn-o:hover{background:var(--bg3);transform:translateY(-2px)}
+
+/* Recently searched */
+.recent-bar{display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.recent-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.recent-chip{padding:4px 12px;border-radius:999px;border:1px solid var(--border2);font-size:12px;color:var(--muted2);cursor:pointer;background:var(--bg2);transition:all .15s}
+.recent-chip:hover{border-color:var(--gold);color:var(--gold)}
+
+/* Stats strip */
+.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border)}
+.ss-item{padding:24px;border-right:1px solid var(--border);text-align:center}
+.ss-item:last-child{border-right:none}
+.ss-num{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--text)}
+.ss-num span{color:var(--gold)}
+.ss-lbl{font-size:11px;color:var(--muted);margin-top:3px;letter-spacing:.3px}
+
+/* Section */
+.sec{max-width:1100px;margin:0 auto;padding:48px 1.5rem}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
+.sec-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--text)}
+.sec-link{font-size:13px;color:var(--gold);cursor:pointer;border:none;background:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:500}
+.sec-link:hover{text-decoration:underline}
+
+/* Featured horizontal scroll */
+.feat-scroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px}
+.feat-scroll::-webkit-scrollbar{height:2px}
+.feat-card{flex:0 0 260px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;cursor:pointer;transition:all .2s}
+.feat-card:hover{transform:translateY(-4px);border-color:var(--border2)}
+.feat-img{width:100%;height:140px;object-fit:cover;background:var(--bg3);display:block;filter:brightness(.85)}
+.feat-img-wrap{position:relative;overflow:hidden;height:140px}
+.feat-img-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,var(--bg2))}
+.feat-body{padding:14px}
+.feat-type{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;opacity:.75}
+.feat-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:3px}
+.feat-loc{font-size:11px;color:var(--muted);margin-bottom:12px}
+.feat-stats{display:flex;gap:10px}
+.fst{flex:1}
+.fst-v{font-size:16px;font-weight:600;color:var(--text)}
+.fst-l{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
+
+/* Type grid */
+.type-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.type-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:18px 14px;text-align:center;cursor:pointer;transition:all .2s}
+.type-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.type-icon{font-size:26px;margin-bottom:7px}
+.type-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+.type-cnt{font-size:11px;color:var(--muted)}
+
+/* ═══ EXPLORE ═══ */
+.explore-wrap{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 58px);max-width:100%}
+.sidebar{background:var(--bg1);border-right:1px solid var(--border);padding:20px 16px;position:sticky;top:58px;height:calc(100vh - 58px);overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:2px}
+.sb-sec{margin-bottom:24px}
+.sb-label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.f-opt{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-radius:var(--r);cursor:pointer;font-size:13px;color:var(--muted2);border:none;background:none;width:100%;text-align:left;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.f-opt:hover{background:var(--bg2);color:var(--text)}
+.f-opt.on{background:rgba(212,168,67,0.1);color:var(--gold);font-weight:500}
+.f-badge{font-size:10px;padding:1px 6px;border-radius:999px;background:var(--bg3);color:var(--muted)}
+.f-opt.on .f-badge{background:rgba(212,168,67,0.15);color:var(--gold)}
+.range-row{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:6px}
+input[type=range]{width:100%;appearance:none;height:2px;background:var(--bg4);border-radius:1px;outline:none}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;border-radius:50%;background:var(--gold);cursor:pointer}
+.rtg-row{display:flex;gap:5px;flex-wrap:wrap}
+.rtg-btn{padding:4px 10px;border-radius:var(--r);font-size:12px;border:1px solid var(--border);background:transparent;color:var(--muted2);cursor:pointer;transition:all .15s;font-family:'Bricolage Grotesque',sans-serif}
+.rtg-btn:hover{border-color:var(--border2);color:var(--text)}
+.rtg-btn.on{background:var(--gold);border-color:var(--gold);color:#0a0800}
+
+.explore-main{padding:20px}
+.e-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.s-wrap{flex:1;position:relative;min-width:180px}
+.s-wrap input{width:100%;padding:9px 14px 9px 36px;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--border);color:var(--text);font-size:13px;font-family:'Bricolage Grotesque',sans-serif;outline:none;transition:border-color .15s}
+.s-wrap input:focus{border-color:var(--gold)}
+.s-wrap input::placeholder{color:var(--muted)}
+.s-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:13px;pointer-events:none}
+.sort-sel{padding:9px 13px;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--border);color:var(--text);font-size:13px;font-family:'Bricolage Grotesque',sans-serif;outline:none;cursor:pointer}
+.vbtns{display:flex;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.vb{padding:7px 11px;border:none;background:none;color:var(--muted);cursor:pointer;font-size:13px;transition:all .15s}
+.vb.on{background:var(--bg4);color:var(--text)}
+.r-info{font-size:12px;color:var(--muted);margin-bottom:14px}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.cg.lv{grid-template-columns:1fr}
+
+.cc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;cursor:pointer;transition:all .2s;animation:fu .3s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cc:hover{border-color:var(--border2);transform:translateY(-3px)}
+.cc.sel{border-color:var(--gold) !important}
+
+.cc-img-wrap{position:relative;height:160px;overflow:hidden;background:var(--bg3)}
+.cc-img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;filter:brightness(.8)}
+.cc:hover .cc-img{transform:scale(1.05)}
+.cc-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,5,10,.85) 0%,transparent 50%)}
+.cc-img-badge{position:absolute;top:10px;right:10px;padding:3px 9px;border-radius:999px;font-size:10px;font-weight:700;backdrop-filter:blur(8px)}
+.cc-img-rating{position:absolute;bottom:10px;left:12px;font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+
+.cc-body{padding:14px}
+.cc-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:2px}
+.cc-loc{font-size:11px;color:var(--muted);margin-bottom:10px}
+.cc-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.cc-pill{font-size:10px;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid}
+.cc-stats{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cs{background:var(--bg3);border-radius:var(--r);padding:7px 9px}
+.cs-v{font-size:14px;font-weight:600;color:var(--text)}
+.cs-l{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:1px}
+.cc-actions{padding:10px 14px;border-top:1px solid var(--border);display:flex;gap:6px}
+.cc-btn{flex:1;padding:6px;border-radius:var(--r);font-size:12px;font-weight:500;border:1px solid var(--border);background:none;color:var(--muted2);cursor:pointer;transition:all .15s;font-family:'Bricolage Grotesque',sans-serif;text-align:center}
+.cc-btn:hover{background:var(--bg3);color:var(--text)}
+.cc-btn.p{background:var(--gold);border-color:var(--gold);color:#0a0800}
+.cc-btn.p:hover{background:var(--goldL)}
+.cc-btn.ca{background:rgba(212,168,67,0.1);border-color:var(--gold);color:var(--gold)}
+
+/* list view card */
+.cc.lv{display:grid;grid-template-columns:5px 200px 1fr auto;align-items:stretch;gap:0}
+.cc.lv .cc-img-wrap{height:auto;width:200px;flex-shrink:0}
+.cc.lv .cc-img{height:100%}
+.cc.lv .cc-img-overlay{background:linear-gradient(to right,rgba(6,5,10,.7) 0%,transparent 60%)}
+.cc-stripe{width:5px;background:var(--gold);flex-shrink:0}
+.cc.lv .cc-body{display:flex;align-items:center;gap:20px;padding:14px 16px}
+.cc.lv .cc-stats{grid-template-columns:repeat(3,1fr)}
+.cc.lv .cc-actions{border-top:none;border-left:1px solid var(--border);flex-direction:column;padding:14px 12px;justify-content:center;min-width:100px}
+
+/* loading shimmer */
+.shimmer{background:linear-gradient(90deg,var(--bg2) 0%,var(--bg3) 50%,var(--bg2) 100%);background-size:200%;animation:sh 1.4s infinite}
+@keyframes sh{0%{background-position:200%}100%{background-position:-200%}}
+.sk-card{border-radius:var(--r2);overflow:hidden;border:1px solid var(--border)}
+.sk-img{height:160px}
+.sk-body{padding:14px}
+.sk-line{height:12px;border-radius:4px;margin-bottom:8px}
+
+/* ═══ DETAIL ═══ */
+.detail-wrap{max-width:1000px;margin:0 auto;padding:32px 1.5rem 80px}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--r);border:1px solid var(--border);background:none;color:var(--muted2);font-size:13px;cursor:pointer;margin-bottom:24px;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.bk-btn:hover{color:var(--text);background:var(--bg2)}
+
+.d-hero{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r3);overflow:hidden;margin-bottom:20px}
+.d-hero-img{width:100%;height:280px;object-fit:cover;filter:brightness(.6);display:block;background:var(--bg3)}
+.d-hero-img-wrap{position:relative}
+.d-hero-overlay{position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(transparent,rgba(6,5,10,.95))}
+.d-title{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#fff;line-height:1.2}
+.d-sub{font-size:13px;color:rgba(255,255,255,.6);margin-top:4px}
+
+.d-body{padding:24px}
+.d-ks{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.dk{background:var(--bg3);border-radius:var(--r2);padding:14px;text-align:center;border:1px solid var(--border)}
+.dk-v{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--text)}
+.dk-l{font-size:11px;color:var(--muted);margin-top:3px}
+
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.d-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:20px}
+.d-card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.wiki-notice{font-size:11px;color:var(--muted);background:var(--bg4);border-radius:var(--r);padding:8px 12px;border:1px solid var(--border);margin-bottom:12px;line-height:1.5}
+
+.course-row{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg4);border-radius:var(--r);margin-bottom:6px}
+.cr-name{font-size:13px;color:var(--text)}
+.cr-lvl{font-size:10px;padding:2px 7px;border-radius:999px;background:var(--bg2);color:var(--muted);border:1px solid var(--border)}
+
+.review-card{padding:12px;background:var(--bg4);border-radius:var(--r2);border-left:3px solid var(--gold);margin-bottom:10px}
+.rv-text{font-size:13px;line-height:1.6;color:var(--muted2)}
+.rv-footer{display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--muted)}
+.rv-stars{color:var(--gold)}
+
+.plc-big{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;line-height:1}
+.plc-bar{height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin:8px 0}
+.plc-fill{height:100%;border-radius:3px;transition:width 1s ease}
+.recruiter-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.rc{padding:4px 11px;border-radius:999px;border:1px solid var(--border);font-size:11px;color:var(--muted2);background:var(--bg4)}
+
+.d-wiki-section{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:20px;margin-bottom:16px}
+.wiki-loading{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;padding:12px 0}
+.wiki-spinner{width:16px;height:16px;border:2px solid var(--bg4);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wiki-text{font-size:13px;line-height:1.8;color:var(--muted2)}
+.wiki-link{color:var(--gold);text-decoration:none;font-size:12px;display:inline-block;margin-top:8px}
+.wiki-link:hover{text-decoration:underline}
+
+/* ═══ COMPARE ═══ */
+.cmp-wrap{max-width:1200px;margin:0 auto;padding:36px 1.5rem 80px}
+.cmp-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--text);margin-bottom:6px}
+.cmp-sub{font-size:14px;color:var(--muted);margin-bottom:28px}
+.cmp-empty{text-align:center;padding:80px 24px;color:var(--muted)}
+.cmp-empty-icon{font-size:48px;margin-bottom:14px}
+.cmp-empty-title{font-size:18px;font-weight:600;color:var(--text);margin-bottom:6px}
+
+.cmp-tbl-wrap{overflow-x:auto}
+.cmp-tbl{width:100%;border-collapse:separate;border-spacing:0;min-width:560px}
+.cmp-tbl th,.cmp-tbl td{padding:0;border:none}
+.cmp-col-h{padding:16px 18px 14px;background:var(--bg2);border:1px solid var(--border);border-bottom:none;vertical-align:top}
+.cmp-col-h:first-child{background:transparent;border:none}
+.cmp-col-h:not(:first-child){border-radius:var(--r2) var(--r2) 0 0}
+.cmp-col-img{width:100%;height:90px;object-fit:cover;border-radius:var(--r);margin-bottom:10px;background:var(--bg3);filter:brightness(.8)}
+.cmp-col-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.cmp-col-loc{font-size:11px;color:var(--muted)}
+.cmp-row td{padding:11px 18px;border:1px solid var(--border);border-top:none}
+.cmp-row td:first-child{background:var(--bg1);font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-left:none;border-right:none;width:130px}
+.cmp-row td:not(:first-child){background:var(--bg2);font-size:13px;color:var(--text)}
+.cmp-row:last-child td:not(:first-child){border-bottom:none}
+.cmp-win{color:var(--green) !important;font-weight:600}
+.cmp-lose{color:var(--muted) !important}
+.mini-bar{display:flex;align-items:center;gap:6px}
+.mb-bg{flex:1;height:3px;background:var(--bg4);border-radius:2px;overflow:hidden}
+.mb-fill{height:100%;border-radius:2px}
+
+/* ═══ COMPARE BAR ═══ */
+#cbar{position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--bg1);border-top:1px solid var(--border);padding:10px 20px;display:flex;align-items:center;gap:14px;transform:translateY(100%);transition:transform .3s ease}
+#cbar.on{transform:translateY(0)}
+.cbar-label{font-size:12px;color:var(--muted2);font-weight:600;white-space:nowrap}
+.cbar-slots{display:flex;gap:8px;flex:1}
+.cslot{flex:1;max-width:180px;padding:6px 10px;border-radius:var(--r);border:1px dashed var(--border2);display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.cslot.f{border-style:solid;border-color:var(--gold);color:var(--text)}
+.cslot-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.cslot-rm{margin-left:auto;cursor:pointer;color:var(--muted);background:none;border:none;font-size:13px;line-height:1}
+.cbar-clear{padding:8px 13px;border-radius:var(--r);background:none;border:1px solid var(--border);color:var(--muted2);font-size:12px;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif}
+.cbar-go{padding:9px 20px;border-radius:var(--r);background:var(--gold);color:#0a0800;border:none;font-size:13px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:background .15s}
+.cbar-go:hover{background:var(--goldL)}
+.cbar-go:disabled{background:var(--bg4);color:var(--muted);cursor:not-allowed}
+
+/* ═══ LOGIN MODAL ═══ */
+.modal-backdrop{position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-backdrop.on{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r3);width:100%;max-width:420px;overflow:hidden;animation:mup .25s ease}
+@keyframes mup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.modal-top{padding:28px 28px 0;text-align:center}
+.modal-logo{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:6px;color:var(--text)}
+.modal-logo em{color:var(--gold);font-style:normal}
+.modal-tagline{font-size:13px;color:var(--muted);margin-bottom:24px}
+.modal-tabs{display:flex;background:var(--bg3);border-radius:var(--r);padding:3px;margin-bottom:24px}
+.modal-tab{flex:1;padding:7px;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;border:none;background:none;color:var(--muted2);font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.modal-tab.on{background:var(--bg2);color:var(--text)}
+.modal-body{padding:0 28px 28px}
+.mf-group{margin-bottom:14px}
+.mf-label{font-size:12px;font-weight:600;color:var(--muted2);margin-bottom:6px;display:block}
+.mf-input{width:100%;padding:11px 14px;border-radius:var(--r2);background:var(--bg3);border:1px solid var(--border);color:var(--text);font-size:14px;font-family:'Bricolage Grotesque',sans-serif;outline:none;transition:all .15s}
+.mf-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,168,67,0.1)}
+.mf-input::placeholder{color:var(--muted)}
+.mf-btn{width:100%;padding:13px;border-radius:var(--r2);background:var(--gold);color:#0a0800;border:none;font-size:15px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:background .15s;margin-top:4px}
+.mf-btn:hover{background:var(--goldL)}
+.mf-divider{text-align:center;font-size:12px;color:var(--muted);margin:16px 0;position:relative}
+.mf-divider::before,.mf-divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:var(--border)}
+.mf-divider::before{left:0}
+.mf-divider::after{right:0}
+.mf-demo{width:100%;padding:11px;border-radius:var(--r2);background:var(--bg3);color:var(--muted2);border:1px solid var(--border);font-size:13px;font-weight:600;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.mf-demo:hover{border-color:var(--border2);color:var(--text)}
+.modal-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);cursor:pointer;color:var(--muted);font-size:14px;display:flex;align-items:center;justify-content:center;font-family:sans-serif}
+.modal-close:hover{color:var(--text)}
+
+/* User dropdown */
+.user-menu{position:absolute;top:52px;right:16px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);padding:8px;min-width:180px;z-index:2100;box-shadow:0 12px 40px rgba(0,0,0,.5);animation:mup .2s ease}
+.user-menu-item{padding:9px 12px;border-radius:var(--r);font-size:13px;color:var(--muted2);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:8px}
+.user-menu-item:hover{background:var(--bg3);color:var(--text)}
+.user-menu-item.danger{color:var(--red)}
+.user-name{font-size:12px;font-weight:600;color:var(--text);padding:8px 12px;border-bottom:1px solid var(--border);margin-bottom:4px}
+
+/* ═══ TOAST ═══ */
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);padding:10px 20px;font-size:13px;color:var(--text);z-index:4000;opacity:0;transition:all .3s;white-space:nowrap;pointer-events:none}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+#toast.success{border-color:rgba(61,220,132,.3);color:var(--green)}
+#toast.error{border-color:rgba(255,107,107,.3);color:var(--red)}
+
+/* misc */
+.nores{text-align:center;padding:60px 24px;color:var(--muted);grid-column:1/-1}
+.nores-e{font-size:40px;margin-bottom:12px}
+.badge-pos{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600;margin-left:6px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo" onclick="go('home')">College<em>Scope</em></div>
+  <div class="nav-links">
+    <button class="nl on" id="nl-home" onclick="go('home')">Home</button>
+    <button class="nl" id="nl-explore" onclick="go('explore')">Explore</button>
+    <button class="nl" id="nl-compare" onclick="go('compare')">Compare</button>
+  </div>
+  <div class="nav-right" id="nav-right">
+    <button class="nav-login-btn" onclick="openLogin()">Sign In</button>
+  </div>
+</nav>
+
+<!-- LOGIN MODAL -->
+<div class="modal-backdrop" id="login-modal" onclick="modalBgClick(event)">
+  <div class="modal" style="position:relative">
+    <button class="modal-close" onclick="closeLogin()">✕</button>
+    <div class="modal-top">
+      <div class="modal-logo">College<em>Scope</em></div>
+      <div class="modal-tagline">Your personal college discovery journey</div>
+      <div class="modal-tabs">
+        <button class="modal-tab on" id="tab-login" onclick="switchTab('login')">Sign In</button>
+        <button class="modal-tab" id="tab-signup" onclick="switchTab('signup')">Create Account</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div id="form-login">
+        <div class="mf-group"><label class="mf-label">Email</label><input class="mf-input" id="li-email" type="email" placeholder="you@example.com"></div>
+        <div class="mf-group"><label class="mf-label">Password</label><input class="mf-input" id="li-pass" type="password" placeholder="••••••••"></div>
+        <button class="mf-btn" onclick="doLogin()">Sign In →</button>
+        <div class="mf-divider">or</div>
+        <button class="mf-demo" onclick="demoLogin()">🎓 Continue as Guest</button>
+      </div>
+      <div id="form-signup" style="display:none">
+        <div class="mf-group"><label class="mf-label">Full Name</label><input class="mf-input" id="su-name" type="text" placeholder="Rahul Sharma"></div>
+        <div class="mf-group"><label class="mf-label">Email</label><input class="mf-input" id="su-email" type="email" placeholder="you@example.com"></div>
+        <div class="mf-group"><label class="mf-label">Password</label><input class="mf-input" id="su-pass" type="password" placeholder="••••••••"></div>
+        <button class="mf-btn" onclick="doSignup()">Create Account →</button>
+        <div class="mf-divider">or</div>
+        <button class="mf-demo" onclick="demoLogin()">🎓 Continue as Guest</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- USER MENU (hidden) -->
+<div id="user-menu" style="display:none" class="user-menu">
+  <div class="user-name" id="user-name-label">Guest User</div>
+  <div class="user-menu-item" onclick="go('explore')">🔍 Explore Colleges</div>
+  <div class="user-menu-item" onclick="go('compare')">⚖️ Compare</div>
+  <div class="user-menu-item" onclick="clearRecent()">🕐 Clear History</div>
+  <div class="user-menu-item danger" onclick="doLogout()">↩ Sign Out</div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- ═══ HOME ═══ -->
+<div class="pg on" id="pg-home">
+  <div class="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-chip"><span class="hero-dot"></span>Live Wikipedia Data</div>
+      <h1>Discover India's<br><em>finest institutions</em></h1>
+      <p class="hero-sub">Real-time data from Wikipedia. Compare fees, placements, and campus life — then find your perfect college fit.</p>
+      <div class="hero-search">
+        <span class="hero-search-icon">🔍</span>
+        <input type="text" id="hero-search" placeholder="Search IIT Bombay, AIIMS, IIM..." onkeydown="heroSearchKey(event)">
+        <button class="hero-search-btn" onclick="heroSearch()">Search</button>
+      </div>
+      <div id="recent-bar" class="recent-bar" style="display:none">
+        <span class="recent-label">Recent:</span>
+        <div id="recent-chips"></div>
+      </div>
+      <div class="hero-btns">
+        <button class="btn-g" onclick="go('explore')">Explore All Colleges →</button>
+        <button class="btn-o" onclick="go('compare')">Compare Side-by-Side</button>
+      </div>
+    </div>
+  </div>
+  <div class="stats-strip">
+    <div class="ss-item"><div class="ss-num">10<span>+</span></div><div class="ss-lbl">Top Institutions</div></div>
+    <div class="ss-item"><div class="ss-num">5</div><div class="ss-lbl">Disciplines</div></div>
+    <div class="ss-item"><div class="ss-num">94<span>%</span></div><div class="ss-lbl">Avg. Placement</div></div>
+    <div class="ss-item"><div class="ss-num">4.6<span>★</span></div><div class="ss-lbl">Avg. Rating</div></div>
+  </div>
+  <div class="sec">
+    <div class="sec-head"><div class="sec-title">⭐ Top Rated</div><button class="sec-link" onclick="go('explore')">View all →</button></div>
+    <div class="feat-scroll" id="feat-scroll">
+      <div class="sk-card shimmer" style="flex:0 0 260px"><div class="sk-img shimmer"></div><div class="sk-body"><div class="sk-line shimmer" style="width:80%"></div><div class="sk-line shimmer" style="width:55%"></div></div></div>
+      <div class="sk-card shimmer" style="flex:0 0 260px"><div class="sk-img shimmer"></div><div class="sk-body"><div class="sk-line shimmer" style="width:80%"></div><div class="sk-line shimmer" style="width:55%"></div></div></div>
+      <div class="sk-card shimmer" style="flex:0 0 260px"><div class="sk-img shimmer"></div><div class="sk-body"><div class="sk-line shimmer" style="width:80%"></div><div class="sk-line shimmer" style="width:55%"></div></div></div>
+    </div>
+  </div>
+  <div class="sec" style="border-top:1px solid var(--border);padding-top:40px">
+    <div class="sec-head"><div class="sec-title">Browse by Discipline</div></div>
+    <div class="type-grid" id="type-grid"></div>
+  </div>
+</div>
+
+<!-- ═══ EXPLORE ═══ -->
+<div class="pg" id="pg-explore">
+  <div class="explore-wrap">
+    <div class="sidebar">
+      <div class="sb-sec">
+        <div class="sb-label">Discipline</div>
+        <div id="sb-type"></div>
+      </div>
+      <div class="sb-sec">
+        <div class="sb-label">Min. Placement %</div>
+        <div class="range-row"><span>0%</span><span id="plc-v" style="color:var(--gold)">0%</span></div>
+        <input type="range" min="0" max="100" value="0" id="rng-plc" oninput="onRange(this,'plc-v','%')">
+      </div>
+      <div class="sb-sec">
+        <div class="sb-label">Max. Annual Fees</div>
+        <div class="range-row"><span>₹0</span><span id="fee-v" style="color:var(--gold)">Any</span></div>
+        <input type="range" min="0" max="2400000" step="50000" value="2400000" id="rng-fee" oninput="onRange(this,'fee-v','₹',true)">
+      </div>
+      <div class="sb-sec">
+        <div class="sb-label">Min. Rating</div>
+        <div class="rtg-row">
+          <button class="rtg-btn on" onclick="setRtg(0,this)">Any</button>
+          <button class="rtg-btn" onclick="setRtg(4,this)">4.0+</button>
+          <button class="rtg-btn" onclick="setRtg(4.5,this)">4.5+</button>
+          <button class="rtg-btn" onclick="setRtg(4.8,this)">4.8+</button>
+        </div>
+      </div>
+      <div class="sb-sec">
+        <div class="sb-label">State</div>
+        <div id="sb-state"></div>
+      </div>
+    </div>
+    <div class="explore-main">
+      <div class="e-toolbar">
+        <div class="s-wrap"><span class="s-icon">🔍</span><input type="text" placeholder="Search colleges..." id="ex-search" oninput="renderExplore()"></div>
+        <select class="sort-sel" id="ex-sort" onchange="renderExplore()">
+          <option value="rating">Top Rated</option>
+          <option value="placement">Best Placement</option>
+          <option value="fees_asc">Fees ↑</option>
+          <option value="fees_desc">Fees ↓</option>
+          <option value="name">Name A–Z</option>
+        </select>
+        <div class="vbtns">
+          <button class="vb on" id="vb-grid" onclick="setView('grid')">⊞</button>
+          <button class="vb" id="vb-list" onclick="setView('list')">☰</button>
+        </div>
+      </div>
+      <div class="r-info" id="r-info"></div>
+      <div class="cg" id="cg"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DETAIL ═══ -->
+<div class="pg" id="pg-detail">
+  <div class="detail-wrap" id="detail-inner"></div>
+</div>
+
+<!-- ═══ COMPARE ═══ -->
+<div class="pg" id="pg-compare">
+  <div class="cmp-wrap">
+    <div class="cmp-title">Compare Colleges</div>
+    <div class="cmp-sub">Select up to 3 colleges from Explore to compare side-by-side.</div>
+    <div id="cmp-content"></div>
+  </div>
+</div>
+
+<!-- COMPARE BAR -->
+<div id="cbar">
+  <span class="cbar-label">Compare:</span>
+  <div class="cbar-slots" id="cbar-slots"></div>
+  <button class="cbar-clear" onclick="clearCmp()">Clear</button>
+  <button class="cbar-go" id="cbar-go" onclick="go('compare')" disabled>Compare Now →</button>
+</div>
+
+<script>
+/* ══════════════ DATA ══════════════ */
+const COLLEGES = [
+  {id:1,name:"Indian Institute of Technology Bombay",short:"IIT Bombay",
+   location:"Mumbai, Maharashtra",city:"Mumbai",state:"Maharashtra",
+   type:"Engineering",fees:900000,placement:95,rating:4.9,est:1958,
+   color:"#5b9cf6",
+   wiki:"Indian_Institute_of_Technology_Bombay",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/IIT_Bombay_Main_Building.jpg/1280px-IIT_Bombay_Main_Building.jpg",
+   courses:[{n:"B.Tech Computer Science",l:"UG",d:4,s:120},{n:"B.Tech Electrical",l:"UG",d:4,s:80},{n:"M.Tech Data Science",l:"PG",d:2,s:60},{n:"PhD Computer Science",l:"PhD",d:5,s:30}],
+   reviews:[{a:"Rahul S.",p:"B.Tech CSE",y:2022,r:5,t:"World-class faculty and research labs. Placement season is intense but incredibly rewarding."},{a:"Priya M.",p:"M.Tech",y:2023,r:5,t:"The campus culture and peer network is unmatched anywhere in India."}],
+   recruiters:["Google","Microsoft","Goldman Sachs","McKinsey","Qualcomm","DE Shaw"]},
+  {id:2,name:"Indian Institute of Management Ahmedabad",short:"IIM-A",
+   location:"Ahmedabad, Gujarat",city:"Ahmedabad",state:"Gujarat",
+   type:"Management",fees:2400000,placement:100,rating:4.8,est:1961,
+   color:"#f97316",
+   wiki:"Indian_Institute_of_Management_Ahmedabad",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/IIMA_main_entrance.jpg/1280px-IIMA_main_entrance.jpg",
+   courses:[{n:"MBA (PGP)",l:"PG",d:2,s:385},{n:"Executive MBA",l:"Executive",d:1,s:120},{n:"PhD Management",l:"PhD",d:5,s:20}],
+   reviews:[{a:"Neha K.",p:"MBA",y:2023,r:5,t:"The case method here is transformative. Peers push you harder than the professors."},{a:"Aditya P.",p:"MBA",y:2022,r:5,t:"100% placement with median CTC above ₹28 LPA speaks for itself."}],
+   recruiters:["BCG","Bain","McKinsey","Goldman Sachs","Amazon","Flipkart"]},
+  {id:3,name:"All India Institute of Medical Sciences",short:"AIIMS Delhi",
+   location:"New Delhi, Delhi",city:"New Delhi",state:"Delhi",
+   type:"Medical",fees:6500,placement:99,rating:4.9,est:1956,
+   color:"#3ddc84",
+   wiki:"All_India_Institute_of_Medical_Sciences,_New_Delhi",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/AIIMS_main_block.jpg/1280px-AIIMS_main_block.jpg",
+   courses:[{n:"MBBS",l:"UG",d:5.5,s:107},{n:"MD General Medicine",l:"PG",d:3,s:30},{n:"MS Surgery",l:"PG",d:3,s:25},{n:"PhD Biomedical",l:"PhD",d:5,s:20}],
+   reviews:[{a:"Dr. Sonal R.",p:"MBBS",y:2021,r:5,t:"Exposure to rare cases from across India makes AIIMS a unique clinical training ground."},{a:"Dr. Vikram T.",p:"MD",y:2023,r:5,t:"The residency load is heavy but the skills you build are unparalleled."}],
+   recruiters:["AIIMS Hospitals","Fortis","Apollo","Max Healthcare","Armed Forces Medical"]},
+  {id:4,name:"National Law School of India University",short:"NLSIU Bangalore",
+   location:"Bengaluru, Karnataka",city:"Bengaluru",state:"Karnataka",
+   type:"Law",fees:220000,placement:92,rating:4.7,est:1987,
+   color:"#c084fc",
+   wiki:"National_Law_School_of_India_University",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/NLSIU_Main_Gate.jpg/1280px-NLSIU_Main_Gate.jpg",
+   courses:[{n:"BA LLB (Hons)",l:"UG",d:5,s:80},{n:"LLM",l:"PG",d:1,s:30},{n:"PhD Law",l:"PhD",d:5,s:10}],
+   reviews:[{a:"Ananya G.",p:"BA LLB",y:2022,r:5,t:"Moot court culture is exceptional. I won two national competitions in my first year."},{a:"Rohan M.",p:"LLM",y:2023,r:4.5,t:"Best law school in India, period. Faculty research is genuinely cutting-edge."}],
+   recruiters:["AZB & Partners","Cyril Amarchand","Trilegal","Khaitan & Co","Supreme Court"]},
+  {id:5,name:"Indian Institute of Science",short:"IISc Bangalore",
+   location:"Bengaluru, Karnataka",city:"Bengaluru",state:"Karnataka",
+   type:"Science",fees:34000,placement:98,rating:4.8,est:1909,
+   color:"#2dd4bf",
+   wiki:"Indian_Institute_of_Science",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/IISc_Bangalore_entrance.jpg/1280px-IISc_Bangalore_entrance.jpg",
+   courses:[{n:"M.Tech Computational Science",l:"PG",d:2,s:30},{n:"MSc Physics",l:"PG",d:2,s:40},{n:"PhD AI & ML",l:"PhD",d:5,s:30}],
+   reviews:[{a:"Kavya N.",p:"PhD Physics",y:2023,r:5,t:"If research is your calling, IISc is the summit. Funding and lab access are exceptional."},{a:"Arjun K.",p:"M.Tech",y:2022,r:5,t:"The interdisciplinary environment allows me to work at the intersection of ML and biology."}],
+   recruiters:["ISRO","DRDO","Intel","IBM Research","Tata Institute","IITs (Faculty)"]},
+  {id:6,name:"Birla Institute of Technology & Science",short:"BITS Pilani",
+   location:"Pilani, Rajasthan",city:"Pilani",state:"Rajasthan",
+   type:"Engineering",fees:520000,placement:89,rating:4.5,est:1964,
+   color:"#f472b6",
+   wiki:"BITS_Pilani",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Bits_pilani_main.jpg/1280px-Bits_pilani_main.jpg",
+   courses:[{n:"BE Computer Science",l:"UG",d:4,s:200},{n:"BE Electronics",l:"UG",d:4,s:180},{n:"MSc Mathematics",l:"PG",d:2,s:60}],
+   reviews:[{a:"Tanvi S.",p:"BE CSE",y:2022,r:4.5,t:"The BITS Practice School internship programme is worth the fees alone — real industry exposure."},{a:"Suresh P.",p:"BE+MSc",y:2023,r:4.5,t:"Freedom to design your schedule is fantastic. The dual-degree option is a hidden gem."}],
+   recruiters:["Microsoft","Google","Qualcomm","Samsung","Cisco","Flipkart"]},
+  {id:7,name:"Jadavpur University",short:"JU Kolkata",
+   location:"Kolkata, West Bengal",city:"Kolkata",state:"West Bengal",
+   type:"Engineering",fees:18000,placement:82,rating:4.3,est:1906,
+   color:"#f87171",
+   wiki:"Jadavpur_University",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jadavpur_University_main_building.JPG/1280px-Jadavpur_University_main_building.JPG",
+   courses:[{n:"BE Civil Engineering",l:"UG",d:4,s:120},{n:"BE Mechanical",l:"UG",d:4,s:120},{n:"BArch",l:"UG",d:5,s:40}],
+   reviews:[{a:"Debashish R.",p:"BE Mech",y:2022,r:4.5,t:"Excellent academics at a fraction of the cost. The alumni network in Kolkata is very active."},{a:"Soma D.",p:"BE Civil",y:2023,r:4,t:"Campus feels historic and vibrant. Strong focus on fundamental engineering principles."}],
+   recruiters:["TCS","Infosys","L&T","Tata Steel","ONGC","Indian Railways"]},
+  {id:8,name:"Faculty of Management Studies, Delhi",short:"FMS Delhi",
+   location:"New Delhi, Delhi",city:"New Delhi",state:"Delhi",
+   type:"Management",fees:22000,placement:97,rating:4.6,est:1954,
+   color:"#818cf8",
+   wiki:"Faculty_of_Management_Studies,_Delhi",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/FMS_Delhi_building.jpg/1280px-FMS_Delhi_building.jpg",
+   courses:[{n:"MBA",l:"PG",d:2,s:216},{n:"MBA International Business",l:"PG",d:2,s:40},{n:"Executive MBA",l:"Executive",d:1,s:100}],
+   reviews:[{a:"Nikhil B.",p:"MBA",y:2022,r:5,t:"Best ROI for an MBA in India. Top recruiter access with fees under ₹25k. Unbeatable."},{a:"Ishita V.",p:"MBA",y:2023,r:4.5,t:"Batch diversity and alumni in Fortune 500 companies make networking incredibly powerful."}],
+   recruiters:["BCG","Amazon","HDFC Bank","Deloitte","EY","Aon Hewitt"]},
+  {id:9,name:"Vellore Institute of Technology",short:"VIT Vellore",
+   location:"Vellore, Tamil Nadu",city:"Vellore",state:"Tamil Nadu",
+   type:"Engineering",fees:200000,placement:86,rating:4.2,est:1984,
+   color:"#a3e635",
+   wiki:"Vellore_Institute_of_Technology",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/VIT_University_main_entrance.jpg/1280px-VIT_University_main_entrance.jpg",
+   courses:[{n:"B.Tech CSE",l:"UG",d:4,s:1800},{n:"B.Tech Biotech",l:"UG",d:4,s:400},{n:"M.Tech AI & ML",l:"PG",d:2,s:120}],
+   reviews:[{a:"Keerthana N.",p:"B.Tech CSE",y:2022,r:4,t:"Giant campus with excellent infrastructure. Strong MNC recruiters across IT sector."},{a:"Ganesh M.",p:"B.Tech Mech",y:2023,r:4.5,t:"FFCS (fully flexible credit system) is a game-changer for academic autonomy."}],
+   recruiters:["TCS","Infosys","Wipro","HCL","Accenture","Cognizant"]},
+  {id:10,name:"Symbiosis Institute of Business Management",short:"SIBM Pune",
+   location:"Pune, Maharashtra",city:"Pune",state:"Maharashtra",
+   type:"Management",fees:1800000,placement:94,rating:4.4,est:1978,
+   color:"#fbbf24",
+   wiki:"Symbiosis_Institute_of_Business_Management",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/SIBM_Pune_campus.jpg/1280px-SIBM_Pune_campus.jpg",
+   courses:[{n:"MBA",l:"PG",d:2,s:180},{n:"MBA Innovation",l:"PG",d:2,s:60},{n:"MBA Business Analytics",l:"PG",d:2,s:60}],
+   reviews:[{a:"Roshni A.",p:"MBA",y:2022,r:4.5,t:"Vibrant campus life and excellent international immersion programmes set SIBM apart."},{a:"Karan T.",p:"MBA",y:2023,r:4,t:"Strong B-school with a fantastic alumni chapter. Industry interface cells provide great exposure."}],
+   recruiters:["Deloitte","Wipro","HDFC Bank","Mahindra","Bajaj","Asian Paints"]}
+];
+
+const TYPE_META={Engineering:{icon:"⚙️",color:"#5b9cf6"},Management:{icon:"📊",color:"#f97316"},Medical:{icon:"🏥",color:"#3ddc84"},Law:{icon:"⚖️",color:"#c084fc"},Science:{icon:"🔬",color:"#2dd4bf"}};
+
+/* ══════════════ STATE ══════════════ */
+let curPage='home', viewMode='grid';
+let fType='all', fPlc=0, fFee=2400000, fRtg=0, fState='all';
+let cmpList=[];
+let user=null;
+let recentSearches=JSON.parse(localStorage.getItem('cs_recent')||'[]');
+
+/* ══════════════ NAV ══════════════ */
+function go(p,q){
+  document.querySelectorAll('.pg').forEach(e=>e.classList.remove('on'));
+  document.querySelectorAll('.nl').forEach(e=>e.classList.remove('on'));
+  document.getElementById('pg-'+p).classList.add('on');
+  const nl=document.getElementById('nl-'+p);
+  if(nl) nl.classList.add('on');
+  curPage=p; window.scrollTo(0,0);
+  if(p==='home') renderHome();
+  if(p==='explore'){renderSidebar();renderExplore();}
+  if(p==='compare') renderCompare();
+}
+
+/* ══════════════ AUTH ══════════════ */
+function openLogin(){
+  document.getElementById('login-modal').classList.add('on');
+}
+function closeLogin(){
+  document.getElementById('login-modal').classList.remove('on');
+}
+function modalBgClick(e){
+  if(e.target===document.getElementById('login-modal')) closeLogin();
+}
+function switchTab(t){
+  document.getElementById('form-login').style.display=t==='login'?'':'none';
+  document.getElementById('form-signup').style.display=t==='signup'?'':'none';
+  document.getElementById('tab-login').classList.toggle('on',t==='login');
+  document.getElementById('tab-signup').classList.toggle('on',t==='signup');
+}
+function doLogin(){
+  const e=document.getElementById('li-email').value;
+  const p=document.getElementById('li-pass').value;
+  if(!e||!p){showToast('Please fill all fields','error');return;}
+  loginUser({name:e.split('@')[0].replace(/\./g,' ').replace(/\b\w/g,c=>c.toUpperCase()),email:e});
+}
+const API_BASE = "http://localhost:5000/api";
+
+// 1. Updated Signup logic
+async function doSignup() {
+  const n = document.getElementById('su-name').value;
+  const e = document.getElementById('su-email').value;
+  const p = document.getElementById('su-pass').value;
+  
+  if (!n || !e || !p) { showToast('Please fill all fields', 'error'); return; }
+
+  try {
+    const res = await fetch(`${API_BASE}/auth/signup`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: n, email: e, password: p })
+    });
+    const data = await res.json();
+    
+    if (res.ok) {
+      loginUser(data.user); // data.user returned from backend
+      localStorage.setItem('token', data.token); // Store JWT
+    } else {
+      showToast(data.error, 'error');
+    }
+  } catch (err) {
+    showToast("Server connection failed", "error");
+  }
+}
+
+// 2. Updated Wikipedia logic (Fetching via YOUR backend now)
+async function fetchWiki(slug) {
+  if (wikiCache[slug]) return wikiCache[slug];
+  try {
+    // Calling your backend endpoint which proxies the Wiki API
+    const res = await fetch(`${API_BASE}/colleges/wiki/${slug}`);
+    const data = await res.json();
+    wikiCache[slug] = data;
+    return data;
+  } catch (e) { return null; }
+}
+function demoLogin(){
+  loginUser({name:'Guest User',email:'guest@collegescope.in'});
+}
+function loginUser(u){
+  user=u;
+  closeLogin();
+  renderNavUser();
+  showToast('Welcome, '+u.name.split(' ')[0]+'! 👋','success');
+}
+function doLogout(){
+  user=null;
+  document.getElementById('user-menu').style.display='none';
+  document.getElementById('nav-right').innerHTML='<button class="nav-login-btn" onclick="openLogin()">Sign In</button>';
+  showToast('Signed out successfully');
+}
+function renderNavUser(){
+  const initials=user.name.split(' ').map(w=>w[0]).slice(0,2).join('');
+  document.getElementById('nav-right').innerHTML=`
+    <div class="nav-avatar" onclick="toggleUserMenu()" title="${user.name}">${initials}</div>`;
+}
+function toggleUserMenu(){
+  const m=document.getElementById('user-menu');
+  document.getElementById('user-name-label').textContent=user?user.name:'Guest';
+  m.style.display=m.style.display==='none'?'block':'none';
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('user-menu');
+  if(m.style.display!=='none' && !e.target.closest('.nav-avatar') && !e.target.closest('.user-menu')) m.style.display='none';
+});
+
+/* ══════════════ RECENT ══════════════ */
+function addRecent(name){
+  recentSearches=recentSearches.filter(x=>x!==name);
+  recentSearches.unshift(name);
+  recentSearches=recentSearches.slice(0,5);
+  localStorage.setItem('cs_recent',JSON.stringify(recentSearches));
+  renderRecent();
+}
+function clearRecent(){
+  recentSearches=[];
+  localStorage.setItem('cs_recent','[]');
+  renderRecent();
+  showToast('Search history cleared');
+}
+function renderRecent(){
+  const bar=document.getElementById('recent-bar');
+  const chips=document.getElementById('recent-chips');
+  if(!recentSearches.length){bar.style.display='none';return;}
+  bar.style.display='flex';
+  chips.innerHTML=recentSearches.map(s=>`<span class="recent-chip" onclick="quickSearch('${s}')">${s}</span>`).join('');
+}
+function quickSearch(name){
+  const c=COLLEGES.find(x=>x.short===name||x.name.includes(name));
+  if(c) openDetail(c.id);
+}
+
+/* ══════════════ HERO SEARCH ══════════════ */
+function heroSearch(){
+  const q=document.getElementById('hero-search').value.trim();
+  if(!q) return;
+  fType='all';
+  go('explore');
+  setTimeout(()=>{
+    const el=document.getElementById('ex-search');
+    if(el){el.value=q;renderExplore();}
+  },50);
+}
+function heroSearchKey(e){if(e.key==='Enter') heroSearch();}
+
+/* ══════════════ WIKIPEDIA FETCH ══════════════ */
+const wikiCache={};
+async function fetchWiki(slug){
+  if(wikiCache[slug]) return wikiCache[slug];
+  try{
+    const url=`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`;
+    const res=await fetch(url);
+    const data=await res.json();
+    wikiCache[slug]=data;
+    return data;
+  }catch(e){return null;}
+}
+
+async function getWikiImage(slug){
+  try{
+    const url=`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`;
+    const res=await fetch(url);
+    const data=await res.json();
+    return data.thumbnail?.source || data.originalimage?.source || null;
+  }catch(e){return null;}
+}
+
+/* ══════════════ HOME ══════════════ */
+function renderHome(){
+  renderRecent();
+  const top=COLLEGES.sort((a,b)=>b.rating-a.rating).slice(0,6);
+  // Featured cards — load wiki images async
+  document.getElementById('feat-scroll').innerHTML=top.map(c=>`
+    <div class="feat-card" onclick="openDetail(${c.id})">
+      <div class="feat-img-wrap">
+        <img class="feat-img" id="fi-${c.id}" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80'">
+        <div class="feat-img-wrap" style="position:absolute;inset:0;pointer-events:none"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,var(--bg2))"></div></div>
+      </div>
+      <div class="feat-body">
+        <div class="feat-type" style="color:${c.color}">${c.type}</div>
+        <div class="feat-name">${c.short}</div>
+        <div class="feat-loc">📍 ${c.location}</div>
+        <div class="feat-stats">
+          <div class="fst"><div class="fst-v">${c.rating}★</div><div class="fst-l">Rating</div></div>
+          <div class="fst"><div class="fst-v">${c.placement}%</div><div class="fst-l">Placed</div></div>
+          <div class="fst"><div class="fst-v">${ff(c.fees)}</div><div class="fst-l">Fees/yr</div></div>
+        </div>
+      </div>
+    </div>`).join('');
+
+  // Type grid
+  const types=['Engineering','Management','Medical','Law','Science'];
+  document.getElementById('type-grid').innerHTML=types.map(t=>{
+    const cnt=COLLEGES.filter(c=>c.type===t).length;
+    const m=TYPE_META[t];
+    return `<div class="type-card" onclick="filterType('${t}')">
+      <div class="type-icon">${m.icon}</div>
+      <div class="type-name" style="color:${m.color}">${t}</div>
+      <div class="type-cnt">${cnt} colleges</div>
+    </div>`;
+  }).join('');
+}
+
+function filterType(t){fType=t;go('explore');}
+
+/* ══════════════ SIDEBAR ══════════════ */
+function renderSidebar(){
+  const types=['all','Engineering','Management','Medical','Law','Science'];
+  const cnts={};COLLEGES.forEach(c=>{cnts[c.type]=(cnts[c.type]||0)+1;});
+  document.getElementById('sb-type').innerHTML=types.map(t=>`
+    <button class="f-opt ${fType===t?'on':''}" onclick="setType('${t}',this)">
+      ${t==='all'?'All Disciplines':t}<span class="f-badge">${t==='all'?COLLEGES.length:(cnts[t]||0)}</span>
+    </button>`).join('');
+  const states=['all',...new Set(COLLEGES.map(c=>c.state).sort())];
+  document.getElementById('sb-state').innerHTML=states.map(s=>`
+    <button class="f-opt ${fState===s?'on':''}" onclick="setState('${s}',this)">
+      ${s==='all'?'All States':s}<span class="f-badge">${s==='all'?COLLEGES.length:COLLEGES.filter(c=>c.state===s).length}</span>
+    </button>`).join('');
+}
+function setType(t,btn){fType=t;document.querySelectorAll('#sb-type .f-opt').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderExplore();}
+function setState(s,btn){fState=s;document.querySelectorAll('#sb-state .f-opt').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderExplore();}
+function setRtg(r,btn){fRtg=r;document.querySelectorAll('.rtg-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderExplore();}
+function onRange(el,lid,pre,isFee){
+  const v=parseInt(el.value);
+  if(el.id==='rng-plc') fPlc=v;
+  if(el.id==='rng-fee') fFee=v;
+  const lbl=document.getElementById(lid);
+  lbl.textContent=isFee?(v>=2400000?'Any':ff(v)):pre+v;
+  renderExplore();
+}
+function setView(v){
+  viewMode=v;
+  document.getElementById('vb-grid').classList.toggle('on',v==='grid');
+  document.getElementById('vb-list').classList.toggle('on',v==='list');
+  renderExplore();
+}
+
+/* ══════════════ EXPLORE ══════════════ */
+function renderExplore(){
+  const q=(document.getElementById('ex-search')?.value||'').toLowerCase();
+  const sort=document.getElementById('ex-sort')?.value||'rating';
+  const maxF=fFee>=2400000?Infinity:fFee;
+  let list=COLLEGES.filter(c=>{
+    if(fType!=='all'&&c.type!==fType) return false;
+    if(fState!=='all'&&c.state!==fState) return false;
+    if(c.placement<fPlc) return false;
+    if(c.fees>maxF) return false;
+    if(c.rating<fRtg) return false;
+    if(q&&!c.name.toLowerCase().includes(q)&&!c.short.toLowerCase().includes(q)&&!c.city.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  if(sort==='rating') list.sort((a,b)=>b.rating-a.rating);
+  else if(sort==='placement') list.sort((a,b)=>b.placement-a.placement);
+  else if(sort==='fees_asc') list.sort((a,b)=>a.fees-b.fees);
+  else if(sort==='fees_desc') list.sort((a,b)=>b.fees-a.fees);
+  else list.sort((a,b)=>a.name.localeCompare(b.name));
+
+  document.getElementById('r-info').textContent=`${list.length} institution${list.length!==1?'s':''} found`;
+  const grid=document.getElementById('cg');
+  grid.className='cg'+(viewMode==='list'?' lv':'');
+
+  if(!list.length){
+    grid.innerHTML=`<div class="nores"><div class="nores-e">🎓</div><div>No colleges match your filters.</div></div>`;
+    return;
+  }
+
+  if(viewMode==='list'){
+    grid.innerHTML=list.map((c,i)=>`
+      <div class="cc lv ${cmpList.includes(c.id)?'sel':''}" style="animation-delay:${i*0.04}s">
+        <div class="cc-stripe" style="background:${c.color}"></div>
+        <div class="cc-img-wrap">
+          <img class="cc-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=70'" onclick="openDetail(${c.id})">
+          <div class="cc-img-overlay"></div>
+        </div>
+        <div class="cc-body">
+          <div>
+            <div class="cc-name">${c.short}</div>
+            <div class="cc-loc">📍 ${c.location}</div>
+            <div class="cc-meta">
+              <span class="cc-pill" style="color:${c.color};border-color:${c.color}44">${c.type}</span>
+              <span class="cc-pill" style="color:#d4a843;border-color:rgba(212,168,67,0.3)">${c.rating} ★</span>
+            </div>
+          </div>
+          <div class="cc-stats">
+            <div class="cs"><div class="cs-v">${ff(c.fees)}</div><div class="cs-l">Annual fees</div></div>
+            <div class="cs"><div class="cs-v">${c.placement}%</div><div class="cs-l">Placement</div></div>
+            <div class="cs"><div class="cs-v">${c.est}</div><div class="cs-l">Established</div></div>
+          </div>
+        </div>
+        <div class="cc-actions">
+          <button class="cc-btn p" onclick="openDetail(${c.id})">View</button>
+          <button class="cc-btn ${cmpList.includes(c.id)?'ca':''}" onclick="toggleCmp(${c.id})">${cmpList.includes(c.id)?'✓':'+'} Cmp</button>
+        </div>
+      </div>`).join('');
+  } else {
+    grid.innerHTML=list.map((c,i)=>`
+      <div class="cc ${cmpList.includes(c.id)?'sel':''}" style="animation-delay:${i*0.05}s">
+        <div class="cc-img-wrap" onclick="openDetail(${c.id})">
+          <img class="cc-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=70'">
+          <div class="cc-img-overlay"></div>
+          <span class="cc-img-badge" style="background:${c.color}22;color:${c.color};border:1px solid ${c.color}55">${c.type}</span>
+          <div class="cc-img-rating">${c.rating}★</div>
+        </div>
+        <div class="cc-body">
+          <div class="cc-name">${c.short}</div>
+          <div class="cc-loc">📍 ${c.location}</div>
+          <div class="cc-stats">
+            <div class="cs"><div class="cs-v">${ff(c.fees)}</div><div class="cs-l">Annual fees</div></div>
+            <div class="cs">
+              <div class="cs-v">${c.placement}%</div>
+              <div class="cs-l">Placement</div>
+              <div style="height:2px;background:var(--bg4);border-radius:1px;margin-top:4px;overflow:hidden"><div style="width:${c.placement}%;height:100%;background:${c.color};border-radius:1px"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cc-actions">
+          <button class="cc-btn p" onclick="openDetail(${c.id})">View Details</button>
+          <button class="cc-btn ${cmpList.includes(c.id)?'ca':''}" onclick="toggleCmp(${c.id})">${cmpList.includes(c.id)?'✓ Added':'+ Compare'}</button>
+        </div>
+      </div>`).join('');
+  }
+}
+
+/* ══════════════ DETAIL ══════════════ */
+async function openDetail(id){
+  const c=COLLEGES.find(x=>x.id===id);
+  addRecent(c.short);
+  const stars='★'.repeat(Math.floor(c.rating))+(c.rating%1>=.5?'½':'')+'☆'.repeat(5-Math.ceil(c.rating));
+
+  document.getElementById('detail-inner').innerHTML=`
+    <button class="bk-btn" onclick="history.back()">← Back</button>
+    <div class="d-hero">
+      <div class="d-hero-img-wrap">
+        <img class="d-hero-img" id="d-main-img" src="${c.wikimg}" alt="${c.name}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80'">
+        <div class="d-hero-overlay">
+          <div style="font-size:11px;font-weight:600;color:${c.color};text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">${c.type}</div>
+          <div class="d-title">${c.name}</div>
+          <div class="d-sub">📍 ${c.location} · Est. ${c.est}</div>
+        </div>
+      </div>
+      <div class="d-body">
+        <div class="d-ks">
+          <div class="dk"><div class="dk-v" style="color:${c.color}">${c.rating} ★</div><div class="dk-l">Rating</div></div>
+          <div class="dk"><div class="dk-v">${c.placement}%</div><div class="dk-l">Placement</div></div>
+          <div class="dk"><div class="dk-v">${ff(c.fees)}</div><div class="dk-l">Annual fees</div></div>
+          <div class="dk"><div class="dk-v">${c.courses.length}</div><div class="dk-l">Programmes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wikipedia About -->
+    <div class="d-wiki-section">
+      <div class="d-card-title">📖 About (Wikipedia)</div>
+      <div id="wiki-content">
+        <div class="wiki-loading"><div class="wiki-spinner"></div>Fetching Wikipedia data…</div>
+      </div>
+    </div>
+
+    <div class="d-grid">
+      <div class="d-card">
+        <div class="d-card-title">🎓 Programmes</div>
+        ${c.courses.map(x=>`<div class="course-row"><div><div class="cr-name">${x.n}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${x.d} yr · ${x.s} seats</div></div><span class="cr-lvl">${x.l}</span></div>`).join('')}
+      </div>
+      <div>
+        <div class="d-card" style="margin-bottom:14px">
+          <div class="d-card-title">📈 Placement</div>
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px">
+            <div class="plc-big" style="color:${c.color}">${c.placement}%</div>
+            <div style="flex:1">
+              <div class="plc-bar"><div class="plc-fill" style="width:${c.placement}%;background:${c.color}"></div></div>
+              <div style="font-size:11px;color:var(--muted)">placed within 3 months</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Top Recruiters</div>
+          <div class="recruiter-chips">${c.recruiters.map(r=>`<span class="rc">${r}</span>`).join('')}</div>
+        </div>
+        <div class="d-card">
+          <div class="d-card-title">💬 Reviews</div>
+          ${c.reviews.map(r=>`<div class="review-card"><div class="rv-text">"${r.t}"</div><div class="rv-footer"><span>— ${r.a}, ${r.p} '${r.y}</span><span class="rv-stars">${'★'.repeat(Math.floor(r.r))}</span></div></div>`).join('')}
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:18px">
+      <button class="btn-g" onclick="toggleCmp(${c.id});go('compare')">${cmpList.includes(c.id)?'✓ Added to Compare':'Add to Compare'}</button>
+      <button class="btn-o" onclick="go('explore')">← Back to Explore</button>
+    </div>
+  `;
+
+  go('detail');
+
+  // Fetch Wikipedia
+  const wdata=await fetchWiki(c.wiki);
+  const wEl=document.getElementById('wiki-content');
+  if(wEl){
+    if(wdata&&wdata.extract){
+      const snippet=wdata.extract.split('\n').filter(l=>l.trim().length>60).slice(0,3).join('\n\n');
+      wEl.innerHTML=`
+        <div class="wiki-text">${snippet||wdata.extract.slice(0,600)+'...'}</div>
+        <a class="wiki-link" href="https://en.wikipedia.org/wiki/${c.wiki}" target="_blank">Read full article on Wikipedia →</a>`;
+      // Update image if wiki has a better one
+      if(wdata.thumbnail?.source){
+        const img=document.getElementById('d-main-img');
+        if(img) img.src=wdata.thumbnail.source;
+      }
+    } else {
+      wEl.innerHTML=`<div style="font-size:13px;color:var(--muted)">${c.name} is a premier institution in India. <a class="wiki-link" href="https://en.wikipedia.org/wiki/${c.wiki}" target="_blank">Read on Wikipedia →</a></div>`;
+    }
+  }
+}
+
+/* ══════════════ COMPARE ══════════════ */
+function toggleCmp(id){
+  if(cmpList.includes(id)){cmpList=cmpList.filter(x=>x!==id);}
+  else{if(cmpList.length>=3){showToast('Max 3 colleges for comparison','error');return;}cmpList.push(id);}
+  updateCbar();
+  if(curPage==='explore') renderExplore();
+}
+function updateCbar(){
+  const bar=document.getElementById('cbar');
+  const go=document.getElementById('cbar-go');
+  bar.classList.toggle('on',cmpList.length>0);
+  go.disabled=cmpList.length<2;
+  let h='';
+  for(let i=0;i<3;i++){
+    if(cmpList[i]!==undefined){
+      const c=COLLEGES.find(x=>x.id===cmpList[i]);
+      h+=`<div class="cslot f"><div class="cslot-dot" style="background:${c.color}"></div><span style="font-size:12px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${c.short}</span><button class="cslot-rm" onclick="toggleCmp(${c.id})">✕</button></div>`;
+    } else {
+      h+=`<div class="cslot">+ Add college</div>`;
+    }
+  }
+  document.getElementById('cbar-slots').innerHTML=h;
+}
+function clearCmp(){cmpList=[];updateCbar();if(curPage==='explore') renderExplore();}
+
+function renderCompare(){
+  const el=document.getElementById('cmp-content');
+  if(cmpList.length<2){
+    el.innerHTML=`<div class="cmp-empty"><div class="cmp-empty-icon">⚖️</div><div class="cmp-empty-title">No colleges selected</div><div style="font-size:14px;margin-bottom:20px">Go to Explore and click "+ Compare" on 2–3 colleges.</div><button class="btn-g" onclick="go('explore')">Explore →</button></div>`;
+    return;
+  }
+  const cols=cmpList.map(id=>COLLEGES.find(c=>c.id===id));
+  const minFeeC=cols.reduce((a,c)=>c.fees<a.fees?c:a);
+  const maxPlcC=cols.reduce((a,c)=>c.placement>a.placement?c:a);
+  const maxRtgC=cols.reduce((a,c)=>c.rating>a.rating?c:a);
+  const rows=[
+    {l:'Fees/yr',r:c=>{const best=c.id===minFeeC.id;return `<span class="${best?'cmp-win':'cmp-lose'}">${ff(c.fees)}${best?' ✓':''}</span>`}},
+    {l:'Placement',r:c=>{const best=c.id===maxPlcC.id;return `<div class="mini-bar"><div class="mb-bg"><div class="mb-fill" style="width:${c.placement}%;background:${c.color}"></div></div><span class="${best?'cmp-win':''}">${c.placement}%${best?' ✓':''}</span></div>`}},
+    {l:'Rating',r:c=>{const best=c.id===maxRtgC.id;return `<span class="${best?'cmp-win':'cmp-lose'}">${c.rating} ★${best?' ✓':''}</span>`}},
+    {l:'Type',r:c=>`<span style="color:${c.color}">${c.type}</span>`},
+    {l:'Location',r:c=>`${c.city}, ${c.state}`},
+    {l:'Est.',r:c=>c.est},
+    {l:'Courses',r:c=>c.courses.length+' offered'},
+    {l:'Top Recruiter',r:c=>c.recruiters[0]},
+  ];
+  el.innerHTML=`<div class="cmp-tbl-wrap"><table class="cmp-tbl"><thead><tr>
+    <th class="cmp-col-h"></th>
+    ${cols.map(c=>`<th class="cmp-col-h">
+      <img class="cmp-col-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=300&q=60'">
+      <div class="cmp-col-name">${c.short}</div>
+      <div class="cmp-col-loc">📍 ${c.location}</div>
+    </th>`).join('')}
+  </tr></thead><tbody>
+    ${rows.map(row=>`<tr class="cmp-row"><td>${row.l}</td>${cols.map(c=>`<td>${row.r(c)}</td>`).join('')}</tr>`).join('')}
+    <tr class="cmp-row"><td>Action</td>${cols.map(c=>`<td><button onclick="openDetail(${c.id})" style="padding:6px 12px;border-radius:6px;background:${c.color};color:#06050a;border:none;font-size:12px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif">View →</button></td>`).join('')}</tr>
+  </tbody></table></div>
+  <div style="font-size:11px;color:var(--muted);margin-top:14px">✓ = best value in category</div>`;
+}
+
+/* ══════════════ UTILS ══════════════ */
+function ff(f){
+  if(f<1000) return '₹'+f.toLocaleString('en-IN');
+  if(f>=100000) return '₹'+(f/100000).toFixed(f%100000===0?0:1)+'L';
+  return '₹'+(f/1000).toFixed(0)+'K';
+}
+let toastTimer;
+function showToast(msg,type=''){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className='on'+(type?' '+type:'');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.className='',2500);
+}
+
+/* ══════════════ INIT ══════════════ */
+window.history.pushState=new Proxy(window.history.pushState,{apply:(t,th,a)=>{t.apply(th,a);}});
+window.addEventListener('popstate',()=>{if(curPage==='detail') go('explore');});
+document.addEventListener('click',e=>{if(e.target.closest('.bk-btn')){e.preventDefault();go('explore');}});
+renderHome();renderSidebar();renderExplore();
+</script>
+</body>
+</html>
