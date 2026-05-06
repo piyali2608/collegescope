@@ -77,28 +77,6 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .ss-num span{color:var(--gold)}
 .ss-lbl{font-size:11px;color:var(--muted);margin-top:3px;letter-spacing:.3px}
 
-/* ═══ PREDICTOR FEATURE ═══ */
-.predictor-container{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r3);padding:32px 24px;max-width:1100px;margin:40px auto}
-.predictor-header{text-align:center;margin-bottom:24px}
-.predictor-header h2{font-family:'Syne',sans-serif;font-size:26px;color:var(--text);margin-bottom:8px}
-.predictor-header p{color:var(--muted2);font-size:14px}
-.predictor-controls{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;justify-content:center}
-.input-group{display:flex;flex-direction:column;min-width:220px}
-.input-group label{font-size:12px;font-weight:600;color:var(--muted2);margin-bottom:6px}
-.input-group input,.input-group select{padding:12px 16px;border-radius:var(--r2);background:var(--bg3);border:1px solid var(--border);color:var(--text);font-size:14px;font-family:'Bricolage Grotesque',sans-serif;outline:none}
-.input-group input:focus,.input-group select:focus{border-color:var(--gold)}
-#predict-btn{padding:12px 24px;background:var(--gold);color:#0a0800;border:none;border-radius:var(--r2);font-weight:700;cursor:pointer;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif;height:46px}
-#predict-btn:hover{background:var(--goldL);transform:translateY(-2px)}
-.results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
-.pred-card{background:var(--bg3);padding:20px;border-radius:var(--r2);border:1px solid var(--border);transition:all .2s}
-.pred-card:hover{transform:translateY(-3px);border-color:var(--border2)}
-.pred-card h3{font-family:'Syne',sans-serif;font-size:16px;color:var(--text);margin-bottom:6px}
-.pred-tag{display:inline-block;background:var(--bg4);padding:4px 10px;border-radius:999px;font-size:11px;color:var(--muted2);margin-bottom:12px;border:1px solid var(--border)}
-.pred-stat{font-size:12px;color:var(--muted);margin-bottom:4px}
-.probability.high{color:var(--green);font-weight:700}
-.probability.medium{color:var(--gold);font-weight:700}
-.hidden{display:none}
-
 /* Section */
 .sec{max-width:1100px;margin:0 auto;padding:48px 1.5rem}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
@@ -130,6 +108,47 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .type-icon{font-size:26px;margin-bottom:7px}
 .type-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
 .type-cnt{font-size:11px;color:var(--muted)}
+
+/* ═══ PREDICTOR DASHBOARD ═══ */
+.dash-wrap{display:grid;grid-template-columns:300px 1fr;min-height:calc(100vh - 58px);max-width:100%}
+.dash-sidebar{background:var(--bg1);border-right:1px solid var(--border);padding:24px;position:sticky;top:58px;height:calc(100vh - 58px);overflow-y:auto}
+.dash-sidebar::-webkit-scrollbar{width:2px}
+.dash-header{margin-bottom:32px}
+.dash-header h2{font-family:'Syne',sans-serif;font-size:22px;color:var(--text);margin-bottom:8px}
+.dash-header p{font-size:13px;color:var(--muted2);line-height:1.5}
+.input-group{margin-bottom:20px}
+.input-group label{font-size:12px;font-weight:600;color:var(--muted2);margin-bottom:8px;display:block}
+.input-group input,.input-group select{width:100%;padding:12px 16px;border-radius:var(--r2);background:var(--bg3);border:1px solid var(--border);color:var(--text);font-size:14px;font-family:'Bricolage Grotesque',sans-serif;outline:none;transition:border-color .2s}
+.input-group input:focus,.input-group select:focus{border-color:var(--gold)}
+#predict-btn{width:100%;padding:14px;background:var(--gold);color:#0a0800;border:none;border-radius:var(--r2);font-weight:700;cursor:pointer;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif;margin-top:10px}
+#predict-btn:hover{background:var(--goldL);transform:translateY(-2px)}
+
+.dash-main{padding:32px;background:var(--bg)}
+.dash-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:20px;display:flex;align-items:center;gap:16px}
+.stat-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.stat-icon.safe{background:rgba(61,220,132,0.1);color:var(--green)}
+.stat-icon.reach{background:rgba(212,168,67,0.1);color:var(--gold)}
+.stat-icon.tough{background:rgba(255,107,107,0.1);color:var(--red)}
+.stat-info h4{font-size:24px;font-family:'Syne',sans-serif;margin-bottom:4px}
+.stat-info p{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+.results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.pred-card{background:var(--bg3);padding:20px;border-radius:var(--r2);border:1px solid var(--border);transition:all .2s;display:flex;flex-direction:column}
+.pred-card:hover{transform:translateY(-3px);border-color:var(--border2)}
+.pred-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.pred-card h3{font-family:'Syne',sans-serif;font-size:16px;color:var(--text);margin-bottom:4px;line-height:1.2}
+.pred-badge{padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;text-transform:uppercase}
+.pred-badge.safe{background:rgba(61,220,132,0.1);color:var(--green);border:1px solid rgba(61,220,132,0.2)}
+.pred-badge.reach{background:rgba(212,168,67,0.1);color:var(--gold);border:1px solid rgba(212,168,67,0.2)}
+.pred-tag{display:inline-block;font-size:12px;color:var(--muted2);margin-bottom:16px}
+.pred-card-bot{margin-top:auto;padding-top:16px;border-top:1px dashed var(--border2);display:flex;justify-content:space-between;align-items:center}
+.pred-stat-sm{font-size:11px;color:var(--muted)}
+.pred-stat-sm strong{color:var(--text);font-size:13px;display:block;margin-top:2px}
+.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;background:var(--bg2);border-radius:var(--r3);border:1px dashed var(--border2)}
+.empty-state-icon{font-size:48px;margin-bottom:16px}
+.empty-state h3{font-family:'Syne',sans-serif;font-size:20px;margin-bottom:8px}
+.empty-state p{color:var(--muted);font-size:14px}
 
 /* ═══ EXPLORE ═══ */
 .explore-wrap{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 58px);max-width:100%}
@@ -355,6 +374,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
   <div class="nav-links">
     <button class="nl on" id="nl-home" onclick="go('home')">Home</button>
     <button class="nl" id="nl-explore" onclick="go('explore')">Explore</button>
+    <button class="nl" id="nl-predict" onclick="go('predict')">Predictor</button>
     <button class="nl" id="nl-compare" onclick="go('compare')">Compare</button>
   </div>
   <div class="nav-right" id="nav-right">
@@ -426,7 +446,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
       </div>
       <div class="hero-btns">
         <button class="btn-g" onclick="go('explore')">Explore All Colleges →</button>
-        <button class="btn-o" onclick="go('compare')">Compare Side-by-Side</button>
+        <button class="btn-o" onclick="go('predict')">Rank Predictor</button>
       </div>
     </div>
   </div>
@@ -436,35 +456,6 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
     <div class="ss-item"><div class="ss-num">94<span>%</span></div><div class="ss-lbl">Avg. Placement</div></div>
     <div class="ss-item"><div class="ss-num">4.6<span>★</span></div><div class="ss-lbl">Avg. Rating</div></div>
   </div>
-
-  <!-- ═══ NEW JEE RANK PREDICTOR ═══ -->
-  <section class="predictor-container" id="predictor">
-    <div class="predictor-header">
-      <h2>🎯 JEE Rank College Predictor</h2>
-      <p>Enter your expected or actual JEE Main rank to see eligible engineering colleges.</p>
-    </div>
-
-    <div class="predictor-controls">
-      <div class="input-group">
-        <label for="jee-rank">Your All India Rank (AIR)</label>
-        <input type="number" id="jee-rank" placeholder="e.g., 15000" min="1" required />
-      </div>
-
-      <div class="input-group">
-        <label for="jee-category">Category</label>
-        <select id="jee-category">
-          <option value="general">General (OPEN)</option>
-          <option value="obc">OBC-NCL</option>
-          <option value="sc">SC / ST</option>
-        </select>
-      </div>
-
-      <button id="predict-btn" onclick="predictColleges()">Find My Colleges</button>
-    </div>
-
-    <!-- Results will be injected here -->
-    <div id="prediction-results" class="results-grid hidden"></div>
-  </section>
 
   <div class="sec">
     <div class="sec-head"><div class="sec-title">⭐ Top Rated</div><button class="sec-link" onclick="go('explore')">View all →</button></div>
@@ -477,6 +468,71 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
   <div class="sec" style="border-top:1px solid var(--border);padding-top:40px">
     <div class="sec-head"><div class="sec-title">Browse by Discipline</div></div>
     <div class="type-grid" id="type-grid"></div>
+  </div>
+</div>
+
+<!-- ═══ PREDICTOR DASHBOARD (NEW) ═══ -->
+<div class="pg" id="pg-predict">
+  <div class="dash-wrap">
+    <div class="dash-sidebar">
+      <div class="dash-header">
+        <h2>🎯 Predictor Dashboard</h2>
+        <p>Enter your exam credentials to simulate potential college allotments based on previous year trends.</p>
+      </div>
+
+      <div class="input-group">
+        <label for="p-exam">Entrance Exam</label>
+        <select id="p-exam">
+          <option value="jee">JEE Main (Engineering)</option>
+          <option value="neet">NEET UG (Medical)</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="p-rank">Your All India Rank (AIR)</label>
+        <input type="number" id="p-rank" placeholder="e.g. 15000" min="1">
+      </div>
+
+      <div class="input-group">
+        <label for="p-category">Category</label>
+        <select id="p-category">
+          <option value="general">General (OPEN)</option>
+          <option value="obc">OBC-NCL</option>
+          <option value="sc">SC / ST</option>
+        </select>
+      </div>
+
+      <button id="predict-btn" onclick="runDashboardPrediction()">Generate Insights →</button>
+    </div>
+
+    <div class="dash-main">
+      <div class="dash-stats-row">
+        <div class="stat-card">
+          <div class="stat-icon safe">✓</div>
+          <div class="stat-info"><h4 id="stat-safe">0</h4><p>Safe Matches</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon reach">⚡</div>
+          <div class="stat-info"><h4 id="stat-reach">0</h4><p>Reach Matches</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon tough">✕</div>
+          <div class="stat-info"><h4 id="stat-tough">0</h4><p>Tough Chances</p></div>
+        </div>
+      </div>
+
+      <div class="sec-head" style="margin-bottom: 20px;">
+        <div class="sec-title" style="font-size: 18px;">Simulated Results</div>
+      </div>
+
+      <div id="dash-results" class="results-grid">
+        <div class="empty-state">
+          <div class="empty-state-icon">📊</div>
+          <h3>Awaiting Input</h3>
+          <p>Fill out the parameters on the left to generate your personalized college prediction matrix.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -647,7 +703,42 @@ const COLLEGES = [
    wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/SIBM_Pune_campus.jpg/1280px-SIBM_Pune_campus.jpg",
    courses:[{n:"MBA",l:"PG",d:2,s:180},{n:"MBA Innovation",l:"PG",d:2,s:60},{n:"MBA Business Analytics",l:"PG",d:2,s:60}],
    reviews:[{a:"Roshni A.",p:"MBA",y:2022,r:4.5,t:"Vibrant campus life and excellent international immersion programmes set SIBM apart."},{a:"Karan T.",p:"MBA",y:2023,r:4,t:"Strong B-school with a fantastic alumni chapter. Industry interface cells provide great exposure."}],
-   recruiters:["Deloitte","Wipro","HDFC Bank","Mahindra","Bajaj","Asian Paints"]}
+   recruiters:["Deloitte","Wipro","HDFC Bank","Mahindra","Bajaj","Asian Paints"]},
+  {id:11,name:"National Institute of Technology Tiruchirappalli",short:"NIT Trichy",
+   location:"Tiruchirappalli, Tamil Nadu",city:"Trichy",state:"Tamil Nadu",
+   type:"Engineering",fees:175000,placement:94,rating:4.6,est:1964,
+   color:"#5b9cf6",wiki:"National_Institute_of_Technology,_Tiruchirappalli",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/NITT_Admin_Block.jpg/1200px-NITT_Admin_Block.jpg",
+   courses:[{n:"B.Tech CSE",l:"UG",d:4,s:120}],recruiters:["Google","Amazon","Microsoft"],reviews:[]},
+  {id:12,name:"National Institute of Technology Karnataka",short:"NIT Surathkal",
+   location:"Surathkal, Karnataka",city:"Mangalore",state:"Karnataka",
+   type:"Engineering",fees:180000,placement:93,rating:4.5,est:1960,
+   color:"#5b9cf6",wiki:"National_Institute_of_Technology_Karnataka",
+   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Main_Building_NITK.jpg/1200px-Main_Building_NITK.jpg",
+   courses:[{n:"B.Tech IT",l:"UG",d:4,s:110}],recruiters:["Adobe","Uber","Intuit"],reviews:[]},
+  {id:13,name:"Motilal Nehru National Institute of Technology",short:"MNNIT Allahabad",
+   location:"Prayagraj, Uttar Pradesh",city:"Prayagraj",state:"Uttar Pradesh",
+   type:"Engineering",fees:165000,placement:92,rating:4.4,est:1961,
+   color:"#5b9cf6",wiki:"Motilal_Nehru_National_Institute_of_Technology_Allahabad",
+   wikimg:"",courses:[{n:"B.Tech CSE",l:"UG",d:4,s:150}],recruiters:["De Shaw","Goldman Sachs"],reviews:[]},
+  {id:14,name:"National Institute of Technology Rourkela",short:"NIT Rourkela",
+   location:"Rourkela, Odisha",city:"Rourkela",state:"Odisha",
+   type:"Engineering",fees:170000,placement:89,rating:4.4,est:1961,
+   color:"#5b9cf6",wiki:"National_Institute_of_Technology_Rourkela",
+   wikimg:"",courses:[{n:"B.Tech Mechanical",l:"UG",d:4,s:120}],recruiters:["PwC","Tata Steel"],reviews:[]},
+  {id:15,name:"Malaviya National Institute of Technology",short:"MNIT Jaipur",
+   location:"Jaipur, Rajasthan",city:"Jaipur",state:"Rajasthan",
+   type:"Engineering",fees:175000,placement:88,rating:4.3,est:1963,
+   color:"#5b9cf6",wiki:"Malaviya_National_Institute_of_Technology_Jaipur",
+   wikimg:"",courses:[{n:"B.Tech ECE",l:"UG",d:4,s:100}],recruiters:["Samsung","Reliance"],reviews:[]},
+  {id:16,name:"Indian Institute of Information Technology Sri City",short:"IIIT Sri City",
+   location:"Sri City, Andhra Pradesh",city:"Sri City",state:"Andhra Pradesh",
+   type:"Engineering",fees:320000,placement:91,rating:4.4,est:2013,
+   color:"#5b9cf6",wiki:"Indian_Institute_of_Information_Technology,_Sri_City",
+   wikimg:"https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/IIIT_Sri_City_Logo.png/220px-IIIT_Sri_City_Logo.png",
+   courses:[{n:"B.Tech Computer Science",l:"UG",d:4,s:250},{n:"B.Tech AI & Data Science",l:"UG",d:4,s:60}],
+   reviews:[{a:"Alumni",p:"B.Tech CSE",y:2024,r:4.5,t:"Great coding culture and proximity to IT hubs makes a huge difference."}],
+   recruiters:["Amazon","Microsoft","TCS","Cognizant"]}
 ];
 
 const TYPE_META={Engineering:{icon:"⚙️",color:"#5b9cf6"},Management:{icon:"📊",color:"#f97316"},Medical:{icon:"🏥",color:"#3ddc84"},Law:{icon:"⚖️",color:"#c084fc"},Science:{icon:"🔬",color:"#2dd4bf"}};
@@ -696,7 +787,6 @@ function doLogin(){
 }
 const API_BASE = "http://localhost:5000/api";
 
-// 1. Updated Signup logic
 async function doSignup() {
   const n = document.getElementById('su-name').value;
   const e = document.getElementById('su-email').value;
@@ -713,8 +803,8 @@ async function doSignup() {
     const data = await res.json();
     
     if (res.ok) {
-      loginUser(data.user); // data.user returned from backend
-      localStorage.setItem('token', data.token); // Store JWT
+      loginUser(data.user);
+      localStorage.setItem('token', data.token);
     } else {
       showToast(data.error, 'error');
     }
@@ -723,17 +813,19 @@ async function doSignup() {
   }
 }
 
-// 2. Updated Wikipedia logic (Fetching via YOUR backend now)
+const wikiCache={};
 async function fetchWiki(slug) {
   if (wikiCache[slug]) return wikiCache[slug];
   try {
-    // Calling your backend endpoint which proxies the Wiki API
-    const res = await fetch(`${API_BASE}/colleges/wiki/${slug}`);
-    const data = await res.json();
+    // Standard Wikipedia REST API integration for demo
+    const url=`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`;
+    const res=await fetch(url);
+    const data=await res.json();
     wikiCache[slug] = data;
     return data;
   } catch (e) { return null; }
 }
+
 function demoLogin(){
   loginUser({name:'Guest User',email:'guest@collegescope.in'});
 }
@@ -803,20 +895,10 @@ function heroSearch(){
 }
 function heroSearchKey(e){if(e.key==='Enter') heroSearch();}
 
-async function getWikiImage(slug){
-  try{
-    const url=`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`;
-    const res=await fetch(url);
-    const data=await res.json();
-    return data.thumbnail?.source || data.originalimage?.source || null;
-  }catch(e){return null;}
-}
-
 /* ══════════════ HOME ══════════════ */
 function renderHome(){
   renderRecent();
   const top=COLLEGES.sort((a,b)=>b.rating-a.rating).slice(0,6);
-  // Featured cards — load wiki images async
   document.getElementById('feat-scroll').innerHTML=top.map(c=>`
     <div class="feat-card" onclick="openDetail(${c.id})">
       <div class="feat-img-wrap">
@@ -835,7 +917,6 @@ function renderHome(){
       </div>
     </div>`).join('');
 
-  // Type grid
   const types=['Engineering','Management','Medical','Law','Science'];
   document.getElementById('type-grid').innerHTML=types.map(t=>{
     const cnt=COLLEGES.filter(c=>c.type===t).length;
@@ -1044,7 +1125,6 @@ async function openDetail(id){
       wEl.innerHTML=`
         <div class="wiki-text">${snippet||wdata.extract.slice(0,600)+'...'}</div>
         <a class="wiki-link" href="https://en.wikipedia.org/wiki/${c.wiki}" target="_blank">Read full article on Wikipedia →</a>`;
-      // Update image if wiki has a better one
       if(wdata.thumbnail?.source){
         const img=document.getElementById('d-main-img');
         if(img) img.src=wdata.thumbnail.source;
@@ -1114,83 +1194,105 @@ function renderCompare(){
   <div style="font-size:11px;color:var(--muted);margin-top:14px">✓ = best value in category</div>`;
 }
 
-/* ══════════════ JEE PREDICTOR ══════════════ */
-const mockCollegeData = [
-  { name: "IIT Bombay", branch: "Computer Science", closingRank: 60 },
-  { name: "IIT Delhi", branch: "Mathematics & Computing", closingRank: 300 },
-  { name: "NIT Trichy", branch: "Computer Science", closingRank: 1200 },
-  { name: "NIT Surathkal", branch: "Information Technology", closingRank: 2500 },
-  { name: "DTU Delhi", branch: "Software Engineering", closingRank: 8000 },
-  { name: "IIIT Allahabad", branch: "Information Technology", closingRank: 5500 },
-  { name: "NIT Warangal", branch: "Electronics", closingRank: 11000 },
-  { name: "VIT Vellore", branch: "Computer Science", closingRank: 25000 },
-  { name: "MIT Manipal", branch: "Computer & Comm.", closingRank: 35000 },
-  { name: "SRM Chennai", branch: "Software Engineering", closingRank: 45000 },
-  { name: "Jaypee Noida", branch: "Computer Science", closingRank: 60000 },
-  { name: "NIT Rourkela", branch: "Electrical Eng.", cr: 6000, lr: 9500, type: "Engineering" },
-  { name: "MNIT Jaipur", branch: "Computer Science", cr: 3000, lr: 5800, type: "Engineering" },
-  { name: "NIT Calicut", branch: "Computer Science", cr: 4000, lr: 7200, type: "Engineering" },
-  { name: "NIT Durgapur", branch: "Mechanical Eng.", cr: 12000, lr: 18000, type: "Engineering" },
-  { name: "NIT Kurukshetra", branch: "Information Tech.", cr: 7000, lr: 11000, type: "Engineering" },
-  { name: "IIIT Sri City", branch: "Computer Science", cr: 22000, lr: 28000, type: "Engineering" },
-  { name: "NIT Silchar", branch: "Civil Engineering", cr: 25000, lr: 35000, type: "Engineering" }
-];
+/* ══════════════ DASHBOARD PREDICTOR LOGIC ══════════════ */
+const dashMockData = {
+  jee: [
+    { name: "IIT Bombay", branch: "Computer Science", cr: 1, lr: 65, type: "Engineering" },
+    { name: "NIT Trichy", branch: "Computer Science", cr: 800, lr: 1500, type: "Engineering" },
+    { name: "NIT Surathkal", branch: "IT & Computing", cr: 1200, lr: 2800, type: "Engineering" },
+    { name: "NIT Warangal", branch: "Electronics (ECE)", cr: 3500, lr: 5500, type: "Engineering" },
+    { name: "MNNIT Allahabad", branch: "Computer Science", cr: 2500, lr: 4800, type: "Engineering" },
+    { name: "NIT Rourkela", branch: "Electrical Eng.", cr: 6000, lr: 9500, type: "Engineering" },
+    { name: "MNIT Jaipur", branch: "Computer Science", cr: 3000, lr: 5800, type: "Engineering" },
+    { name: "NIT Calicut", branch: "Computer Science", cr: 4000, lr: 7200, type: "Engineering" },
+    { name: "NIT Durgapur", branch: "Mechanical Eng.", cr: 12000, lr: 18000, type: "Engineering" },
+    { name: "NIT Kurukshetra", branch: "Information Tech.", cr: 7000, lr: 11000, type: "Engineering" },
+    { name: "IIIT Sri City", branch: "Computer Science", cr: 22000, lr: 28000, type: "Engineering" },
+    { name: "NIT Silchar", branch: "Civil Engineering", cr: 25000, lr: 35000, type: "Engineering" }
+  ],
+  neet: [
+    { name: "AIIMS New Delhi", branch: "MBBS", cr: 50, lr: 55, type: "Medical" },
+    { name: "JIPMER Puducherry", branch: "MBBS", cr: 200, lr: 220, type: "Medical" },
+    { name: "MAMC Delhi", branch: "MBBS", cr: 1000, lr: 1100, type: "Medical" },
+    { name: "CMC Vellore", branch: "MBBS", cr: 1500, lr: 1800, type: "Medical" },
+    { name: "KGMU Lucknow", branch: "MBBS", cr: 2500, lr: 2800, type: "Medical" },
+    { name: "AFMC Pune", branch: "MBBS", cr: 4000, lr: 4500, type: "Medical" },
+    { name: "Grant Medical College", branch: "MBBS", cr: 6000, lr: 6500, type: "Medical" }
+  ]
+};
 
-function predictColleges() {
-  const rankInput = document.getElementById('jee-rank').value;
-  const category = document.getElementById('jee-category').value;
-  const resultsContainer = document.getElementById('prediction-results');
+function runDashboardPrediction() {
+  const rankInput = document.getElementById('p-rank').value;
+  const category = document.getElementById('p-category').value;
+  const exam = document.getElementById('p-exam').value;
+  const resultsContainer = document.getElementById('dash-results');
 
   if (!rankInput || rankInput <= 0) {
-    showToast("Please enter a valid JEE Rank", "error");
+    showToast("Please enter a valid Rank", "error");
     return;
   }
 
   const userRank = parseInt(rankInput);
+  const examData = dashMockData[exam];
   
-  resultsContainer.classList.remove('hidden');
-  resultsContainer.innerHTML = ''; 
-
   let categoryMultiplier = 1;
   if (category === 'obc') categoryMultiplier = 1.6;
   if (category === 'sc') categoryMultiplier = 3.5;
 
-  const eligibleColleges = mockCollegeData.map(college => {
-    const adjustedRank = Math.floor(college.closingRank * categoryMultiplier);
+  let safeCount = 0;
+  let reachCount = 0;
+  let toughCount = 0;
+
+  const eligibleColleges = examData.map(college => {
+    const adjustedRank = Math.floor(college.lr * categoryMultiplier);
     
-    let probability = "Low";
-    let probClass = "";
+    let probability = "Tough";
+    let probClass = "tough";
     
-    if (userRank <= adjustedRank * 0.8) {
-      probability = "High";
-      probClass = "high";
+    if (userRank <= adjustedRank * 0.7) {
+      probability = "Safe";
+      probClass = "safe";
+      safeCount++;
     } else if (userRank <= adjustedRank * 1.1) {
+      probability = "Reach";
+      probClass = "reach";
+      reachCount++;
+    } else if (userRank <= adjustedRank * 1.5) {
       probability = "Borderline";
-      probClass = "medium";
+      probClass = "tough"; 
+      toughCount++;
     }
 
     return { ...college, adjustedRank, probability, probClass };
-  }).filter(college => userRank <= college.adjustedRank * 1.1); 
+  }).filter(college => userRank <= college.adjustedRank * 1.5); 
+
+  document.getElementById('stat-safe').textContent = safeCount;
+  document.getElementById('stat-reach').textContent = reachCount;
+  document.getElementById('stat-tough').textContent = toughCount;
 
   if (eligibleColleges.length === 0) {
-    resultsContainer.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--muted2);">No engineering colleges found in this rank range. Try adjusting your inputs!</p>`;
+    resultsContainer.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">📉</div>
+        <h3>No direct matches found</h3>
+        <p>Your rank is currently outside the simulated historical cutoffs for our database. Try checking state-level counseling options!</p>
+      </div>`;
     return;
   }
 
-  eligibleColleges.forEach(college => {
-    const card = document.createElement('div');
-    card.className = 'pred-card';
-    card.innerHTML = `
-      <h3>${college.name}</h3>
-      <span class="pred-tag">${college.branch}</span>
-      <div class="pred-stat">Cutoff Trend: ~${college.adjustedRank}</div>
-      <div class="pred-stat">Admission Chance: <span class="probability ${college.probClass}">${college.probability}</span></div>
-    `;
-    resultsContainer.appendChild(card);
-  });
-  
-  // Auto-scroll to results
-  resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  resultsContainer.innerHTML = eligibleColleges.map(college => `
+    <div class="pred-card">
+      <div class="pred-card-top">
+        <h3 title="${college.name}">${college.name.length > 20 ? college.name.substring(0, 20) + '...' : college.name}</h3>
+        <span class="pred-badge ${college.probClass}">${college.probability}</span>
+      </div>
+      <span class="pred-tag">${college.type} · ${college.branch}</span>
+      <div class="pred-card-bot">
+        <div class="pred-stat-sm">Est. Cutoff <strong>AIR ${college.adjustedRank}</strong></div>
+        <button class="cc-btn p" style="max-width: 80px;" onclick="go('explore')">Explore</button>
+      </div>
+    </div>
+  `).join('');
 }
 
 /* ══════════════ UTILS ══════════════ */
