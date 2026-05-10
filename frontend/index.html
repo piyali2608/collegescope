@@ -63,13 +63,11 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .btn-o{padding:12px 26px;border-radius:var(--r2);font-size:14px;font-weight:600;background:transparent;color:var(--text);border:1px solid var(--border2);cursor:pointer;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif}
 .btn-o:hover{background:var(--bg3);transform:translateY(-2px)}
 
-/* Recently searched */
 .recent-bar{display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:20px}
 .recent-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
 .recent-chip{padding:4px 12px;border-radius:999px;border:1px solid var(--border2);font-size:12px;color:var(--muted2);cursor:pointer;background:var(--bg2);transition:all .15s}
 .recent-chip:hover{border-color:var(--gold);color:var(--gold)}
 
-/* Stats strip */
 .stats-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border)}
 .ss-item{padding:24px;border-right:1px solid var(--border);text-align:center}
 .ss-item:last-child{border-right:none}
@@ -77,14 +75,12 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .ss-num span{color:var(--gold)}
 .ss-lbl{font-size:11px;color:var(--muted);margin-top:3px;letter-spacing:.3px}
 
-/* Section */
 .sec{max-width:1100px;margin:0 auto;padding:48px 1.5rem}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
 .sec-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--text)}
 .sec-link{font-size:13px;color:var(--gold);cursor:pointer;border:none;background:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:500}
 .sec-link:hover{text-decoration:underline}
 
-/* Featured horizontal scroll */
 .feat-scroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px}
 .feat-scroll::-webkit-scrollbar{height:2px}
 .feat-card{flex:0 0 260px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;cursor:pointer;transition:all .2s}
@@ -101,7 +97,6 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .fst-v{font-size:16px;font-weight:600;color:var(--text)}
 .fst-l{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
 
-/* Type grid */
 .type-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .type-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:18px 14px;text-align:center;cursor:pointer;transition:all .2s}
 .type-card:hover{border-color:var(--border2);transform:translateY(-2px)}
@@ -109,7 +104,7 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .type-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
 .type-cnt{font-size:11px;color:var(--muted)}
 
-/* ═══ PREDICTOR DASHBOARD ═══ */
+/* ═══ PREDICTOR ═══ */
 .dash-wrap{display:grid;grid-template-columns:300px 1fr;min-height:calc(100vh - 58px);max-width:100%}
 .dash-sidebar{background:var(--bg1);border-right:1px solid var(--border);padding:24px;position:sticky;top:58px;height:calc(100vh - 58px);overflow-y:auto}
 .dash-sidebar::-webkit-scrollbar{width:2px}
@@ -122,7 +117,6 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .input-group input:focus,.input-group select:focus{border-color:var(--gold)}
 #predict-btn{width:100%;padding:14px;background:var(--gold);color:#0a0800;border:none;border-radius:var(--r2);font-weight:700;cursor:pointer;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif;margin-top:10px}
 #predict-btn:hover{background:var(--goldL);transform:translateY(-2px)}
-
 .dash-main{padding:32px;background:var(--bg)}
 .dash-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
 .stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:20px;display:flex;align-items:center;gap:16px}
@@ -132,7 +126,6 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .stat-icon.tough{background:rgba(255,107,107,0.1);color:var(--red)}
 .stat-info h4{font-size:24px;font-family:'Syne',sans-serif;margin-bottom:4px}
 .stat-info p{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-
 .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
 .pred-card{background:var(--bg3);padding:20px;border-radius:var(--r2);border:1px solid var(--border);transition:all .2s;display:flex;flex-direction:column}
 .pred-card:hover{transform:translateY(-3px);border-color:var(--border2)}
@@ -141,6 +134,7 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--bg);color:var
 .pred-badge{padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;text-transform:uppercase}
 .pred-badge.safe{background:rgba(61,220,132,0.1);color:var(--green);border:1px solid rgba(61,220,132,0.2)}
 .pred-badge.reach{background:rgba(212,168,67,0.1);color:var(--gold);border:1px solid rgba(212,168,67,0.2)}
+.pred-badge.tough{background:rgba(255,107,107,0.1);color:var(--red);border:1px solid rgba(255,107,107,0.2)}
 .pred-tag{display:inline-block;font-size:12px;color:var(--muted2);margin-bottom:16px}
 .pred-card-bot{margin-top:auto;padding-top:16px;border-top:1px dashed var(--border2);display:flex;justify-content:space-between;align-items:center}
 .pred-stat-sm{font-size:11px;color:var(--muted)}
@@ -213,7 +207,6 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 .cc-btn.p:hover{background:var(--goldL)}
 .cc-btn.ca{background:rgba(212,168,67,0.1);border-color:var(--gold);color:var(--gold)}
 
-/* list view card */
 .cc.lv{display:grid;grid-template-columns:5px 200px 1fr auto;align-items:stretch;gap:0}
 .cc.lv .cc-img-wrap{height:auto;width:200px;flex-shrink:0}
 .cc.lv .cc-img{height:100%}
@@ -223,7 +216,6 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 .cc.lv .cc-stats{grid-template-columns:repeat(3,1fr)}
 .cc.lv .cc-actions{border-top:none;border-left:1px solid var(--border);flex-direction:column;padding:14px 12px;justify-content:center;min-width:100px}
 
-/* loading shimmer */
 .shimmer{background:linear-gradient(90deg,var(--bg2) 0%,var(--bg3) 50%,var(--bg2) 100%);background-size:200%;animation:sh 1.4s infinite}
 @keyframes sh{0%{background-position:200%}100%{background-position:-200%}}
 .sk-card{border-radius:var(--r2);overflow:hidden;border:1px solid var(--border)}
@@ -252,16 +244,77 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 .d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .d-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:20px}
 .d-card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:7px}
-.wiki-notice{font-size:11px;color:var(--muted);background:var(--bg4);border-radius:var(--r);padding:8px 12px;border:1px solid var(--border);margin-bottom:12px;line-height:1.5}
 
 .course-row{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg4);border-radius:var(--r);margin-bottom:6px}
 .cr-name{font-size:13px;color:var(--text)}
 .cr-lvl{font-size:10px;padding:2px 7px;border-radius:999px;background:var(--bg2);color:var(--muted);border:1px solid var(--border)}
 
-.review-card{padding:12px;background:var(--bg4);border-radius:var(--r2);border-left:3px solid var(--gold);margin-bottom:10px}
+/* ── REVIEWS ENHANCED ── */
+.reviews-section{margin-top:0}
+.reviews-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.reviews-summary{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding:14px;background:var(--bg4);border-radius:var(--r2);border:1px solid var(--border)}
+.rs-big{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;line-height:1;color:var(--gold)}
+.rs-stars{font-size:16px;color:var(--gold);margin-bottom:3px}
+.rs-count{font-size:11px;color:var(--muted)}
+.rs-bars{flex:1}
+.rs-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.rs-bar-lbl{font-size:11px;color:var(--muted);width:14px;text-align:right}
+.rs-bar-bg{flex:1;height:4px;background:var(--bg2);border-radius:2px;overflow:hidden}
+.rs-bar-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .8s ease}
+.rs-bar-cnt{font-size:10px;color:var(--muted);width:20px}
+.write-review-btn{padding:8px 16px;border-radius:var(--r2);background:rgba(212,168,67,0.1);color:var(--gold);border:1px solid rgba(212,168,67,0.3);font-size:12px;font-weight:600;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s;white-space:nowrap}
+.write-review-btn:hover{background:rgba(212,168,67,0.2)}
+.review-card{padding:14px;background:var(--bg4);border-radius:var(--r2);border-left:3px solid var(--gold);margin-bottom:10px;animation:fu .3s ease both}
+.review-card.new-review{border-left-color:var(--green);animation:fu .4s ease both}
+.rv-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.rv-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.rv-name{font-size:13px;font-weight:600;color:var(--text)}
+.rv-program{font-size:11px;color:var(--muted)}
+.rv-stars-sm{font-size:12px;color:var(--gold);margin-left:auto}
 .rv-text{font-size:13px;line-height:1.6;color:var(--muted2)}
-.rv-footer{display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--muted)}
-.rv-stars{color:var(--gold)}
+.rv-footer{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);align-items:center}
+.rv-helpful{background:none;border:1px solid var(--border);border-radius:var(--r);padding:3px 9px;font-size:11px;color:var(--muted);cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.rv-helpful:hover{border-color:var(--border2);color:var(--text)}
+.rv-helpful.liked{color:var(--green);border-color:rgba(61,220,132,0.3)}
+.rv-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.rv-tag{padding:2px 8px;border-radius:999px;font-size:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg3)}
+.no-reviews{text-align:center;padding:28px;color:var(--muted);font-size:13px}
+.review-filter-bar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.rv-filter-btn{padding:4px 10px;border-radius:999px;font-size:11px;border:1px solid var(--border);background:none;color:var(--muted2);cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.rv-filter-btn.on{background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.4);color:var(--gold)}
+
+/* ── REVIEW MODAL ── */
+.review-modal-bd{position:fixed;inset:0;z-index:3500;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:1rem}
+.review-modal-bd.on{display:flex}
+.review-modal{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r3);width:100%;max-width:500px;overflow:hidden;animation:mup .25s ease;position:relative}
+@keyframes mup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.rm-header{padding:22px 24px 16px;border-bottom:1px solid var(--border)}
+.rm-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:4px}
+.rm-sub{font-size:12px;color:var(--muted)}
+.rm-close{position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);cursor:pointer;color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center}
+.rm-close:hover{color:var(--text)}
+.rm-body{padding:20px 24px}
+.rm-group{margin-bottom:16px}
+.rm-label{font-size:12px;font-weight:600;color:var(--muted2);margin-bottom:8px;display:block}
+.rm-input{width:100%;padding:10px 14px;border-radius:var(--r2);background:var(--bg3);border:1px solid var(--border);color:var(--text);font-size:14px;font-family:'Bricolage Grotesque',sans-serif;outline:none;transition:all .15s}
+.rm-input:focus{border-color:var(--gold)}
+.rm-input::placeholder{color:var(--muted)}
+.rm-textarea{width:100%;padding:12px 14px;border-radius:var(--r2);background:var(--bg3);border:1px solid var(--border);color:var(--text);font-size:13px;font-family:'Bricolage Grotesque',sans-serif;outline:none;resize:vertical;min-height:90px;transition:all .15s;line-height:1.6}
+.rm-textarea:focus{border-color:var(--gold)}
+.rm-textarea::placeholder{color:var(--muted)}
+.star-picker{display:flex;gap:6px;font-size:26px;cursor:pointer;margin-bottom:4px}
+.star-picker span{transition:transform .1s;user-select:none;opacity:.35}
+.star-picker span.lit{opacity:1;color:var(--gold)}
+.star-picker span:hover{transform:scale(1.15)}
+.star-label{font-size:11px;color:var(--muted);height:16px}
+.rm-tags-grid{display:flex;flex-wrap:wrap;gap:6px}
+.rm-tag-pick{padding:5px 12px;border-radius:999px;font-size:11px;border:1px solid var(--border);background:none;color:var(--muted2);cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.rm-tag-pick:hover{border-color:var(--border2);color:var(--text)}
+.rm-tag-pick.sel{background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.4);color:var(--gold)}
+.rm-footer{padding:16px 24px;border-top:1px solid var(--border);display:flex;gap:10px}
+.rm-submit{flex:1;padding:12px;border-radius:var(--r2);background:var(--gold);color:#0a0800;border:none;font-size:14px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:background .15s}
+.rm-submit:hover{background:var(--goldL)}
+.rm-cancel{padding:12px 20px;border-radius:var(--r2);background:none;color:var(--muted2);border:1px solid var(--border);font-size:14px;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif}
 
 .plc-big{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;line-height:1}
 .plc-bar{height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin:8px 0}
@@ -284,7 +337,6 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 .cmp-empty{text-align:center;padding:80px 24px;color:var(--muted)}
 .cmp-empty-icon{font-size:48px;margin-bottom:14px}
 .cmp-empty-title{font-size:18px;font-weight:600;color:var(--text);margin-bottom:6px}
-
 .cmp-tbl-wrap{overflow-x:auto}
 .cmp-tbl{width:100%;border-collapse:separate;border-spacing:0;min-width:560px}
 .cmp-tbl th,.cmp-tbl td{padding:0;border:none}
@@ -318,11 +370,83 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 .cbar-go:hover{background:var(--goldL)}
 .cbar-go:disabled{background:var(--bg4);color:var(--muted);cursor:not-allowed}
 
+/* ═══ EXAMS PAGE ═══ */
+.exams-wrap{max-width:1100px;margin:0 auto;padding:40px 1.5rem 80px}
+.exams-hero{text-align:center;margin-bottom:48px;position:relative}
+.exams-hero::before{content:'';position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:400px;height:300px;background:radial-gradient(ellipse,rgba(91,156,246,0.08) 0%,transparent 70%);pointer-events:none}
+.exams-hero h1{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;margin-bottom:12px;position:relative}
+.exams-hero h1 em{font-style:normal;color:var(--blue)}
+.exams-hero p{font-size:15px;color:var(--muted2);max-width:480px;margin:0 auto}
+.exams-tab-bar{display:flex;gap:8px;justify-content:center;margin-bottom:36px;flex-wrap:wrap}
+.exam-tab{padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;border:1px solid var(--border2);background:none;color:var(--muted2);cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .2s}
+.exam-tab:hover{color:var(--text);border-color:var(--border2);background:var(--bg2)}
+.exam-tab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.exams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.exam-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r3);overflow:hidden;cursor:pointer;transition:all .25s;animation:fu .3s ease both}
+.exam-card:hover{transform:translateY(-4px);border-color:var(--border2);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.exam-card-top{padding:22px 22px 16px;position:relative}
+.exam-accent-bar{position:absolute;top:0;left:0;right:0;height:3px}
+.exam-icon-wrap{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.exam-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.exam-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--text);margin-bottom:2px}
+.exam-full-name{font-size:11px;color:var(--muted);font-weight:400}
+.exam-desc{font-size:12px;color:var(--muted2);line-height:1.6;margin-bottom:16px}
+.exam-pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.exam-pill{padding:4px 10px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.3px}
+.exam-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:0}
+.exam-stat{background:var(--bg3);border-radius:var(--r);padding:10px 12px;text-align:center;border:1px solid var(--border)}
+.exam-stat-v{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--text)}
+.exam-stat-l{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:2px}
+.exam-card-bot{padding:14px 22px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.exam-dates{font-size:11px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
+.exam-dates strong{color:var(--text);font-size:12px}
+.exam-view-btn{padding:8px 18px;border-radius:var(--r);background:var(--bg3);color:var(--muted2);border:1px solid var(--border);font-size:12px;font-weight:600;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.exam-view-btn:hover{color:var(--text);background:var(--bg4)}
+
+/* EXAM DETAIL */
+.exam-detail-wrap{max-width:900px;margin:0 auto;padding:32px 1.5rem 80px}
+.exam-d-hero{border-radius:var(--r3);overflow:hidden;margin-bottom:24px;padding:36px;position:relative}
+.exam-d-hero::before{content:'';position:absolute;inset:0;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.exam-d-name{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:#fff;letter-spacing:-2px;margin-bottom:6px}
+.exam-d-full{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:18px}
+.exam-d-tags{display:flex;gap:8px;flex-wrap:wrap}
+.exam-d-tag{padding:5px 14px;border-radius:999px;font-size:12px;font-weight:600;background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.15)}
+
+.exam-d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.exam-d-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:20px}
+.exam-d-card-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.5px}
+.exam-timeline{list-style:none}
+.etl-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.etl-item:last-child{border-bottom:none}
+.etl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.etl-label{font-size:12px;color:var(--muted);margin-bottom:2px}
+.etl-val{font-size:13px;color:var(--text);font-weight:500}
+.exam-pattern-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px}
+.exam-pattern-row:last-child{border-bottom:none}
+.exam-pattern-row span:first-child{color:var(--muted);font-size:12px}
+.exam-pattern-row span:last-child{color:var(--text);font-weight:500}
+.exam-syllabus-tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.syl-tab{padding:5px 13px;border-radius:var(--r);font-size:12px;border:1px solid var(--border);background:none;color:var(--muted2);cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .15s}
+.syl-tab.on{background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.3);color:var(--gold)}
+.syl-list{display:flex;flex-direction:column;gap:5px}
+.syl-item{padding:7px 10px;background:var(--bg4);border-radius:var(--r);font-size:12px;color:var(--muted2);border:1px solid var(--border);display:flex;align-items:center;gap:7px}
+.syl-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.exam-colleges-list{display:flex;flex-direction:column;gap:8px}
+.ecl-item{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--bg4);border-radius:var(--r);border:1px solid var(--border);cursor:pointer;transition:all .15s}
+.ecl-item:hover{border-color:var(--border2)}
+.ecl-name{font-size:12px;font-weight:600;color:var(--text)}
+.ecl-loc{font-size:11px;color:var(--muted)}
+.ecl-arrow{font-size:11px;color:var(--muted)}
+.exam-tips{background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.15);border-radius:var(--r2);padding:18px;margin-bottom:16px}
+.exam-tips-title{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.exam-tips-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.exam-tips-list li{font-size:12px;color:var(--muted2);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.exam-tips-list li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:1px}
+
 /* ═══ LOGIN MODAL ═══ */
 .modal-backdrop{position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:1rem}
 .modal-backdrop.on{display:flex}
 .modal{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r3);width:100%;max-width:420px;overflow:hidden;animation:mup .25s ease}
-@keyframes mup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .modal-top{padding:28px 28px 0;text-align:center}
 .modal-logo{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:6px;color:var(--text)}
 .modal-logo em{color:var(--gold);font-style:normal}
@@ -347,20 +471,17 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 .modal-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);cursor:pointer;color:var(--muted);font-size:14px;display:flex;align-items:center;justify-content:center;font-family:sans-serif}
 .modal-close:hover{color:var(--text)}
 
-/* User dropdown */
 .user-menu{position:absolute;top:52px;right:16px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);padding:8px;min-width:180px;z-index:2100;box-shadow:0 12px 40px rgba(0,0,0,.5);animation:mup .2s ease}
 .user-menu-item{padding:9px 12px;border-radius:var(--r);font-size:13px;color:var(--muted2);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:8px}
 .user-menu-item:hover{background:var(--bg3);color:var(--text)}
 .user-menu-item.danger{color:var(--red)}
 .user-name{font-size:12px;font-weight:600;color:var(--text);padding:8px 12px;border-bottom:1px solid var(--border);margin-bottom:4px}
 
-/* ═══ TOAST ═══ */
 #toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);padding:10px 20px;font-size:13px;color:var(--text);z-index:4000;opacity:0;transition:all .3s;white-space:nowrap;pointer-events:none}
 #toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 #toast.success{border-color:rgba(61,220,132,.3);color:var(--green)}
 #toast.error{border-color:rgba(255,107,107,.3);color:var(--red)}
 
-/* misc */
 .nores{text-align:center;padding:60px 24px;color:var(--muted);grid-column:1/-1}
 .nores-e{font-size:40px;margin-bottom:12px}
 .badge-pos{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600;margin-left:6px}
@@ -376,6 +497,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
     <button class="nl" id="nl-explore" onclick="go('explore')">Explore</button>
     <button class="nl" id="nl-predict" onclick="go('predict')">Predictor</button>
     <button class="nl" id="nl-compare" onclick="go('compare')">Compare</button>
+    <button class="nl" id="nl-exams" onclick="go('exams')">Exams</button>
   </div>
   <div class="nav-right" id="nav-right">
     <button class="nav-login-btn" onclick="openLogin()">Sign In</button>
@@ -414,13 +536,64 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
   </div>
 </div>
 
-<!-- USER MENU (hidden) -->
+<!-- USER MENU -->
 <div id="user-menu" style="display:none" class="user-menu">
   <div class="user-name" id="user-name-label">Guest User</div>
   <div class="user-menu-item" onclick="go('explore')">🔍 Explore Colleges</div>
+  <div class="user-menu-item" onclick="go('exams')">📝 Exam Center</div>
   <div class="user-menu-item" onclick="go('compare')">⚖️ Compare</div>
   <div class="user-menu-item" onclick="clearRecent()">🕐 Clear History</div>
   <div class="user-menu-item danger" onclick="doLogout()">↩ Sign Out</div>
+</div>
+
+<!-- REVIEW MODAL -->
+<div class="review-modal-bd" id="review-modal" onclick="reviewModalBgClick(event)">
+  <div class="review-modal">
+    <div class="rm-header">
+      <div class="rm-title">Write a Review</div>
+      <div class="rm-sub" id="rm-college-name">Share your experience</div>
+      <button class="rm-close" onclick="closeReviewModal()">✕</button>
+    </div>
+    <div class="rm-body">
+      <div class="rm-group">
+        <label class="rm-label">Your Program</label>
+        <input class="rm-input" id="rm-program" placeholder="e.g. B.Tech CSE '25">
+      </div>
+      <div class="rm-group">
+        <label class="rm-label">Overall Rating</label>
+        <div class="star-picker" id="star-picker">
+          <span onclick="setStars(1)">★</span>
+          <span onclick="setStars(2)">★</span>
+          <span onclick="setStars(3)">★</span>
+          <span onclick="setStars(4)">★</span>
+          <span onclick="setStars(5)">★</span>
+        </div>
+        <div class="star-label" id="star-label">Click to rate</div>
+      </div>
+      <div class="rm-group">
+        <label class="rm-label">Your Review</label>
+        <textarea class="rm-textarea" id="rm-text" placeholder="Tell future students about academics, campus life, placements, faculty..." maxlength="400"></textarea>
+        <div style="font-size:11px;color:var(--muted);text-align:right;margin-top:4px"><span id="rm-char">0</span>/400</div>
+      </div>
+      <div class="rm-group">
+        <label class="rm-label">Tags (select all that apply)</label>
+        <div class="rm-tags-grid" id="rm-tags">
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Great Placements</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Strong Faculty</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Vibrant Campus</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Good Infrastructure</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Research Focus</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Affordable</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">High Workload</button>
+          <button class="rm-tag-pick" onclick="toggleRmTag(this)">Active Clubs</button>
+        </div>
+      </div>
+    </div>
+    <div class="rm-footer">
+      <button class="rm-cancel" onclick="closeReviewModal()">Cancel</button>
+      <button class="rm-submit" onclick="submitReview()">Post Review →</button>
+    </div>
+  </div>
 </div>
 
 <!-- TOAST -->
@@ -446,17 +619,17 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
       </div>
       <div class="hero-btns">
         <button class="btn-g" onclick="go('explore')">Explore All Colleges →</button>
+        <button class="btn-o" onclick="go('exams')">📝 Exam Center</button>
         <button class="btn-o" onclick="go('predict')">Rank Predictor</button>
       </div>
     </div>
   </div>
   <div class="stats-strip">
     <div class="ss-item"><div class="ss-num">10<span>+</span></div><div class="ss-lbl">Top Institutions</div></div>
-    <div class="ss-item"><div class="ss-num">5</div><div class="ss-lbl">Disciplines</div></div>
+    <div class="ss-item"><div class="ss-num">8</div><div class="ss-lbl">Major Exams</div></div>
     <div class="ss-item"><div class="ss-num">94<span>%</span></div><div class="ss-lbl">Avg. Placement</div></div>
     <div class="ss-item"><div class="ss-num">4.6<span>★</span></div><div class="ss-lbl">Avg. Rating</div></div>
   </div>
-
   <div class="sec">
     <div class="sec-head"><div class="sec-title">⭐ Top Rated</div><button class="sec-link" onclick="go('explore')">View all →</button></div>
     <div class="feat-scroll" id="feat-scroll">
@@ -471,7 +644,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
   </div>
 </div>
 
-<!-- ═══ PREDICTOR DASHBOARD (NEW) ═══ -->
+<!-- ═══ PREDICTOR ═══ -->
 <div class="pg" id="pg-predict">
   <div class="dash-wrap">
     <div class="dash-sidebar">
@@ -479,52 +652,34 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
         <h2>🎯 Predictor Dashboard</h2>
         <p>Enter your exam credentials to simulate potential college allotments based on previous year trends.</p>
       </div>
-
       <div class="input-group">
-        <label for="p-exam">Entrance Exam</label>
+        <label>Entrance Exam</label>
         <select id="p-exam">
           <option value="jee">JEE Main (Engineering)</option>
           <option value="neet">NEET UG (Medical)</option>
         </select>
       </div>
-
       <div class="input-group">
-        <label for="p-rank">Your All India Rank (AIR)</label>
+        <label>Your All India Rank (AIR)</label>
         <input type="number" id="p-rank" placeholder="e.g. 15000" min="1">
       </div>
-
       <div class="input-group">
-        <label for="p-category">Category</label>
+        <label>Category</label>
         <select id="p-category">
           <option value="general">General (OPEN)</option>
           <option value="obc">OBC-NCL</option>
           <option value="sc">SC / ST</option>
         </select>
       </div>
-
       <button id="predict-btn" onclick="runDashboardPrediction()">Generate Insights →</button>
     </div>
-
     <div class="dash-main">
       <div class="dash-stats-row">
-        <div class="stat-card">
-          <div class="stat-icon safe">✓</div>
-          <div class="stat-info"><h4 id="stat-safe">0</h4><p>Safe Matches</p></div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon reach">⚡</div>
-          <div class="stat-info"><h4 id="stat-reach">0</h4><p>Reach Matches</p></div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon tough">✕</div>
-          <div class="stat-info"><h4 id="stat-tough">0</h4><p>Tough Chances</p></div>
-        </div>
+        <div class="stat-card"><div class="stat-icon safe">✓</div><div class="stat-info"><h4 id="stat-safe">0</h4><p>Safe Matches</p></div></div>
+        <div class="stat-card"><div class="stat-icon reach">⚡</div><div class="stat-info"><h4 id="stat-reach">0</h4><p>Reach Matches</p></div></div>
+        <div class="stat-card"><div class="stat-icon tough">✕</div><div class="stat-info"><h4 id="stat-tough">0</h4><p>Tough Chances</p></div></div>
       </div>
-
-      <div class="sec-head" style="margin-bottom: 20px;">
-        <div class="sec-title" style="font-size: 18px;">Simulated Results</div>
-      </div>
-
+      <div class="sec-head" style="margin-bottom:20px"><div class="sec-title" style="font-size:18px">Simulated Results</div></div>
       <div id="dash-results" class="results-grid">
         <div class="empty-state">
           <div class="empty-state-icon">📊</div>
@@ -540,10 +695,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 <div class="pg" id="pg-explore">
   <div class="explore-wrap">
     <div class="sidebar">
-      <div class="sb-sec">
-        <div class="sb-label">Discipline</div>
-        <div id="sb-type"></div>
-      </div>
+      <div class="sb-sec"><div class="sb-label">Discipline</div><div id="sb-type"></div></div>
       <div class="sb-sec">
         <div class="sb-label">Min. Placement %</div>
         <div class="range-row"><span>0%</span><span id="plc-v" style="color:var(--gold)">0%</span></div>
@@ -563,10 +715,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
           <button class="rtg-btn" onclick="setRtg(4.8,this)">4.8+</button>
         </div>
       </div>
-      <div class="sb-sec">
-        <div class="sb-label">State</div>
-        <div id="sb-state"></div>
-      </div>
+      <div class="sb-sec"><div class="sb-label">State</div><div id="sb-state"></div></div>
     </div>
     <div class="explore-main">
       <div class="e-toolbar">
@@ -603,6 +752,31 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
   </div>
 </div>
 
+<!-- ═══ EXAMS ═══ -->
+<div class="pg" id="pg-exams">
+  <div class="exams-wrap">
+    <div class="exams-hero">
+      <div style="position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:400px;height:300px;background:radial-gradient(ellipse,rgba(91,156,246,0.08) 0%,transparent 70%);pointer-events:none"></div>
+      <h1 style="font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;margin-bottom:12px;position:relative">India's Major <em style="font-style:normal;color:var(--blue)">Entrance Exams</em></h1>
+      <p style="font-size:15px;color:var(--muted2);max-width:480px;margin:0 auto 32px">Comprehensive guides for JEE, NEET, CAT, CLAT and more — dates, syllabus, pattern & top colleges.</p>
+      <div class="exams-tab-bar" id="exam-tab-bar">
+        <button class="exam-tab on" onclick="filterExams('all',this)">All Exams</button>
+        <button class="exam-tab" onclick="filterExams('Engineering',this)">Engineering</button>
+        <button class="exam-tab" onclick="filterExams('Medical',this)">Medical</button>
+        <button class="exam-tab" onclick="filterExams('Management',this)">Management</button>
+        <button class="exam-tab" onclick="filterExams('Law',this)">Law</button>
+        <button class="exam-tab" onclick="filterExams('Design',this)">Design</button>
+      </div>
+    </div>
+    <div class="exams-grid" id="exams-grid"></div>
+  </div>
+</div>
+
+<!-- ═══ EXAM DETAIL ═══ -->
+<div class="pg" id="pg-examdetail">
+  <div class="exam-detail-wrap" id="exam-detail-inner"></div>
+</div>
+
 <!-- COMPARE BAR -->
 <div id="cbar">
   <span class="cbar-label">Compare:</span>
@@ -612,146 +786,53 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:13px;height:13px;b
 </div>
 
 <script>
-/* ══════════════ DATA ══════════════ */
+/* ══════════ DATA ══════════ */
 const COLLEGES = [
-  {id:1,name:"Indian Institute of Technology Bombay",short:"IIT Bombay",
-   location:"Mumbai, Maharashtra",city:"Mumbai",state:"Maharashtra",
-   type:"Engineering",fees:900000,placement:95,rating:4.9,est:1958,
-   color:"#5b9cf6",
-   wiki:"Indian_Institute_of_Technology_Bombay",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/IIT_Bombay_Main_Building.jpg/1280px-IIT_Bombay_Main_Building.jpg",
-   courses:[{n:"B.Tech Computer Science",l:"UG",d:4,s:120},{n:"B.Tech Electrical",l:"UG",d:4,s:80},{n:"M.Tech Data Science",l:"PG",d:2,s:60},{n:"PhD Computer Science",l:"PhD",d:5,s:30}],
-   reviews:[{a:"Rahul S.",p:"B.Tech CSE",y:2022,r:5,t:"World-class faculty and research labs. Placement season is intense but incredibly rewarding."},{a:"Priya M.",p:"M.Tech",y:2023,r:5,t:"The campus culture and peer network is unmatched anywhere in India."}],
-   recruiters:["Google","Microsoft","Goldman Sachs","McKinsey","Qualcomm","DE Shaw"]},
-  {id:2,name:"Indian Institute of Management Ahmedabad",short:"IIM-A",
-   location:"Ahmedabad, Gujarat",city:"Ahmedabad",state:"Gujarat",
-   type:"Management",fees:2400000,placement:100,rating:4.8,est:1961,
-   color:"#f97316",
-   wiki:"Indian_Institute_of_Management_Ahmedabad",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/IIMA_main_entrance.jpg/1280px-IIMA_main_entrance.jpg",
-   courses:[{n:"MBA (PGP)",l:"PG",d:2,s:385},{n:"Executive MBA",l:"Executive",d:1,s:120},{n:"PhD Management",l:"PhD",d:5,s:20}],
-   reviews:[{a:"Neha K.",p:"MBA",y:2023,r:5,t:"The case method here is transformative. Peers push you harder than the professors."},{a:"Aditya P.",p:"MBA",y:2022,r:5,t:"100% placement with median CTC above ₹28 LPA speaks for itself."}],
-   recruiters:["BCG","Bain","McKinsey","Goldman Sachs","Amazon","Flipkart"]},
-  {id:3,name:"All India Institute of Medical Sciences",short:"AIIMS Delhi",
-   location:"New Delhi, Delhi",city:"New Delhi",state:"Delhi",
-   type:"Medical",fees:6500,placement:99,rating:4.9,est:1956,
-   color:"#3ddc84",
-   wiki:"All_India_Institute_of_Medical_Sciences,_New_Delhi",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/AIIMS_main_block.jpg/1280px-AIIMS_main_block.jpg",
-   courses:[{n:"MBBS",l:"UG",d:5.5,s:107},{n:"MD General Medicine",l:"PG",d:3,s:30},{n:"MS Surgery",l:"PG",d:3,s:25},{n:"PhD Biomedical",l:"PhD",d:5,s:20}],
-   reviews:[{a:"Dr. Sonal R.",p:"MBBS",y:2021,r:5,t:"Exposure to rare cases from across India makes AIIMS a unique clinical training ground."},{a:"Dr. Vikram T.",p:"MD",y:2023,r:5,t:"The residency load is heavy but the skills you build are unparalleled."}],
-   recruiters:["AIIMS Hospitals","Fortis","Apollo","Max Healthcare","Armed Forces Medical"]},
-  {id:4,name:"National Law School of India University",short:"NLSIU Bangalore",
-   location:"Bengaluru, Karnataka",city:"Bengaluru",state:"Karnataka",
-   type:"Law",fees:220000,placement:92,rating:4.7,est:1987,
-   color:"#c084fc",
-   wiki:"National_Law_School_of_India_University",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/NLSIU_Main_Gate.jpg/1280px-NLSIU_Main_Gate.jpg",
-   courses:[{n:"BA LLB (Hons)",l:"UG",d:5,s:80},{n:"LLM",l:"PG",d:1,s:30},{n:"PhD Law",l:"PhD",d:5,s:10}],
-   reviews:[{a:"Ananya G.",p:"BA LLB",y:2022,r:5,t:"Moot court culture is exceptional. I won two national competitions in my first year."},{a:"Rohan M.",p:"LLM",y:2023,r:4.5,t:"Best law school in India, period. Faculty research is genuinely cutting-edge."}],
-   recruiters:["AZB & Partners","Cyril Amarchand","Trilegal","Khaitan & Co","Supreme Court"]},
-  {id:5,name:"Indian Institute of Science",short:"IISc Bangalore",
-   location:"Bengaluru, Karnataka",city:"Bengaluru",state:"Karnataka",
-   type:"Science",fees:34000,placement:98,rating:4.8,est:1909,
-   color:"#2dd4bf",
-   wiki:"Indian_Institute_of_Science",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/IISc_Bangalore_entrance.jpg/1280px-IISc_Bangalore_entrance.jpg",
-   courses:[{n:"M.Tech Computational Science",l:"PG",d:2,s:30},{n:"MSc Physics",l:"PG",d:2,s:40},{n:"PhD AI & ML",l:"PhD",d:5,s:30}],
-   reviews:[{a:"Kavya N.",p:"PhD Physics",y:2023,r:5,t:"If research is your calling, IISc is the summit. Funding and lab access are exceptional."},{a:"Arjun K.",p:"M.Tech",y:2022,r:5,t:"The interdisciplinary environment allows me to work at the intersection of ML and biology."}],
-   recruiters:["ISRO","DRDO","Intel","IBM Research","Tata Institute","IITs (Faculty)"]},
-  {id:6,name:"Birla Institute of Technology & Science",short:"BITS Pilani",
-   location:"Pilani, Rajasthan",city:"Pilani",state:"Rajasthan",
-   type:"Engineering",fees:520000,placement:89,rating:4.5,est:1964,
-   color:"#f472b6",
-   wiki:"BITS_Pilani",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Bits_pilani_main.jpg/1280px-Bits_pilani_main.jpg",
-   courses:[{n:"BE Computer Science",l:"UG",d:4,s:200},{n:"BE Electronics",l:"UG",d:4,s:180},{n:"MSc Mathematics",l:"PG",d:2,s:60}],
-   reviews:[{a:"Tanvi S.",p:"BE CSE",y:2022,r:4.5,t:"The BITS Practice School internship programme is worth the fees alone — real industry exposure."},{a:"Suresh P.",p:"BE+MSc",y:2023,r:4.5,t:"Freedom to design your schedule is fantastic. The dual-degree option is a hidden gem."}],
-   recruiters:["Microsoft","Google","Qualcomm","Samsung","Cisco","Flipkart"]},
-  {id:7,name:"Jadavpur University",short:"JU Kolkata",
-   location:"Kolkata, West Bengal",city:"Kolkata",state:"West Bengal",
-   type:"Engineering",fees:18000,placement:82,rating:4.3,est:1906,
-   color:"#f87171",
-   wiki:"Jadavpur_University",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jadavpur_University_main_building.JPG/1280px-Jadavpur_University_main_building.JPG",
-   courses:[{n:"BE Civil Engineering",l:"UG",d:4,s:120},{n:"BE Mechanical",l:"UG",d:4,s:120},{n:"BArch",l:"UG",d:5,s:40}],
-   reviews:[{a:"Debashish R.",p:"BE Mech",y:2022,r:4.5,t:"Excellent academics at a fraction of the cost. The alumni network in Kolkata is very active."},{a:"Soma D.",p:"BE Civil",y:2023,r:4,t:"Campus feels historic and vibrant. Strong focus on fundamental engineering principles."}],
-   recruiters:["TCS","Infosys","L&T","Tata Steel","ONGC","Indian Railways"]},
-  {id:8,name:"Faculty of Management Studies, Delhi",short:"FMS Delhi",
-   location:"New Delhi, Delhi",city:"New Delhi",state:"Delhi",
-   type:"Management",fees:22000,placement:97,rating:4.6,est:1954,
-   color:"#818cf8",
-   wiki:"Faculty_of_Management_Studies,_Delhi",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/FMS_Delhi_building.jpg/1280px-FMS_Delhi_building.jpg",
-   courses:[{n:"MBA",l:"PG",d:2,s:216},{n:"MBA International Business",l:"PG",d:2,s:40},{n:"Executive MBA",l:"Executive",d:1,s:100}],
-   reviews:[{a:"Nikhil B.",p:"MBA",y:2022,r:5,t:"Best ROI for an MBA in India. Top recruiter access with fees under ₹25k. Unbeatable."},{a:"Ishita V.",p:"MBA",y:2023,r:4.5,t:"Batch diversity and alumni in Fortune 500 companies make networking incredibly powerful."}],
-   recruiters:["BCG","Amazon","HDFC Bank","Deloitte","EY","Aon Hewitt"]},
-  {id:9,name:"Vellore Institute of Technology",short:"VIT Vellore",
-   location:"Vellore, Tamil Nadu",city:"Vellore",state:"Tamil Nadu",
-   type:"Engineering",fees:200000,placement:86,rating:4.2,est:1984,
-   color:"#a3e635",
-   wiki:"Vellore_Institute_of_Technology",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/VIT_University_main_entrance.jpg/1280px-VIT_University_main_entrance.jpg",
-   courses:[{n:"B.Tech CSE",l:"UG",d:4,s:1800},{n:"B.Tech Biotech",l:"UG",d:4,s:400},{n:"M.Tech AI & ML",l:"PG",d:2,s:120}],
-   reviews:[{a:"Keerthana N.",p:"B.Tech CSE",y:2022,r:4,t:"Giant campus with excellent infrastructure. Strong MNC recruiters across IT sector."},{a:"Ganesh M.",p:"B.Tech Mech",y:2023,r:4.5,t:"FFCS (fully flexible credit system) is a game-changer for academic autonomy."}],
-   recruiters:["TCS","Infosys","Wipro","HCL","Accenture","Cognizant"]},
-  {id:10,name:"Symbiosis Institute of Business Management",short:"SIBM Pune",
-   location:"Pune, Maharashtra",city:"Pune",state:"Maharashtra",
-   type:"Management",fees:1800000,placement:94,rating:4.4,est:1978,
-   color:"#fbbf24",
-   wiki:"Symbiosis_Institute_of_Business_Management",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/SIBM_Pune_campus.jpg/1280px-SIBM_Pune_campus.jpg",
-   courses:[{n:"MBA",l:"PG",d:2,s:180},{n:"MBA Innovation",l:"PG",d:2,s:60},{n:"MBA Business Analytics",l:"PG",d:2,s:60}],
-   reviews:[{a:"Roshni A.",p:"MBA",y:2022,r:4.5,t:"Vibrant campus life and excellent international immersion programmes set SIBM apart."},{a:"Karan T.",p:"MBA",y:2023,r:4,t:"Strong B-school with a fantastic alumni chapter. Industry interface cells provide great exposure."}],
-   recruiters:["Deloitte","Wipro","HDFC Bank","Mahindra","Bajaj","Asian Paints"]},
-  {id:11,name:"National Institute of Technology Tiruchirappalli",short:"NIT Trichy",
-   location:"Tiruchirappalli, Tamil Nadu",city:"Trichy",state:"Tamil Nadu",
-   type:"Engineering",fees:175000,placement:94,rating:4.6,est:1964,
-   color:"#5b9cf6",wiki:"National_Institute_of_Technology,_Tiruchirappalli",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/NITT_Admin_Block.jpg/1200px-NITT_Admin_Block.jpg",
-   courses:[{n:"B.Tech CSE",l:"UG",d:4,s:120}],recruiters:["Google","Amazon","Microsoft"],reviews:[]},
-  {id:12,name:"National Institute of Technology Karnataka",short:"NIT Surathkal",
-   location:"Surathkal, Karnataka",city:"Mangalore",state:"Karnataka",
-   type:"Engineering",fees:180000,placement:93,rating:4.5,est:1960,
-   color:"#5b9cf6",wiki:"National_Institute_of_Technology_Karnataka",
-   wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Main_Building_NITK.jpg/1200px-Main_Building_NITK.jpg",
-   courses:[{n:"B.Tech IT",l:"UG",d:4,s:110}],recruiters:["Adobe","Uber","Intuit"],reviews:[]},
-  {id:13,name:"Motilal Nehru National Institute of Technology",short:"MNNIT Allahabad",
-   location:"Prayagraj, Uttar Pradesh",city:"Prayagraj",state:"Uttar Pradesh",
-   type:"Engineering",fees:165000,placement:92,rating:4.4,est:1961,
-   color:"#5b9cf6",wiki:"Motilal_Nehru_National_Institute_of_Technology_Allahabad",
-   wikimg:"",courses:[{n:"B.Tech CSE",l:"UG",d:4,s:150}],recruiters:["De Shaw","Goldman Sachs"],reviews:[]},
-  {id:14,name:"National Institute of Technology Rourkela",short:"NIT Rourkela",
-   location:"Rourkela, Odisha",city:"Rourkela",state:"Odisha",
-   type:"Engineering",fees:170000,placement:89,rating:4.4,est:1961,
-   color:"#5b9cf6",wiki:"National_Institute_of_Technology_Rourkela",
-   wikimg:"",courses:[{n:"B.Tech Mechanical",l:"UG",d:4,s:120}],recruiters:["PwC","Tata Steel"],reviews:[]},
-  {id:15,name:"Malaviya National Institute of Technology",short:"MNIT Jaipur",
-   location:"Jaipur, Rajasthan",city:"Jaipur",state:"Rajasthan",
-   type:"Engineering",fees:175000,placement:88,rating:4.3,est:1963,
-   color:"#5b9cf6",wiki:"Malaviya_National_Institute_of_Technology_Jaipur",
-   wikimg:"",courses:[{n:"B.Tech ECE",l:"UG",d:4,s:100}],recruiters:["Samsung","Reliance"],reviews:[]},
-  {id:16,name:"Indian Institute of Information Technology Sri City",short:"IIIT Sri City",
-   location:"Sri City, Andhra Pradesh",city:"Sri City",state:"Andhra Pradesh",
-   type:"Engineering",fees:320000,placement:91,rating:4.4,est:2013,
-   color:"#5b9cf6",wiki:"Indian_Institute_of_Information_Technology,_Sri_City",
-   wikimg:"https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/IIIT_Sri_City_Logo.png/220px-IIIT_Sri_City_Logo.png",
-   courses:[{n:"B.Tech Computer Science",l:"UG",d:4,s:250},{n:"B.Tech AI & Data Science",l:"UG",d:4,s:60}],
-   reviews:[{a:"Alumni",p:"B.Tech CSE",y:2024,r:4.5,t:"Great coding culture and proximity to IT hubs makes a huge difference."}],
-   recruiters:["Amazon","Microsoft","TCS","Cognizant"]}
+  {id:1,name:"Indian Institute of Technology Bombay",short:"IIT Bombay",location:"Mumbai, Maharashtra",city:"Mumbai",state:"Maharashtra",type:"Engineering",fees:900000,placement:95,rating:4.9,est:1958,color:"#5b9cf6",wiki:"Indian_Institute_of_Technology_Bombay",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/IIT_Bombay_Main_Building.jpg/1280px-IIT_Bombay_Main_Building.jpg",courses:[{n:"B.Tech Computer Science",l:"UG",d:4,s:120},{n:"B.Tech Electrical",l:"UG",d:4,s:80},{n:"M.Tech Data Science",l:"PG",d:2,s:60},{n:"PhD Computer Science",l:"PhD",d:5,s:30}],reviews:[{id:'r1',a:"Rahul S.",p:"B.Tech CSE",y:2022,r:5,t:"World-class faculty and research labs. Placement season is intense but incredibly rewarding.",tags:["Great Placements","Research Focus"],helpful:14},{id:'r2',a:"Priya M.",p:"M.Tech",y:2023,r:5,t:"The campus culture and peer network is unmatched anywhere in India.",tags:["Vibrant Campus","Strong Faculty"],helpful:9}],recruiters:["Google","Microsoft","Goldman Sachs","McKinsey","Qualcomm","DE Shaw"]},
+  {id:2,name:"Indian Institute of Management Ahmedabad",short:"IIM-A",location:"Ahmedabad, Gujarat",city:"Ahmedabad",state:"Gujarat",type:"Management",fees:2400000,placement:100,rating:4.8,est:1961,color:"#f97316",wiki:"Indian_Institute_of_Management_Ahmedabad",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/IIMA_main_entrance.jpg/1280px-IIMA_main_entrance.jpg",courses:[{n:"MBA (PGP)",l:"PG",d:2,s:385},{n:"Executive MBA",l:"Executive",d:1,s:120},{n:"PhD Management",l:"PhD",d:5,s:20}],reviews:[{id:'r3',a:"Neha K.",p:"MBA",y:2023,r:5,t:"The case method here is transformative. Peers push you harder than the professors.",tags:["Strong Faculty","High Workload"],helpful:22},{id:'r4',a:"Aditya P.",p:"MBA",y:2022,r:5,t:"100% placement with median CTC above ₹28 LPA speaks for itself.",tags:["Great Placements"],helpful:18}],recruiters:["BCG","Bain","McKinsey","Goldman Sachs","Amazon","Flipkart"]},
+  {id:3,name:"All India Institute of Medical Sciences",short:"AIIMS Delhi",location:"New Delhi, Delhi",city:"New Delhi",state:"Delhi",type:"Medical",fees:6500,placement:99,rating:4.9,est:1956,color:"#3ddc84",wiki:"All_India_Institute_of_Medical_Sciences,_New_Delhi",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/AIIMS_main_block.jpg/1280px-AIIMS_main_block.jpg",courses:[{n:"MBBS",l:"UG",d:5.5,s:107},{n:"MD General Medicine",l:"PG",d:3,s:30},{n:"MS Surgery",l:"PG",d:3,s:25},{n:"PhD Biomedical",l:"PhD",d:5,s:20}],reviews:[{id:'r5',a:"Dr. Sonal R.",p:"MBBS",y:2021,r:5,t:"Exposure to rare cases from across India makes AIIMS a unique clinical training ground.",tags:["Research Focus","Good Infrastructure"],helpful:31},{id:'r6',a:"Dr. Vikram T.",p:"MD",y:2023,r:5,t:"The residency load is heavy but the skills you build are unparalleled.",tags:["High Workload","Strong Faculty"],helpful:11}],recruiters:["AIIMS Hospitals","Fortis","Apollo","Max Healthcare","Armed Forces Medical"]},
+  {id:4,name:"National Law School of India University",short:"NLSIU Bangalore",location:"Bengaluru, Karnataka",city:"Bengaluru",state:"Karnataka",type:"Law",fees:220000,placement:92,rating:4.7,est:1987,color:"#c084fc",wiki:"National_Law_School_of_India_University",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/NLSIU_Main_Gate.jpg/1280px-NLSIU_Main_Gate.jpg",courses:[{n:"BA LLB (Hons)",l:"UG",d:5,s:80},{n:"LLM",l:"PG",d:1,s:30},{n:"PhD Law",l:"PhD",d:5,s:10}],reviews:[{id:'r7',a:"Ananya G.",p:"BA LLB",y:2022,r:5,t:"Moot court culture is exceptional. I won two national competitions in my first year.",tags:["Active Clubs","Strong Faculty"],helpful:8},{id:'r8',a:"Rohan M.",p:"LLM",y:2023,r:4.5,t:"Best law school in India, period. Faculty research is genuinely cutting-edge.",tags:["Research Focus"],helpful:6}],recruiters:["AZB & Partners","Cyril Amarchand","Trilegal","Khaitan & Co","Supreme Court"]},
+  {id:5,name:"Indian Institute of Science",short:"IISc Bangalore",location:"Bengaluru, Karnataka",city:"Bengaluru",state:"Karnataka",type:"Science",fees:34000,placement:98,rating:4.8,est:1909,color:"#2dd4bf",wiki:"Indian_Institute_of_Science",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/IISc_Bangalore_entrance.jpg/1280px-IISc_Bangalore_entrance.jpg",courses:[{n:"M.Tech Computational Science",l:"PG",d:2,s:30},{n:"MSc Physics",l:"PG",d:2,s:40},{n:"PhD AI & ML",l:"PhD",d:5,s:30}],reviews:[{id:'r9',a:"Kavya N.",p:"PhD Physics",y:2023,r:5,t:"If research is your calling, IISc is the summit. Funding and lab access are exceptional.",tags:["Research Focus","Good Infrastructure"],helpful:27},{id:'r10',a:"Arjun K.",p:"M.Tech",y:2022,r:5,t:"The interdisciplinary environment allows me to work at the intersection of ML and biology.",tags:["Research Focus","Vibrant Campus"],helpful:15}],recruiters:["ISRO","DRDO","Intel","IBM Research","Tata Institute","IITs (Faculty)"]},
+  {id:6,name:"Birla Institute of Technology & Science",short:"BITS Pilani",location:"Pilani, Rajasthan",city:"Pilani",state:"Rajasthan",type:"Engineering",fees:520000,placement:89,rating:4.5,est:1964,color:"#f472b6",wiki:"BITS_Pilani",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Bits_pilani_main.jpg/1280px-Bits_pilani_main.jpg",courses:[{n:"BE Computer Science",l:"UG",d:4,s:200},{n:"BE Electronics",l:"UG",d:4,s:180},{n:"MSc Mathematics",l:"PG",d:2,s:60}],reviews:[{id:'r11',a:"Tanvi S.",p:"BE CSE",y:2022,r:4.5,t:"The BITS Practice School internship programme is worth the fees alone — real industry exposure.",tags:["Great Placements","Good Infrastructure"],helpful:19},{id:'r12',a:"Suresh P.",p:"BE+MSc",y:2023,r:4.5,t:"Freedom to design your schedule is fantastic. The dual-degree option is a hidden gem.",tags:["Active Clubs"],helpful:12}],recruiters:["Microsoft","Google","Qualcomm","Samsung","Cisco","Flipkart"]},
+  {id:7,name:"Jadavpur University",short:"JU Kolkata",location:"Kolkata, West Bengal",city:"Kolkata",state:"West Bengal",type:"Engineering",fees:18000,placement:82,rating:4.3,est:1906,color:"#f87171",wiki:"Jadavpur_University",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jadavpur_University_main_building.JPG/1280px-Jadavpur_University_main_building.JPG",courses:[{n:"BE Civil Engineering",l:"UG",d:4,s:120},{n:"BE Mechanical",l:"UG",d:4,s:120},{n:"BArch",l:"UG",d:5,s:40}],reviews:[{id:'r13',a:"Debashish R.",p:"BE Mech",y:2022,r:4.5,t:"Excellent academics at a fraction of the cost. The alumni network in Kolkata is very active.",tags:["Affordable"],helpful:16},{id:'r14',a:"Soma D.",p:"BE Civil",y:2023,r:4,t:"Campus feels historic and vibrant. Strong focus on fundamental engineering principles.",tags:["Vibrant Campus"],helpful:7}],recruiters:["TCS","Infosys","L&T","Tata Steel","ONGC","Indian Railways"]},
+  {id:8,name:"Faculty of Management Studies, Delhi",short:"FMS Delhi",location:"New Delhi, Delhi",city:"New Delhi",state:"Delhi",type:"Management",fees:22000,placement:97,rating:4.6,est:1954,color:"#818cf8",wiki:"Faculty_of_Management_Studies,_Delhi",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/FMS_Delhi_building.jpg/1280px-FMS_Delhi_building.jpg",courses:[{n:"MBA",l:"PG",d:2,s:216},{n:"MBA International Business",l:"PG",d:2,s:40},{n:"Executive MBA",l:"Executive",d:1,s:100}],reviews:[{id:'r15',a:"Nikhil B.",p:"MBA",y:2022,r:5,t:"Best ROI for an MBA in India. Top recruiter access with fees under ₹25k. Unbeatable.",tags:["Affordable","Great Placements"],helpful:34},{id:'r16',a:"Ishita V.",p:"MBA",y:2023,r:4.5,t:"Batch diversity and alumni in Fortune 500 companies make networking incredibly powerful.",tags:["Great Placements","Active Clubs"],helpful:21}],recruiters:["BCG","Amazon","HDFC Bank","Deloitte","EY","Aon Hewitt"]},
+  {id:9,name:"Vellore Institute of Technology",short:"VIT Vellore",location:"Vellore, Tamil Nadu",city:"Vellore",state:"Tamil Nadu",type:"Engineering",fees:200000,placement:86,rating:4.2,est:1984,color:"#a3e635",wiki:"Vellore_Institute_of_Technology",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/VIT_University_main_entrance.jpg/1280px-VIT_University_main_entrance.jpg",courses:[{n:"B.Tech CSE",l:"UG",d:4,s:1800},{n:"B.Tech Biotech",l:"UG",d:4,s:400},{n:"M.Tech AI & ML",l:"PG",d:2,s:120}],reviews:[{id:'r17',a:"Keerthana N.",p:"B.Tech CSE",y:2022,r:4,t:"Giant campus with excellent infrastructure. Strong MNC recruiters across IT sector.",tags:["Good Infrastructure","Great Placements"],helpful:10},{id:'r18',a:"Ganesh M.",p:"B.Tech Mech",y:2023,r:4.5,t:"FFCS (fully flexible credit system) is a game-changer for academic autonomy.",tags:["Active Clubs"],helpful:8}],recruiters:["TCS","Infosys","Wipro","HCL","Accenture","Cognizant"]},
+  {id:10,name:"Symbiosis Institute of Business Management",short:"SIBM Pune",location:"Pune, Maharashtra",city:"Pune",state:"Maharashtra",type:"Management",fees:1800000,placement:94,rating:4.4,est:1978,color:"#fbbf24",wiki:"Symbiosis_Institute_of_Business_Management",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/SIBM_Pune_campus.jpg/1280px-SIBM_Pune_campus.jpg",courses:[{n:"MBA",l:"PG",d:2,s:180},{n:"MBA Innovation",l:"PG",d:2,s:60},{n:"MBA Business Analytics",l:"PG",d:2,s:60}],reviews:[{id:'r19',a:"Roshni A.",p:"MBA",y:2022,r:4.5,t:"Vibrant campus life and excellent international immersion programmes set SIBM apart.",tags:["Vibrant Campus","Good Infrastructure"],helpful:13},{id:'r20',a:"Karan T.",p:"MBA",y:2023,r:4,t:"Strong B-school with a fantastic alumni chapter. Industry interface cells provide great exposure.",tags:["Great Placements","Active Clubs"],helpful:9}],recruiters:["Deloitte","Wipro","HDFC Bank","Mahindra","Bajaj","Asian Paints"]},
+  {id:11,name:"National Institute of Technology Tiruchirappalli",short:"NIT Trichy",location:"Tiruchirappalli, Tamil Nadu",city:"Trichy",state:"Tamil Nadu",type:"Engineering",fees:175000,placement:94,rating:4.6,est:1964,color:"#5b9cf6",wiki:"National_Institute_of_Technology,_Tiruchirappalli",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/NITT_Admin_Block.jpg/1200px-NITT_Admin_Block.jpg",courses:[{n:"B.Tech CSE",l:"UG",d:4,s:120}],reviews:[],recruiters:["Google","Amazon","Microsoft"]},
+  {id:12,name:"National Institute of Technology Karnataka",short:"NIT Surathkal",location:"Surathkal, Karnataka",city:"Mangalore",state:"Karnataka",type:"Engineering",fees:180000,placement:93,rating:4.5,est:1960,color:"#5b9cf6",wiki:"National_Institute_of_Technology_Karnataka",wikimg:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Main_Building_NITK.jpg/1200px-Main_Building_NITK.jpg",courses:[{n:"B.Tech IT",l:"UG",d:4,s:110}],reviews:[],recruiters:["Adobe","Uber","Intuit"]},
+  {id:13,name:"Motilal Nehru National Institute of Technology",short:"MNNIT Allahabad",location:"Prayagraj, Uttar Pradesh",city:"Prayagraj",state:"Uttar Pradesh",type:"Engineering",fees:165000,placement:92,rating:4.4,est:1961,color:"#5b9cf6",wiki:"Motilal_Nehru_National_Institute_of_Technology_Allahabad",wikimg:"",courses:[{n:"B.Tech CSE",l:"UG",d:4,s:150}],reviews:[],recruiters:["De Shaw","Goldman Sachs"]},
+  {id:14,name:"National Institute of Technology Rourkela",short:"NIT Rourkela",location:"Rourkela, Odisha",city:"Rourkela",state:"Odisha",type:"Engineering",fees:170000,placement:89,rating:4.4,est:1961,color:"#5b9cf6",wiki:"National_Institute_of_Technology_Rourkela",wikimg:"",courses:[{n:"B.Tech Mechanical",l:"UG",d:4,s:120}],reviews:[],recruiters:["PwC","Tata Steel"]},
+  {id:15,name:"Malaviya National Institute of Technology",short:"MNIT Jaipur",location:"Jaipur, Rajasthan",city:"Jaipur",state:"Rajasthan",type:"Engineering",fees:175000,placement:88,rating:4.3,est:1963,color:"#5b9cf6",wiki:"Malaviya_National_Institute_of_Technology_Jaipur",wikimg:"",courses:[{n:"B.Tech ECE",l:"UG",d:4,s:100}],reviews:[],recruiters:["Samsung","Reliance"]},
+  {id:16,name:"Indian Institute of Information Technology Sri City",short:"IIIT Sri City",location:"Sri City, Andhra Pradesh",city:"Sri City",state:"Andhra Pradesh",type:"Engineering",fees:320000,placement:91,rating:4.4,est:2013,color:"#5b9cf6",wiki:"Indian_Institute_of_Information_Technology,_Sri_City",wikimg:"",courses:[{n:"B.Tech Computer Science",l:"UG",d:4,s:250},{n:"B.Tech AI & Data Science",l:"UG",d:4,s:60}],reviews:[{id:'r21',a:"Alumni",p:"B.Tech CSE",y:2024,r:4.5,t:"Great coding culture and proximity to IT hubs makes a huge difference.",tags:["Great Placements"],helpful:5}],recruiters:["Amazon","Microsoft","TCS","Cognizant"]}
 ];
 
 const TYPE_META={Engineering:{icon:"⚙️",color:"#5b9cf6"},Management:{icon:"📊",color:"#f97316"},Medical:{icon:"🏥",color:"#3ddc84"},Law:{icon:"⚖️",color:"#c084fc"},Science:{icon:"🔬",color:"#2dd4bf"}};
 
-/* ══════════════ STATE ══════════════ */
+const EXAMS = [
+  {id:'jee-main',name:"JEE Main",fullName:"Joint Entrance Examination (Main)",category:"Engineering",icon:"⚙️",color:"#5b9cf6",desc:"Gateway to NITs, IIITs and CFTIs. Conducted twice a year by NTA for B.E./B.Tech admissions.",pills:["National Level","Twice/Year","Computer Based"],stats:[{v:"11.5L+",l:"Applicants"},{v:"31,000",l:"Seats"},{v:"Jan & Apr",l:"Conducted"}],dates:[{label:"Registration (Session 1)",val:"Nov – Dec 2024"},{label:"Exam (Session 1)",val:"Jan 22–31, 2025"},{label:"Registration (Session 2)",val:"Feb – Mar 2025"},{label:"Exam (Session 2)",val:"Apr 2025"}],pattern:[{k:"Mode",v:"Computer Based Test"},{k:"Duration",v:"3 Hours"},{k:"Subjects",v:"Physics, Chemistry, Maths"},{k:"Total Marks",v:"300"},{k:"Marking",v:"+4 Correct, -1 Wrong"},{k:"Questions",v:"90 (75 Attempted)"}],syllabus:{Physics:["Mechanics","Thermodynamics","Electromagnetism","Optics","Modern Physics","Waves"],Chemistry:["Physical Chemistry","Organic Chemistry","Inorganic Chemistry","Chemical Bonding"],Maths:["Algebra","Calculus","Coordinate Geometry","Trigonometry","Statistics","Vectors"]},tips:["Focus on NCERT for Chemistry — many questions are direct.","Practice previous 10 years JEE Main papers.","Time management: aim to attempt 75 questions well rather than all 90.","Strengthen Maths — it's the highest differentiator.","Take at least 2 mock tests per week in the final month."],colleges:[1,6,11,12,13,14,15,16]},
+  {id:'jee-adv',name:"JEE Advanced",fullName:"Joint Entrance Examination (Advanced)",category:"Engineering",icon:"🏆",color:"#f0c060",desc:"The gateway to India's premier IITs. Only top 2.5 lakh JEE Main qualifiers can attempt this highly competitive exam.",pills:["IITs Only","Invite Only","Paper + Online"],stats:[{v:"2.5L",l:"Eligible"},{v:"~16,000",l:"IIT Seats"},{v:"June",l:"Conducted"}],dates:[{label:"Registration Opens",val:"April 2025"},{label:"Exam Date",val:"May 18, 2025"},{label:"Result",val:"June 2025"},{label:"JoSAA Counselling",val:"June – July 2025"}],pattern:[{k:"Papers",v:"Paper 1 & Paper 2"},{k:"Duration",v:"3 Hours Each"},{k:"Subjects",v:"Physics, Chemistry, Maths"},{k:"Total Marks",v:"~360"},{k:"Question Types",v:"MCQ, Integer, Matrix"},{k:"Negative Marking",v:"Varies by Section"}],syllabus:{Physics:["Rotational Mechanics","Fluid Dynamics","Electrostatics","Magnetic Effects","Modern Physics","Wave Optics"],Chemistry:["Electrochemistry","Coordination Compounds","Organic Reactions","p-Block Elements","Thermodynamics"],Maths:["Differential Equations","Complex Numbers","Matrices","Probability","Integration","Conics"]},tips:["JEE Advanced requires deep conceptual clarity — rote learning won't work.","Practice multi-correct questions extensively.","Time pressure is extreme — do timed full-length mocks.","Read IIT solutions of past years to understand expected depth.","Physical Chemistry and Mechanics are high-weight areas."],colleges:[1,5]},
+  {id:'neet',name:"NEET UG",fullName:"National Eligibility cum Entrance Test (UG)",category:"Medical",icon:"🏥",color:"#3ddc84",desc:"The single national entrance exam for MBBS and BDS admissions across India, conducted once a year by NTA.",pills:["National Level","Once/Year","OMR Based"],stats:[{v:"20L+",l:"Applicants"},{v:"1,08,940",l:"MBBS Seats"},{v:"May",l:"Conducted"}],dates:[{label:"Registration",val:"Feb – Mar 2025"},{label:"Exam Date",val:"May 4, 2025"},{label:"Result",val:"June 2025"},{label:"Counselling (MCC)",val:"July – Aug 2025"}],pattern:[{k:"Mode",v:"Pen & Paper (OMR)"},{k:"Duration",v:"3 Hours 20 Min"},{k:"Subjects",v:"Physics, Chemistry, Biology"},{k:"Total Questions",v:"200 (180 Attempted)"},{k:"Total Marks",v:"720"},{k:"Marking",v:"+4 Correct, -1 Wrong"}],syllabus:{Biology:["Cell Biology","Genetics","Ecology","Human Physiology","Plant Physiology","Evolution"],Physics:["Mechanics","Thermodynamics","Optics","Current Electricity","Dual Nature"],Chemistry:["Biomolecules","Polymers","Chemical Kinetics","p-Block Elements","Aldehydes & Ketones"]},tips:["Biology is 50% of the paper — master it completely from NCERT.","NCERT line-by-line reading is non-negotiable for all 3 subjects.","Solve previous NEET papers (2013–2024) thoroughly.","Aim for 650+ to secure AIIMS / top government colleges.","Use diagrams to memorize complex biological processes."],colleges:[3]},
+  {id:'cat',name:"CAT",fullName:"Common Admission Test",category:"Management",icon:"📊",color:"#f97316",desc:"India's most prestigious MBA entrance exam, conducted by IIMs. Required for admission to IIMs and 1,200+ other B-schools.",pills:["IIM Gateway","Once/Year","Computer Based"],stats:[{v:"3.3L+",l:"Applicants"},{v:"~5,000",l:"IIM Seats"},{v:"Nov",l:"Conducted"}],dates:[{label:"Registration",val:"Aug – Sep 2025"},{label:"Exam Date",val:"Nov 24, 2025"},{label:"Result",val:"Jan 2026"},{label:"IIM GD-PI",val:"Feb – Apr 2026"}],pattern:[{k:"Mode",v:"Computer Based Test"},{k:"Duration",v:"2 Hours"},{k:"Sections",v:"VARC, DILR, QA"},{k:"Total Questions",v:"66"},{k:"Marking",v:"+3 Correct, -1 Wrong"},{k:"Non-MCQs",v:"No Negative Marking"}],syllabus:{VARC:["Reading Comprehension","Para Jumbles","Para Summary","Odd Sentence Out","Vocab"],DILR:["Data Interpretation","Logical Reasoning","Sets & Arrangements","Games & Tournaments"],QA:["Arithmetic","Algebra","Geometry","Number System","Modern Math","Permutations"]},tips:["CAT VARC is about speed + accuracy — read quality editorial content daily.","QA: focus on Arithmetic first (highest weightage).","DILR sets are unconventional — practice variety, not just speed.","Percentile benchmarks: 99+ for IIM-A/B/C; 95+ for other IIMs.","Mock CAT analysis is more important than taking mocks."],colleges:[2,8,10]},
+  {id:'clat',name:"CLAT",fullName:"Common Law Admission Test",category:"Law",icon:"⚖️",color:"#c084fc",desc:"National level entrance for 5-year BA LLB and LLM programmes at 22 National Law Universities across India.",pills:["NLUs Only","Once/Year","Comprehension Based"],stats:[{v:"75,000+",l:"Applicants"},{v:"3,500+",l:"NLU Seats"},{v:"Dec",l:"Conducted"}],dates:[{label:"Registration",val:"Jul – Nov 2025"},{label:"Exam Date",val:"Dec 1, 2025"},{label:"Result",val:"Dec 2025"},{label:"Counselling",val:"Jan 2026"}],pattern:[{k:"Mode",v:"Computer Based Test"},{k:"Duration",v:"2 Hours"},{k:"Total Questions",v:"120"},{k:"Total Marks",v:"120"},{k:"Marking",v:"+1 Correct, -0.25 Wrong"},{k:"Type",v:"Comprehension Passages"}],syllabus:{English:["Reading Comprehension","Inference","Tone & Argument Analysis"],Legal:["Legal Reasoning","Principle-Fact Questions","Constitutional Awareness"],Logical:["Argument Analysis","Critical Reasoning","Analogy"],Maths:["Basic Numeracy","Data Interpretation (10th level)"],General:["Current Affairs","Static GK","Legal GK"]},tips:["CLAT is comprehension-heavy — daily reading of newspapers is essential.","Legal reasoning doesn't need prior law knowledge — read principles carefully.","Current affairs: focus on legal/constitutional news and SC judgments.","Aim for 105+ for NLSIU Bangalore; 95+ for top 5 NLUs.","Practice timed sets — passage reading speed is critical."],colleges:[4]},
+  {id:'gate',name:"GATE",fullName:"Graduate Aptitude Test in Engineering",category:"Engineering",icon:"🔬",color:"#2dd4bf",desc:"National exam for M.Tech admissions to IITs/NITs and PSU recruitment. Tests core engineering/science concepts.",pills:["M.Tech / PSUs","Once/Year","Computer Based"],stats:[{v:"9L+",l:"Applicants"},{v:"Multiple",l:"Disciplines"},{v:"Feb",l:"Conducted"}],dates:[{label:"Registration",val:"Sep – Oct 2025"},{label:"Exam Date",val:"Feb 1–16, 2025"},{label:"Result",val:"Mar 2025"},{label:"CCMT Counselling",val:"Apr – May 2025"}],pattern:[{k:"Mode",v:"Computer Based Test"},{k:"Duration",v:"3 Hours"},{k:"Total Marks",v:"100"},{k:"MCQ + NAT",v:"Mixed Question Types"},{k:"Marking",v:"+1/+2, -0.33/-0.66"},{k:"General Aptitude",v:"15 Marks"}],syllabus:{CSE:["Data Structures","Algorithms","DBMS","OS","Networks","Theory of Computation"],ECE:["Signals & Systems","Control Systems","Electromagnetics","Analog Circuits"],Maths:["Linear Algebra","Calculus","Probability","Discrete Mathematics"]},tips:["GATE score is valid for 3 years — top score opens PSU doors too.","Focus on subject fundamentals; GATE tests depth not breadth.","NAT (Numerical Answer Type) questions have no negative marking — attempt all.","Previous 15 years GATE papers are the best prep resource.","General Aptitude section (15 marks) is easiest — don't ignore it."],colleges:[1,5,11,12]},
+  {id:'nid',name:"NID DAT",fullName:"National Institute of Design — Design Aptitude Test",category:"Design",icon:"🎨",color:"#f472b6",desc:"Entrance exam for B.Des and M.Des programmes at National Institute of Design campuses across India.",pills:["Design Only","Twice/Year","Studio Test"],stats:[{v:"15,000+",l:"Applicants"},{v:"350+",l:"NID Seats"},{v:"Jan & Jun",l:"Conducted"}],dates:[{label:"Registration (Prelims)",val:"Oct – Nov 2024"},{label:"Prelims",val:"Dec 2024"},{label:"Studio Test (Mains)",val:"Feb 2025"},{label:"Result",val:"Apr 2025"}],pattern:[{k:"Prelims Mode",v:"Computer Based"},{k:"Mains Mode",v:"Physical Studio Test"},{k:"Prelims Questions",v:"60 MCQs + 4 Drawing"},{k:"Duration",v:"3 Hours Prelims"},{k:"Studio Test",v:"Portfolio + Exercises"},{k:"Key Skill",v:"Visual Communication"}],syllabus:{Aptitude:["Visual Perception","Spatial Reasoning","Observation Skills","Memory Drawing"],Design:["Product Understanding","Communication Design","Material Awareness","Ergonomics"],General:["Environmental Awareness","Art History","Current Design Trends"]},tips:["Sketching is non-negotiable — practice daily hand sketching.","Observe everyday products and think about their design rationale.","Portfolio for Studio Test: show process, not just final outcomes.","Study design icons: Dieter Rams, Charles Eames, Indian craft traditions.","Don't over-depend on digital tools — NID values hand skills."],colleges:[]},
+  {id:'xat',name:"XAT",fullName:"Xavier Aptitude Test",category:"Management",icon:"📈",color:"#818cf8",desc:"Conducted by XLRI for MBA admissions to XLRI Jamshedpur and 150+ partner institutes across India.",pills:["XLRI Gateway","Once/Year","Computer Based"],stats:[{v:"1.1L+",l:"Applicants"},{v:"250+",l:"XLRI Seats"},{v:"January",l:"Conducted"}],dates:[{label:"Registration",val:"Jul – Nov 2025"},{label:"Exam Date",val:"Jan 5, 2026"},{label:"Result",val:"Jan 2026"},{label:"GD-PI Process",val:"Feb – Mar 2026"}],pattern:[{k:"Mode",v:"Computer Based Test"},{k:"Duration",v:"3.5 Hours"},{k:"Sections",v:"VALR, DM, QA + GK"},{k:"DM Section",v:"Unique Decision Making"},{k:"Marking",v:"+1 Correct, -0.25 Wrong"},{k:"Essay",v:"Discontinued from 2024"}],syllabus:{VALR:["Reading Comprehension","Critical Reasoning","Vocabulary"],DM:["Business Decision Making","Ethical Dilemmas","Case Analysis"],QA:["Arithmetic","Algebra","Modern Math","Geometry"],GK:["Business GK","Current Affairs","International Events"]},tips:["Decision Making is XAT-unique — practice ethical case studies.","XAT is known for high difficulty in Verbal — build reading stamina.","GK section: separate score but crucial for XLRI shortlist.","Attempt DM section with a managerial mindset, not just logic.","Don't leave DM passages — they carry high marks and have predictable structure."],colleges:[2,8]},
+];
+
+/* ══════════ STATE ══════════ */
 let curPage='home', viewMode='grid';
 let fType='all', fPlc=0, fFee=2400000, fRtg=0, fState='all';
 let cmpList=[];
 let user=null;
 let recentSearches=JSON.parse(localStorage.getItem('cs_recent')||'[]');
+let reviewStars=0;
+let currentReviewCollegeId=null;
+let examFilter='all';
+let currentSylTab={};
+let helpedReviews=new Set(JSON.parse(localStorage.getItem('helped_reviews')||'[]'));
 
-/* ══════════════ NAV ══════════════ */
-function go(p,q){
+/* ══════════ NAV ══════════ */
+function go(p){
   document.querySelectorAll('.pg').forEach(e=>e.classList.remove('on'));
   document.querySelectorAll('.nl').forEach(e=>e.classList.remove('on'));
   document.getElementById('pg-'+p).classList.add('on');
@@ -761,18 +842,13 @@ function go(p,q){
   if(p==='home') renderHome();
   if(p==='explore'){renderSidebar();renderExplore();}
   if(p==='compare') renderCompare();
+  if(p==='exams') renderExams();
 }
 
-/* ══════════════ AUTH ══════════════ */
-function openLogin(){
-  document.getElementById('login-modal').classList.add('on');
-}
-function closeLogin(){
-  document.getElementById('login-modal').classList.remove('on');
-}
-function modalBgClick(e){
-  if(e.target===document.getElementById('login-modal')) closeLogin();
-}
+/* ══════════ AUTH ══════════ */
+function openLogin(){document.getElementById('login-modal').classList.add('on');}
+function closeLogin(){document.getElementById('login-modal').classList.remove('on');}
+function modalBgClick(e){if(e.target===document.getElementById('login-modal')) closeLogin();}
 function switchTab(t){
   document.getElementById('form-login').style.display=t==='login'?'':'none';
   document.getElementById('form-signup').style.display=t==='signup'?'':'none';
@@ -785,66 +861,19 @@ function doLogin(){
   if(!e||!p){showToast('Please fill all fields','error');return;}
   loginUser({name:e.split('@')[0].replace(/\./g,' ').replace(/\b\w/g,c=>c.toUpperCase()),email:e});
 }
-const API_BASE = "http://localhost:5000/api";
-
-async function doSignup() {
-  const n = document.getElementById('su-name').value;
-  const e = document.getElementById('su-email').value;
-  const p = document.getElementById('su-pass').value;
-  
-  if (!n || !e || !p) { showToast('Please fill all fields', 'error'); return; }
-
-  try {
-    const res = await fetch(`${API_BASE}/auth/signup`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: n, email: e, password: p })
-    });
-    const data = await res.json();
-    
-    if (res.ok) {
-      loginUser(data.user);
-      localStorage.setItem('token', data.token);
-    } else {
-      showToast(data.error, 'error');
-    }
-  } catch (err) {
-    showToast("Server connection failed", "error");
-  }
+function doSignup(){
+  const n=document.getElementById('su-name').value;
+  const e=document.getElementById('su-email').value;
+  const p=document.getElementById('su-pass').value;
+  if(!n||!e||!p){showToast('Please fill all fields','error');return;}
+  loginUser({name:n,email:e});
 }
-
-const wikiCache={};
-async function fetchWiki(slug) {
-  if (wikiCache[slug]) return wikiCache[slug];
-  try {
-    // Standard Wikipedia REST API integration for demo
-    const url=`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`;
-    const res=await fetch(url);
-    const data=await res.json();
-    wikiCache[slug] = data;
-    return data;
-  } catch (e) { return null; }
-}
-
-function demoLogin(){
-  loginUser({name:'Guest User',email:'guest@collegescope.in'});
-}
-function loginUser(u){
-  user=u;
-  closeLogin();
-  renderNavUser();
-  showToast('Welcome, '+u.name.split(' ')[0]+'! 👋','success');
-}
-function doLogout(){
-  user=null;
-  document.getElementById('user-menu').style.display='none';
-  document.getElementById('nav-right').innerHTML='<button class="nav-login-btn" onclick="openLogin()">Sign In</button>';
-  showToast('Signed out successfully');
-}
+function demoLogin(){loginUser({name:'Guest User',email:'guest@collegescope.in'});}
+function loginUser(u){user=u;closeLogin();renderNavUser();showToast('Welcome, '+u.name.split(' ')[0]+'! 👋','success');}
+function doLogout(){user=null;document.getElementById('user-menu').style.display='none';document.getElementById('nav-right').innerHTML='<button class="nav-login-btn" onclick="openLogin()">Sign In</button>';showToast('Signed out successfully');}
 function renderNavUser(){
   const initials=user.name.split(' ').map(w=>w[0]).slice(0,2).join('');
-  document.getElementById('nav-right').innerHTML=`
-    <div class="nav-avatar" onclick="toggleUserMenu()" title="${user.name}">${initials}</div>`;
+  document.getElementById('nav-right').innerHTML=`<div class="nav-avatar" onclick="toggleUserMenu()" title="${user.name}">${initials}</div>`;
 }
 function toggleUserMenu(){
   const m=document.getElementById('user-menu');
@@ -853,57 +882,28 @@ function toggleUserMenu(){
 }
 document.addEventListener('click',e=>{
   const m=document.getElementById('user-menu');
-  if(m.style.display!=='none' && !e.target.closest('.nav-avatar') && !e.target.closest('.user-menu')) m.style.display='none';
+  if(m.style.display!=='none'&&!e.target.closest('.nav-avatar')&&!e.target.closest('.user-menu')) m.style.display='none';
 });
 
-/* ══════════════ RECENT ══════════════ */
-function addRecent(name){
-  recentSearches=recentSearches.filter(x=>x!==name);
-  recentSearches.unshift(name);
-  recentSearches=recentSearches.slice(0,5);
-  localStorage.setItem('cs_recent',JSON.stringify(recentSearches));
-  renderRecent();
-}
-function clearRecent(){
-  recentSearches=[];
-  localStorage.setItem('cs_recent','[]');
-  renderRecent();
-  showToast('Search history cleared');
-}
-function renderRecent(){
-  const bar=document.getElementById('recent-bar');
-  const chips=document.getElementById('recent-chips');
-  if(!recentSearches.length){bar.style.display='none';return;}
-  bar.style.display='flex';
-  chips.innerHTML=recentSearches.map(s=>`<span class="recent-chip" onclick="quickSearch('${s}')">${s}</span>`).join('');
-}
-function quickSearch(name){
-  const c=COLLEGES.find(x=>x.short===name||x.name.includes(name));
-  if(c) openDetail(c.id);
-}
+/* ══════════ RECENT ══════════ */
+function addRecent(name){recentSearches=recentSearches.filter(x=>x!==name);recentSearches.unshift(name);recentSearches=recentSearches.slice(0,5);localStorage.setItem('cs_recent',JSON.stringify(recentSearches));renderRecent();}
+function clearRecent(){recentSearches=[];localStorage.setItem('cs_recent','[]');renderRecent();showToast('Search history cleared');}
+function renderRecent(){const bar=document.getElementById('recent-bar');const chips=document.getElementById('recent-chips');if(!recentSearches.length){bar.style.display='none';return;}bar.style.display='flex';chips.innerHTML=recentSearches.map(s=>`<span class="recent-chip" onclick="quickSearch('${s}')">${s}</span>`).join('');}
+function quickSearch(name){const c=COLLEGES.find(x=>x.short===name||x.name.includes(name));if(c) openDetail(c.id);}
 
-/* ══════════════ HERO SEARCH ══════════════ */
-function heroSearch(){
-  const q=document.getElementById('hero-search').value.trim();
-  if(!q) return;
-  fType='all';
-  go('explore');
-  setTimeout(()=>{
-    const el=document.getElementById('ex-search');
-    if(el){el.value=q;renderExplore();}
-  },50);
-}
+/* ══════════ HERO SEARCH ══════════ */
+function heroSearch(){const q=document.getElementById('hero-search').value.trim();if(!q) return;fType='all';go('explore');setTimeout(()=>{const el=document.getElementById('ex-search');if(el){el.value=q;renderExplore();}},50);}
 function heroSearchKey(e){if(e.key==='Enter') heroSearch();}
 
-/* ══════════════ HOME ══════════════ */
+/* ══════════ HOME ══════════ */
 function renderHome(){
   renderRecent();
-  const top=COLLEGES.sort((a,b)=>b.rating-a.rating).slice(0,6);
+  const top=COLLEGES.slice().sort((a,b)=>b.rating-a.rating).slice(0,6);
   document.getElementById('feat-scroll').innerHTML=top.map(c=>`
     <div class="feat-card" onclick="openDetail(${c.id})">
       <div class="feat-img-wrap">
-        <img class="feat-img" id="fi-${c.id}" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80'">
-        <div class="feat-img-wrap" style="position:absolute;inset:0;pointer-events:none"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,var(--bg2))"></div></div>
+        <img class="feat-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80'">
+        <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,var(--bg2));pointer-events:none"></div>
       </div>
       <div class="feat-body">
         <div class="feat-type" style="color:${c.color}">${c.type}</div>
@@ -916,54 +916,26 @@ function renderHome(){
         </div>
       </div>
     </div>`).join('');
-
   const types=['Engineering','Management','Medical','Law','Science'];
-  document.getElementById('type-grid').innerHTML=types.map(t=>{
-    const cnt=COLLEGES.filter(c=>c.type===t).length;
-    const m=TYPE_META[t];
-    return `<div class="type-card" onclick="filterType('${t}')">
-      <div class="type-icon">${m.icon}</div>
-      <div class="type-name" style="color:${m.color}">${t}</div>
-      <div class="type-cnt">${cnt} colleges</div>
-    </div>`;
-  }).join('');
+  document.getElementById('type-grid').innerHTML=types.map(t=>{const cnt=COLLEGES.filter(c=>c.type===t).length;const m=TYPE_META[t];return `<div class="type-card" onclick="filterType('${t}')"><div class="type-icon">${m.icon}</div><div class="type-name" style="color:${m.color}">${t}</div><div class="type-cnt">${cnt} colleges</div></div>`;}).join('');
 }
-
 function filterType(t){fType=t;go('explore');}
 
-/* ══════════════ SIDEBAR ══════════════ */
+/* ══════════ SIDEBAR ══════════ */
 function renderSidebar(){
   const types=['all','Engineering','Management','Medical','Law','Science'];
   const cnts={};COLLEGES.forEach(c=>{cnts[c.type]=(cnts[c.type]||0)+1;});
-  document.getElementById('sb-type').innerHTML=types.map(t=>`
-    <button class="f-opt ${fType===t?'on':''}" onclick="setType('${t}',this)">
-      ${t==='all'?'All Disciplines':t}<span class="f-badge">${t==='all'?COLLEGES.length:(cnts[t]||0)}</span>
-    </button>`).join('');
+  document.getElementById('sb-type').innerHTML=types.map(t=>`<button class="f-opt ${fType===t?'on':''}" onclick="setType('${t}',this)">${t==='all'?'All Disciplines':t}<span class="f-badge">${t==='all'?COLLEGES.length:(cnts[t]||0)}</span></button>`).join('');
   const states=['all',...new Set(COLLEGES.map(c=>c.state).sort())];
-  document.getElementById('sb-state').innerHTML=states.map(s=>`
-    <button class="f-opt ${fState===s?'on':''}" onclick="setState('${s}',this)">
-      ${s==='all'?'All States':s}<span class="f-badge">${s==='all'?COLLEGES.length:COLLEGES.filter(c=>c.state===s).length}</span>
-    </button>`).join('');
+  document.getElementById('sb-state').innerHTML=states.map(s=>`<button class="f-opt ${fState===s?'on':''}" onclick="setState('${s}',this)">${s==='all'?'All States':s}<span class="f-badge">${s==='all'?COLLEGES.length:COLLEGES.filter(c=>c.state===s).length}</span></button>`).join('');
 }
 function setType(t,btn){fType=t;document.querySelectorAll('#sb-type .f-opt').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderExplore();}
 function setState(s,btn){fState=s;document.querySelectorAll('#sb-state .f-opt').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderExplore();}
 function setRtg(r,btn){fRtg=r;document.querySelectorAll('.rtg-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderExplore();}
-function onRange(el,lid,pre,isFee){
-  const v=parseInt(el.value);
-  if(el.id==='rng-plc') fPlc=v;
-  if(el.id==='rng-fee') fFee=v;
-  const lbl=document.getElementById(lid);
-  lbl.textContent=isFee?(v>=2400000?'Any':ff(v)):pre+v;
-  renderExplore();
-}
-function setView(v){
-  viewMode=v;
-  document.getElementById('vb-grid').classList.toggle('on',v==='grid');
-  document.getElementById('vb-list').classList.toggle('on',v==='list');
-  renderExplore();
-}
+function onRange(el,lid,pre,isFee){const v=parseInt(el.value);if(el.id==='rng-plc') fPlc=v;if(el.id==='rng-fee') fFee=v;const lbl=document.getElementById(lid);lbl.textContent=isFee?(v>=2400000?'Any':ff(v)):pre+v;renderExplore();}
+function setView(v){viewMode=v;document.getElementById('vb-grid').classList.toggle('on',v==='grid');document.getElementById('vb-list').classList.toggle('on',v==='list');renderExplore();}
 
-/* ══════════════ EXPLORE ══════════════ */
+/* ══════════ EXPLORE ══════════ */
 function renderExplore(){
   const q=(document.getElementById('ex-search')?.value||'').toLowerCase();
   const sort=document.getElementById('ex-sort')?.value||'rating';
@@ -982,81 +954,149 @@ function renderExplore(){
   else if(sort==='fees_asc') list.sort((a,b)=>a.fees-b.fees);
   else if(sort==='fees_desc') list.sort((a,b)=>b.fees-a.fees);
   else list.sort((a,b)=>a.name.localeCompare(b.name));
-
   document.getElementById('r-info').textContent=`${list.length} institution${list.length!==1?'s':''} found`;
   const grid=document.getElementById('cg');
   grid.className='cg'+(viewMode==='list'?' lv':'');
-
-  if(!list.length){
-    grid.innerHTML=`<div class="nores"><div class="nores-e">🎓</div><div>No colleges match your filters.</div></div>`;
-    return;
-  }
-
+  if(!list.length){grid.innerHTML=`<div class="nores"><div class="nores-e">🎓</div><div>No colleges match your filters.</div></div>`;return;}
   if(viewMode==='list'){
-    grid.innerHTML=list.map((c,i)=>`
-      <div class="cc lv ${cmpList.includes(c.id)?'sel':''}" style="animation-delay:${i*0.04}s">
-        <div class="cc-stripe" style="background:${c.color}"></div>
-        <div class="cc-img-wrap">
-          <img class="cc-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=70'" onclick="openDetail(${c.id})">
-          <div class="cc-img-overlay"></div>
-        </div>
-        <div class="cc-body">
-          <div>
-            <div class="cc-name">${c.short}</div>
-            <div class="cc-loc">📍 ${c.location}</div>
-            <div class="cc-meta">
-              <span class="cc-pill" style="color:${c.color};border-color:${c.color}44">${c.type}</span>
-              <span class="cc-pill" style="color:#d4a843;border-color:rgba(212,168,67,0.3)">${c.rating} ★</span>
-            </div>
-          </div>
-          <div class="cc-stats">
-            <div class="cs"><div class="cs-v">${ff(c.fees)}</div><div class="cs-l">Annual fees</div></div>
-            <div class="cs"><div class="cs-v">${c.placement}%</div><div class="cs-l">Placement</div></div>
-            <div class="cs"><div class="cs-v">${c.est}</div><div class="cs-l">Established</div></div>
-          </div>
-        </div>
-        <div class="cc-actions">
-          <button class="cc-btn p" onclick="openDetail(${c.id})">View</button>
-          <button class="cc-btn ${cmpList.includes(c.id)?'ca':''}" onclick="toggleCmp(${c.id})">${cmpList.includes(c.id)?'✓':'+'} Cmp</button>
-        </div>
-      </div>`).join('');
+    grid.innerHTML=list.map((c,i)=>`<div class="cc lv ${cmpList.includes(c.id)?'sel':''}" style="animation-delay:${i*0.04}s"><div class="cc-stripe" style="background:${c.color}"></div><div class="cc-img-wrap"><img class="cc-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=70'" onclick="openDetail(${c.id})"><div class="cc-img-overlay"></div></div><div class="cc-body"><div><div class="cc-name">${c.short}</div><div class="cc-loc">📍 ${c.location}</div><div class="cc-meta"><span class="cc-pill" style="color:${c.color};border-color:${c.color}44">${c.type}</span><span class="cc-pill" style="color:#d4a843;border-color:rgba(212,168,67,0.3)">${c.rating} ★</span></div></div><div class="cc-stats"><div class="cs"><div class="cs-v">${ff(c.fees)}</div><div class="cs-l">Annual fees</div></div><div class="cs"><div class="cs-v">${c.placement}%</div><div class="cs-l">Placement</div></div><div class="cs"><div class="cs-v">${c.est}</div><div class="cs-l">Established</div></div></div></div><div class="cc-actions"><button class="cc-btn p" onclick="openDetail(${c.id})">View</button><button class="cc-btn ${cmpList.includes(c.id)?'ca':''}" onclick="toggleCmp(${c.id})">${cmpList.includes(c.id)?'✓':'+'} Cmp</button></div></div>`).join('');
   } else {
-    grid.innerHTML=list.map((c,i)=>`
-      <div class="cc ${cmpList.includes(c.id)?'sel':''}" style="animation-delay:${i*0.05}s">
-        <div class="cc-img-wrap" onclick="openDetail(${c.id})">
-          <img class="cc-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=70'">
-          <div class="cc-img-overlay"></div>
-          <span class="cc-img-badge" style="background:${c.color}22;color:${c.color};border:1px solid ${c.color}55">${c.type}</span>
-          <div class="cc-img-rating">${c.rating}★</div>
-        </div>
-        <div class="cc-body">
-          <div class="cc-name">${c.short}</div>
-          <div class="cc-loc">📍 ${c.location}</div>
-          <div class="cc-stats">
-            <div class="cs"><div class="cs-v">${ff(c.fees)}</div><div class="cs-l">Annual fees</div></div>
-            <div class="cs">
-              <div class="cs-v">${c.placement}%</div>
-              <div class="cs-l">Placement</div>
-              <div style="height:2px;background:var(--bg4);border-radius:1px;margin-top:4px;overflow:hidden"><div style="width:${c.placement}%;height:100%;background:${c.color};border-radius:1px"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="cc-actions">
-          <button class="cc-btn p" onclick="openDetail(${c.id})">View Details</button>
-          <button class="cc-btn ${cmpList.includes(c.id)?'ca':''}" onclick="toggleCmp(${c.id})">${cmpList.includes(c.id)?'✓ Added':'+ Compare'}</button>
-        </div>
-      </div>`).join('');
+    grid.innerHTML=list.map((c,i)=>`<div class="cc ${cmpList.includes(c.id)?'sel':''}" style="animation-delay:${i*0.05}s"><div class="cc-img-wrap" onclick="openDetail(${c.id})"><img class="cc-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=70'"><div class="cc-img-overlay"></div><span class="cc-img-badge" style="background:${c.color}22;color:${c.color};border:1px solid ${c.color}55">${c.type}</span><div class="cc-img-rating">${c.rating}★</div></div><div class="cc-body"><div class="cc-name">${c.short}</div><div class="cc-loc">📍 ${c.location}</div><div class="cc-stats"><div class="cs"><div class="cs-v">${ff(c.fees)}</div><div class="cs-l">Annual fees</div></div><div class="cs"><div class="cs-v">${c.placement}%</div><div class="cs-l">Placement</div><div style="height:2px;background:var(--bg4);border-radius:1px;margin-top:4px;overflow:hidden"><div style="width:${c.placement}%;height:100%;background:${c.color};border-radius:1px"></div></div></div></div></div><div class="cc-actions"><button class="cc-btn p" onclick="openDetail(${c.id})">View Details</button><button class="cc-btn ${cmpList.includes(c.id)?'ca':''}" onclick="toggleCmp(${c.id})">${cmpList.includes(c.id)?'✓ Added':'+ Compare'}</button></div></div>`).join('');
   }
 }
 
-/* ══════════════ DETAIL ══════════════ */
+/* ══════════ REVIEWS ══════════ */
+function openReviewModal(collegeId){
+  if(!user){showToast('Sign in to write a review','error');openLogin();return;}
+  currentReviewCollegeId=collegeId;
+  const c=COLLEGES.find(x=>x.id===collegeId);
+  document.getElementById('rm-college-name').textContent=c.short;
+  document.getElementById('rm-program').value='';
+  document.getElementById('rm-text').value='';
+  document.getElementById('rm-char').textContent='0';
+  reviewStars=0;
+  updateStarPicker(0);
+  document.getElementById('star-label').textContent='Click to rate';
+  document.querySelectorAll('.rm-tag-pick').forEach(b=>b.classList.remove('sel'));
+  document.getElementById('review-modal').classList.add('on');
+}
+function closeReviewModal(){document.getElementById('review-modal').classList.remove('on');}
+function reviewModalBgClick(e){if(e.target===document.getElementById('review-modal')) closeReviewModal();}
+function setStars(n){
+  reviewStars=n;
+  updateStarPicker(n);
+  const labels=['','Poor','Fair','Good','Very Good','Excellent'];
+  document.getElementById('star-label').textContent=labels[n];
+}
+function updateStarPicker(n){document.querySelectorAll('#star-picker span').forEach((s,i)=>{s.classList.toggle('lit',i<n);});}
+function toggleRmTag(btn){btn.classList.toggle('sel');}
+document.getElementById('rm-text').addEventListener('input',function(){document.getElementById('rm-char').textContent=this.value.length;});
+function submitReview(){
+  const prog=document.getElementById('rm-program').value.trim();
+  const text=document.getElementById('rm-text').value.trim();
+  if(!prog){showToast('Please enter your program','error');return;}
+  if(reviewStars===0){showToast('Please select a rating','error');return;}
+  if(text.length<30){showToast('Write at least 30 characters','error');return;}
+  const selTags=Array.from(document.querySelectorAll('.rm-tag-pick.sel')).map(b=>b.textContent);
+  const c=COLLEGES.find(x=>x.id===currentReviewCollegeId);
+  const newRev={id:'u'+Date.now(),a:user.name,p:prog,y:new Date().getFullYear(),r:reviewStars,t:text,tags:selTags,helpful:0,isNew:true};
+  c.reviews.unshift(newRev);
+  closeReviewModal();
+  showToast('Review posted successfully! 🎉','success');
+  // re-render reviews section if on detail page
+  if(curPage==='detail'){
+    const rv=document.getElementById('reviews-list-'+currentReviewCollegeId);
+    if(rv) renderReviewsList(currentReviewCollegeId);
+    const sum=document.getElementById('reviews-summary-'+currentReviewCollegeId);
+    if(sum) renderReviewsSummary(c,sum.parentElement);
+  }
+}
+function renderReviewsSummary(c, container){
+  const avgRating=c.reviews.length?Math.round(c.reviews.reduce((s,r)=>s+r.r,0)/c.reviews.length*10)/10:c.rating;
+  const counts=[5,4,3,2,1].map(s=>c.reviews.filter(r=>Math.round(r.r)===s).length);
+  container.innerHTML=`
+    <div class="reviews-header">
+      <div class="d-card-title">💬 Student Reviews</div>
+      <button class="write-review-btn" onclick="openReviewModal(${c.id})">✏️ Write Review</button>
+    </div>
+    <div class="reviews-summary" id="reviews-summary-${c.id}">
+      <div style="text-align:center;flex-shrink:0">
+        <div class="rs-big">${avgRating}</div>
+        <div class="rs-stars">${'★'.repeat(Math.floor(avgRating))}${avgRating%1>=.5?'½':''}</div>
+        <div class="rs-count">${c.reviews.length} review${c.reviews.length!==1?'s':''}</div>
+      </div>
+      <div class="rs-bars">
+        ${[5,4,3,2,1].map((s,i)=>`<div class="rs-bar-row"><span class="rs-bar-lbl">${s}</span><div class="rs-bar-bg"><div class="rs-bar-fill" style="width:${c.reviews.length?Math.round(counts[i]/c.reviews.length*100):0}%"></div></div><span class="rs-bar-cnt">${counts[i]}</span></div>`).join('')}
+      </div>
+    </div>
+    <div class="review-filter-bar" id="rv-filters-${c.id}">
+      <button class="rv-filter-btn on" onclick="filterReviews(${c.id},'all',this)">All</button>
+      <button class="rv-filter-btn" onclick="filterReviews(${c.id},5,this)">5★</button>
+      <button class="rv-filter-btn" onclick="filterReviews(${c.id},4,this)">4★</button>
+      <button class="rv-filter-btn" onclick="filterReviews(${c.id},'recent',this)">Recent</button>
+    </div>
+    <div id="reviews-list-${c.id}"></div>`;
+  renderReviewsList(c.id);
+}
+function filterReviews(cid, filter, btn){
+  document.querySelectorAll(`#rv-filters-${cid} .rv-filter-btn`).forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderReviewsList(cid, filter);
+}
+function renderReviewsList(cid, filter='all'){
+  const c=COLLEGES.find(x=>x.id===cid);
+  let revs=[...c.reviews];
+  if(filter===5) revs=revs.filter(r=>Math.round(r.r)===5);
+  else if(filter===4) revs=revs.filter(r=>Math.round(r.r)===4);
+  else if(filter==='recent') revs=revs.slice(0,3);
+  const el=document.getElementById('reviews-list-'+cid);
+  if(!el) return;
+  if(!revs.length){el.innerHTML=`<div class="no-reviews">No reviews yet for this filter. <button class="write-review-btn" onclick="openReviewModal(${cid})" style="margin-left:8px">Be the first!</button></div>`;return;}
+  const avatarColors=['#5b9cf6','#f97316','#3ddc84','#c084fc','#f472b6','#fbbf24','#2dd4bf'];
+  el.innerHTML=revs.map((r,i)=>{
+    const ac=avatarColors[i%avatarColors.length];
+    const initials=r.a.split(' ').map(w=>w[0]).join('').slice(0,2);
+    const liked=helpedReviews.has(r.id);
+    return `<div class="review-card ${r.isNew?'new-review':''}" style="animation-delay:${i*0.06}s">
+      <div class="rv-header">
+        <div class="rv-avatar" style="background:${ac}22;color:${ac};border:1px solid ${ac}44">${initials}</div>
+        <div><div class="rv-name">${r.a}${r.isNew?'<span style="font-size:10px;color:var(--green);margin-left:6px">New ✓</span>':''}</div><div class="rv-program">${r.p} · Class of ${r.y}</div></div>
+        <div class="rv-stars-sm">${'★'.repeat(Math.floor(r.r))}</div>
+      </div>
+      <div class="rv-text">"${r.t}"</div>
+      ${r.tags&&r.tags.length?`<div class="rv-tags">${r.tags.map(t=>`<span class="rv-tag">${t}</span>`).join('')}</div>`:''}
+      <div class="rv-footer">
+        <span>Helpful (${r.helpful})</span>
+        <button class="rv-helpful ${liked?'liked':''}" onclick="markHelpful('${r.id}',${cid},this)">${liked?'✓ Helpful':'👍 Helpful'}</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+function markHelpful(rid, cid, btn){
+  if(helpedReviews.has(rid)){showToast('Already marked as helpful');return;}
+  helpedReviews.add(rid);
+  localStorage.setItem('helped_reviews',JSON.stringify([...helpedReviews]));
+  const c=COLLEGES.find(x=>x.id===cid);
+  const rev=c.reviews.find(r=>r.id===rid);
+  if(rev) rev.helpful++;
+  btn.classList.add('liked');
+  btn.textContent='✓ Helpful';
+  renderReviewsList(cid);
+}
+
+/* ══════════ WIKI ══════════ */
+const wikiCache={};
+async function fetchWiki(slug){
+  if(wikiCache[slug]) return wikiCache[slug];
+  try{const url=`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`;const res=await fetch(url);const data=await res.json();wikiCache[slug]=data;return data;}catch(e){return null;}
+}
+
+/* ══════════ DETAIL ══════════ */
 async function openDetail(id){
   const c=COLLEGES.find(x=>x.id===id);
   addRecent(c.short);
-  const stars='★'.repeat(Math.floor(c.rating))+(c.rating%1>=.5?'½':'')+'☆'.repeat(5-Math.ceil(c.rating));
-
   document.getElementById('detail-inner').innerHTML=`
-    <button class="bk-btn" onclick="history.back()">← Back</button>
+    <button class="bk-btn" onclick="go('explore')">← Back to Explore</button>
     <div class="d-hero">
       <div class="d-hero-img-wrap">
         <img class="d-hero-img" id="d-main-img" src="${c.wikimg}" alt="${c.name}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80'">
@@ -1075,15 +1115,10 @@ async function openDetail(id){
         </div>
       </div>
     </div>
-
-    <!-- Wikipedia About -->
     <div class="d-wiki-section">
       <div class="d-card-title">📖 About (Wikipedia)</div>
-      <div id="wiki-content">
-        <div class="wiki-loading"><div class="wiki-spinner"></div>Fetching Wikipedia data…</div>
-      </div>
+      <div id="wiki-content"><div class="wiki-loading"><div class="wiki-spinner"></div>Fetching Wikipedia data…</div></div>
     </div>
-
     <div class="d-grid">
       <div class="d-card">
         <div class="d-card-title">🎓 Programmes</div>
@@ -1094,48 +1129,37 @@ async function openDetail(id){
           <div class="d-card-title">📈 Placement</div>
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px">
             <div class="plc-big" style="color:${c.color}">${c.placement}%</div>
-            <div style="flex:1">
-              <div class="plc-bar"><div class="plc-fill" style="width:${c.placement}%;background:${c.color}"></div></div>
-              <div style="font-size:11px;color:var(--muted)">placed within 3 months</div>
-            </div>
+            <div style="flex:1"><div class="plc-bar"><div class="plc-fill" style="width:${c.placement}%;background:${c.color}"></div></div><div style="font-size:11px;color:var(--muted)">placed within 3 months</div></div>
           </div>
           <div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Top Recruiters</div>
           <div class="recruiter-chips">${c.recruiters.map(r=>`<span class="rc">${r}</span>`).join('')}</div>
         </div>
-        <div class="d-card">
-          <div class="d-card-title">💬 Reviews</div>
-          ${c.reviews.map(r=>`<div class="review-card"><div class="rv-text">"${r.t}"</div><div class="rv-footer"><span>— ${r.a}, ${r.p} '${r.y}</span><span class="rv-stars">${'★'.repeat(Math.floor(r.r))}</span></div></div>`).join('')}
-        </div>
       </div>
     </div>
+    <!-- REVIEWS SECTION -->
+    <div class="d-card reviews-section" id="reviews-container-${c.id}" style="margin-top:16px"></div>
     <div style="display:flex;gap:10px;margin-top:18px">
       <button class="btn-g" onclick="toggleCmp(${c.id});go('compare')">${cmpList.includes(c.id)?'✓ Added to Compare':'Add to Compare'}</button>
       <button class="btn-o" onclick="go('explore')">← Back to Explore</button>
-    </div>
-  `;
-
+    </div>`;
   go('detail');
-
+  // Render reviews
+  renderReviewsSummary(c, document.getElementById(`reviews-container-${c.id}`));
   // Fetch Wikipedia
   const wdata=await fetchWiki(c.wiki);
   const wEl=document.getElementById('wiki-content');
   if(wEl){
     if(wdata&&wdata.extract){
       const snippet=wdata.extract.split('\n').filter(l=>l.trim().length>60).slice(0,3).join('\n\n');
-      wEl.innerHTML=`
-        <div class="wiki-text">${snippet||wdata.extract.slice(0,600)+'...'}</div>
-        <a class="wiki-link" href="https://en.wikipedia.org/wiki/${c.wiki}" target="_blank">Read full article on Wikipedia →</a>`;
-      if(wdata.thumbnail?.source){
-        const img=document.getElementById('d-main-img');
-        if(img) img.src=wdata.thumbnail.source;
-      }
+      wEl.innerHTML=`<div class="wiki-text">${snippet||wdata.extract.slice(0,600)+'...'}</div><a class="wiki-link" href="https://en.wikipedia.org/wiki/${c.wiki}" target="_blank">Read full article on Wikipedia →</a>`;
+      if(wdata.thumbnail?.source){const img=document.getElementById('d-main-img');if(img) img.src=wdata.thumbnail.source;}
     } else {
       wEl.innerHTML=`<div style="font-size:13px;color:var(--muted)">${c.name} is a premier institution in India. <a class="wiki-link" href="https://en.wikipedia.org/wiki/${c.wiki}" target="_blank">Read on Wikipedia →</a></div>`;
     }
   }
 }
 
-/* ══════════════ COMPARE ══════════════ */
+/* ══════════ COMPARE ══════════ */
 function toggleCmp(id){
   if(cmpList.includes(id)){cmpList=cmpList.filter(x=>x!==id);}
   else{if(cmpList.length>=3){showToast('Max 3 colleges for comparison','error');return;}cmpList.push(id);}
@@ -1143,177 +1167,187 @@ function toggleCmp(id){
   if(curPage==='explore') renderExplore();
 }
 function updateCbar(){
-  const bar=document.getElementById('cbar');
-  const go=document.getElementById('cbar-go');
-  bar.classList.toggle('on',cmpList.length>0);
-  go.disabled=cmpList.length<2;
+  const bar=document.getElementById('cbar');const go2=document.getElementById('cbar-go');
+  bar.classList.toggle('on',cmpList.length>0);go2.disabled=cmpList.length<2;
   let h='';
   for(let i=0;i<3;i++){
-    if(cmpList[i]!==undefined){
-      const c=COLLEGES.find(x=>x.id===cmpList[i]);
-      h+=`<div class="cslot f"><div class="cslot-dot" style="background:${c.color}"></div><span style="font-size:12px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${c.short}</span><button class="cslot-rm" onclick="toggleCmp(${c.id})">✕</button></div>`;
-    } else {
-      h+=`<div class="cslot">+ Add college</div>`;
-    }
+    if(cmpList[i]!==undefined){const c=COLLEGES.find(x=>x.id===cmpList[i]);h+=`<div class="cslot f"><div class="cslot-dot" style="background:${c.color}"></div><span style="font-size:12px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${c.short}</span><button class="cslot-rm" onclick="toggleCmp(${c.id})">✕</button></div>`;}
+    else h+=`<div class="cslot">+ Add college</div>`;
   }
   document.getElementById('cbar-slots').innerHTML=h;
 }
 function clearCmp(){cmpList=[];updateCbar();if(curPage==='explore') renderExplore();}
-
 function renderCompare(){
   const el=document.getElementById('cmp-content');
-  if(cmpList.length<2){
-    el.innerHTML=`<div class="cmp-empty"><div class="cmp-empty-icon">⚖️</div><div class="cmp-empty-title">No colleges selected</div><div style="font-size:14px;margin-bottom:20px">Go to Explore and click "+ Compare" on 2–3 colleges.</div><button class="btn-g" onclick="go('explore')">Explore →</button></div>`;
-    return;
-  }
+  if(cmpList.length<2){el.innerHTML=`<div class="cmp-empty"><div class="cmp-empty-icon">⚖️</div><div class="cmp-empty-title">No colleges selected</div><div style="font-size:14px;margin-bottom:20px">Go to Explore and click "+ Compare" on 2–3 colleges.</div><button class="btn-g" onclick="go('explore')">Explore →</button></div>`;return;}
   const cols=cmpList.map(id=>COLLEGES.find(c=>c.id===id));
-  const minFeeC=cols.reduce((a,c)=>c.fees<a.fees?c:a);
-  const maxPlcC=cols.reduce((a,c)=>c.placement>a.placement?c:a);
-  const maxRtgC=cols.reduce((a,c)=>c.rating>a.rating?c:a);
+  const minFeeC=cols.reduce((a,c)=>c.fees<a.fees?c:a);const maxPlcC=cols.reduce((a,c)=>c.placement>a.placement?c:a);const maxRtgC=cols.reduce((a,c)=>c.rating>a.rating?c:a);
   const rows=[
     {l:'Fees/yr',r:c=>{const best=c.id===minFeeC.id;return `<span class="${best?'cmp-win':'cmp-lose'}">${ff(c.fees)}${best?' ✓':''}</span>`}},
     {l:'Placement',r:c=>{const best=c.id===maxPlcC.id;return `<div class="mini-bar"><div class="mb-bg"><div class="mb-fill" style="width:${c.placement}%;background:${c.color}"></div></div><span class="${best?'cmp-win':''}">${c.placement}%${best?' ✓':''}</span></div>`}},
     {l:'Rating',r:c=>{const best=c.id===maxRtgC.id;return `<span class="${best?'cmp-win':'cmp-lose'}">${c.rating} ★${best?' ✓':''}</span>`}},
+    {l:'Reviews',r:c=>`${c.reviews.length} reviews`},
     {l:'Type',r:c=>`<span style="color:${c.color}">${c.type}</span>`},
     {l:'Location',r:c=>`${c.city}, ${c.state}`},
     {l:'Est.',r:c=>c.est},
     {l:'Courses',r:c=>c.courses.length+' offered'},
     {l:'Top Recruiter',r:c=>c.recruiters[0]},
   ];
-  el.innerHTML=`<div class="cmp-tbl-wrap"><table class="cmp-tbl"><thead><tr>
-    <th class="cmp-col-h"></th>
-    ${cols.map(c=>`<th class="cmp-col-h">
-      <img class="cmp-col-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=300&q=60'">
-      <div class="cmp-col-name">${c.short}</div>
-      <div class="cmp-col-loc">📍 ${c.location}</div>
-    </th>`).join('')}
-  </tr></thead><tbody>
-    ${rows.map(row=>`<tr class="cmp-row"><td>${row.l}</td>${cols.map(c=>`<td>${row.r(c)}</td>`).join('')}</tr>`).join('')}
-    <tr class="cmp-row"><td>Action</td>${cols.map(c=>`<td><button onclick="openDetail(${c.id})" style="padding:6px 12px;border-radius:6px;background:${c.color};color:#06050a;border:none;font-size:12px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif">View →</button></td>`).join('')}</tr>
-  </tbody></table></div>
-  <div style="font-size:11px;color:var(--muted);margin-top:14px">✓ = best value in category</div>`;
+  el.innerHTML=`<div class="cmp-tbl-wrap"><table class="cmp-tbl"><thead><tr><th class="cmp-col-h"></th>${cols.map(c=>`<th class="cmp-col-h"><img class="cmp-col-img" src="${c.wikimg}" alt="${c.short}" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=300&q=60'"><div class="cmp-col-name">${c.short}</div><div class="cmp-col-loc">📍 ${c.location}</div></th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr class="cmp-row"><td>${row.l}</td>${cols.map(c=>`<td>${row.r(c)}</td>`).join('')}</tr>`).join('')}<tr class="cmp-row"><td>Action</td>${cols.map(c=>`<td><button onclick="openDetail(${c.id})" style="padding:6px 12px;border-radius:6px;background:${c.color};color:#06050a;border:none;font-size:12px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif">View →</button></td>`).join('')}</tr></tbody></table></div><div style="font-size:11px;color:var(--muted);margin-top:14px">✓ = best value in category</div>`;
 }
 
-/* ══════════════ DASHBOARD PREDICTOR LOGIC ══════════════ */
-const dashMockData = {
-  jee: [
-    { name: "IIT Bombay", branch: "Computer Science", cr: 1, lr: 65, type: "Engineering" },
-    { name: "NIT Trichy", branch: "Computer Science", cr: 800, lr: 1500, type: "Engineering" },
-    { name: "NIT Surathkal", branch: "IT & Computing", cr: 1200, lr: 2800, type: "Engineering" },
-    { name: "NIT Warangal", branch: "Electronics (ECE)", cr: 3500, lr: 5500, type: "Engineering" },
-    { name: "MNNIT Allahabad", branch: "Computer Science", cr: 2500, lr: 4800, type: "Engineering" },
-    { name: "NIT Rourkela", branch: "Electrical Eng.", cr: 6000, lr: 9500, type: "Engineering" },
-    { name: "MNIT Jaipur", branch: "Computer Science", cr: 3000, lr: 5800, type: "Engineering" },
-    { name: "NIT Calicut", branch: "Computer Science", cr: 4000, lr: 7200, type: "Engineering" },
-    { name: "NIT Durgapur", branch: "Mechanical Eng.", cr: 12000, lr: 18000, type: "Engineering" },
-    { name: "NIT Kurukshetra", branch: "Information Tech.", cr: 7000, lr: 11000, type: "Engineering" },
-    { name: "IIIT Sri City", branch: "Computer Science", cr: 22000, lr: 28000, type: "Engineering" },
-    { name: "NIT Silchar", branch: "Civil Engineering", cr: 25000, lr: 35000, type: "Engineering" }
+/* ══════════ PREDICTOR ══════════ */
+const dashMockData={
+  jee:[
+    {name:"IIT Bombay",branch:"Computer Science",cr:1,lr:65,type:"Engineering"},
+    {name:"NIT Trichy",branch:"Computer Science",cr:800,lr:1500,type:"Engineering"},
+    {name:"NIT Surathkal",branch:"IT & Computing",cr:1200,lr:2800,type:"Engineering"},
+    {name:"NIT Warangal",branch:"Electronics (ECE)",cr:3500,lr:5500,type:"Engineering"},
+    {name:"MNNIT Allahabad",branch:"Computer Science",cr:2500,lr:4800,type:"Engineering"},
+    {name:"NIT Rourkela",branch:"Electrical Eng.",cr:6000,lr:9500,type:"Engineering"},
+    {name:"MNIT Jaipur",branch:"Computer Science",cr:3000,lr:5800,type:"Engineering"},
+    {name:"NIT Calicut",branch:"Computer Science",cr:4000,lr:7200,type:"Engineering"},
+    {name:"NIT Durgapur",branch:"Mechanical Eng.",cr:12000,lr:18000,type:"Engineering"},
+    {name:"NIT Kurukshetra",branch:"Information Tech.",cr:7000,lr:11000,type:"Engineering"},
+    {name:"IIIT Sri City",branch:"Computer Science",cr:22000,lr:28000,type:"Engineering"},
+    {name:"NIT Silchar",branch:"Civil Engineering",cr:25000,lr:35000,type:"Engineering"}
   ],
-  neet: [
-    { name: "AIIMS New Delhi", branch: "MBBS", cr: 50, lr: 55, type: "Medical" },
-    { name: "JIPMER Puducherry", branch: "MBBS", cr: 200, lr: 220, type: "Medical" },
-    { name: "MAMC Delhi", branch: "MBBS", cr: 1000, lr: 1100, type: "Medical" },
-    { name: "CMC Vellore", branch: "MBBS", cr: 1500, lr: 1800, type: "Medical" },
-    { name: "KGMU Lucknow", branch: "MBBS", cr: 2500, lr: 2800, type: "Medical" },
-    { name: "AFMC Pune", branch: "MBBS", cr: 4000, lr: 4500, type: "Medical" },
-    { name: "Grant Medical College", branch: "MBBS", cr: 6000, lr: 6500, type: "Medical" }
+  neet:[
+    {name:"AIIMS New Delhi",branch:"MBBS",cr:50,lr:55,type:"Medical"},
+    {name:"JIPMER Puducherry",branch:"MBBS",cr:200,lr:220,type:"Medical"},
+    {name:"MAMC Delhi",branch:"MBBS",cr:1000,lr:1100,type:"Medical"},
+    {name:"CMC Vellore",branch:"MBBS",cr:1500,lr:1800,type:"Medical"},
+    {name:"KGMU Lucknow",branch:"MBBS",cr:2500,lr:2800,type:"Medical"},
+    {name:"AFMC Pune",branch:"MBBS",cr:4000,lr:4500,type:"Medical"},
+    {name:"Grant Medical College",branch:"MBBS",cr:6000,lr:6500,type:"Medical"}
   ]
 };
+function runDashboardPrediction(){
+  const rankInput=document.getElementById('p-rank').value;const category=document.getElementById('p-category').value;const exam=document.getElementById('p-exam').value;const rc=document.getElementById('dash-results');
+  if(!rankInput||rankInput<=0){showToast('Please enter a valid Rank','error');return;}
+  const userRank=parseInt(rankInput);const examData=dashMockData[exam];
+  let mult=1;if(category==='obc') mult=1.6;if(category==='sc') mult=3.5;
+  let safe=0,reach=0,tough=0;
+  const eligible=examData.map(col=>{
+    const adj=Math.floor(col.lr*mult);let prob='Tough',cls='tough';
+    if(userRank<=adj*0.7){prob='Safe';cls='safe';safe++;}
+    else if(userRank<=adj*1.1){prob='Reach';cls='reach';reach++;}
+    else if(userRank<=adj*1.5){tough++;}
+    return {...col,adj,prob,cls};
+  }).filter(col=>userRank<=col.adj*1.5);
+  document.getElementById('stat-safe').textContent=safe;document.getElementById('stat-reach').textContent=reach;document.getElementById('stat-tough').textContent=tough;
+  if(!eligible.length){rc.innerHTML=`<div class="empty-state"><div class="empty-state-icon">📉</div><h3>No direct matches found</h3><p>Your rank is outside our simulated cutoffs. Try state-level counselling!</p></div>`;return;}
+  rc.innerHTML=eligible.map(col=>`<div class="pred-card"><div class="pred-card-top"><h3>${col.name.length>22?col.name.substring(0,22)+'…':col.name}</h3><span class="pred-badge ${col.cls}">${col.prob}</span></div><span class="pred-tag">${col.type} · ${col.branch}</span><div class="pred-card-bot"><div class="pred-stat-sm">Est. Cutoff <strong>AIR ${col.adj}</strong></div><button class="cc-btn p" style="max-width:80px" onclick="go('explore')">Explore</button></div></div>`).join('');
+}
 
-function runDashboardPrediction() {
-  const rankInput = document.getElementById('p-rank').value;
-  const category = document.getElementById('p-category').value;
-  const exam = document.getElementById('p-exam').value;
-  const resultsContainer = document.getElementById('dash-results');
-
-  if (!rankInput || rankInput <= 0) {
-    showToast("Please enter a valid Rank", "error");
-    return;
-  }
-
-  const userRank = parseInt(rankInput);
-  const examData = dashMockData[exam];
-  
-  let categoryMultiplier = 1;
-  if (category === 'obc') categoryMultiplier = 1.6;
-  if (category === 'sc') categoryMultiplier = 3.5;
-
-  let safeCount = 0;
-  let reachCount = 0;
-  let toughCount = 0;
-
-  const eligibleColleges = examData.map(college => {
-    const adjustedRank = Math.floor(college.lr * categoryMultiplier);
-    
-    let probability = "Tough";
-    let probClass = "tough";
-    
-    if (userRank <= adjustedRank * 0.7) {
-      probability = "Safe";
-      probClass = "safe";
-      safeCount++;
-    } else if (userRank <= adjustedRank * 1.1) {
-      probability = "Reach";
-      probClass = "reach";
-      reachCount++;
-    } else if (userRank <= adjustedRank * 1.5) {
-      probability = "Borderline";
-      probClass = "tough"; 
-      toughCount++;
-    }
-
-    return { ...college, adjustedRank, probability, probClass };
-  }).filter(college => userRank <= college.adjustedRank * 1.5); 
-
-  document.getElementById('stat-safe').textContent = safeCount;
-  document.getElementById('stat-reach').textContent = reachCount;
-  document.getElementById('stat-tough').textContent = toughCount;
-
-  if (eligibleColleges.length === 0) {
-    resultsContainer.innerHTML = `
-      <div class="empty-state">
-        <div class="empty-state-icon">📉</div>
-        <h3>No direct matches found</h3>
-        <p>Your rank is currently outside the simulated historical cutoffs for our database. Try checking state-level counseling options!</p>
-      </div>`;
-    return;
-  }
-
-  resultsContainer.innerHTML = eligibleColleges.map(college => `
-    <div class="pred-card">
-      <div class="pred-card-top">
-        <h3 title="${college.name}">${college.name.length > 20 ? college.name.substring(0, 20) + '...' : college.name}</h3>
-        <span class="pred-badge ${college.probClass}">${college.probability}</span>
+/* ══════════ EXAMS ══════════ */
+function renderExams(){
+  const grid=document.getElementById('exams-grid');
+  const filtered=examFilter==='all'?EXAMS:EXAMS.filter(e=>e.category===examFilter);
+  grid.innerHTML=filtered.map((ex,i)=>`
+    <div class="exam-card" style="animation-delay:${i*0.06}s" onclick="openExamDetail('${ex.id}')">
+      <div style="background:${ex.color};height:3px"></div>
+      <div class="exam-card-top">
+        <div class="exam-icon-wrap">
+          <div class="exam-icon" style="background:${ex.color}18;color:${ex.color}">${ex.icon}</div>
+          <div><div class="exam-name">${ex.name}</div><div class="exam-full-name">${ex.fullName}</div></div>
+        </div>
+        <div class="exam-desc">${ex.desc}</div>
+        <div class="exam-pills">${ex.pills.map(p=>`<span class="exam-pill" style="background:${ex.color}15;color:${ex.color};border-color:${ex.color}40">${p}</span>`).join('')}</div>
+        <div class="exam-stats-row">${ex.stats.map(s=>`<div class="exam-stat"><div class="exam-stat-v">${s.v}</div><div class="exam-stat-l">${s.l}</div></div>`).join('')}</div>
       </div>
-      <span class="pred-tag">${college.type} · ${college.branch}</span>
-      <div class="pred-card-bot">
-        <div class="pred-stat-sm">Est. Cutoff <strong>AIR ${college.adjustedRank}</strong></div>
-        <button class="cc-btn p" style="max-width: 80px;" onclick="go('explore')">Explore</button>
+      <div class="exam-card-bot">
+        <div class="exam-dates">
+          <div>${ex.dates[1]?.label||'Next Exam'}</div>
+          <strong>${ex.dates[1]?.val||'TBA'}</strong>
+        </div>
+        <button class="exam-view-btn" onclick="event.stopPropagation();openExamDetail('${ex.id}')">View Guide →</button>
+      </div>
+    </div>`).join('');
+}
+function filterExams(cat,btn){
+  examFilter=cat;
+  document.querySelectorAll('.exam-tab').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderExams();
+}
+function openExamDetail(eid){
+  const ex=EXAMS.find(e=>e.id===eid);
+  currentSylTab[eid]=Object.keys(ex.syllabus)[0];
+  const linkedColleges=COLLEGES.filter(c=>ex.colleges.includes(c.id));
+  document.getElementById('exam-detail-inner').innerHTML=`
+    <button class="bk-btn" onclick="go('exams')">← Back to Exams</button>
+    <div class="exam-d-hero" style="background:linear-gradient(135deg,${ex.color}22,${ex.color}08);border:1px solid ${ex.color}30">
+      <div class="exam-d-name" style="color:${ex.color}">${ex.name}</div>
+      <div class="exam-d-full">${ex.fullName}</div>
+      <div class="exam-d-tags">${ex.pills.map(p=>`<span class="exam-d-tag">${p}</span>`).join('')}</div>
+    </div>
+
+    <div class="exam-d-grid">
+      <!-- Important Dates -->
+      <div class="exam-d-card">
+        <div class="exam-d-card-title" style="color:${ex.color}">📅 Important Dates</div>
+        <ul class="exam-timeline">
+          ${ex.dates.map(d=>`<li class="etl-item"><div class="etl-dot" style="background:${ex.color}"></div><div><div class="etl-label">${d.label}</div><div class="etl-val">${d.val}</div></div></li>`).join('')}
+        </ul>
+      </div>
+      <!-- Exam Pattern -->
+      <div class="exam-d-card">
+        <div class="exam-d-card-title" style="color:${ex.color}">📋 Exam Pattern</div>
+        ${ex.pattern.map(p=>`<div class="exam-pattern-row"><span>${p.k}</span><span>${p.v}</span></div>`).join('')}
       </div>
     </div>
-  `).join('');
+
+    <!-- Syllabus -->
+    <div class="exam-d-card" style="margin-bottom:16px">
+      <div class="exam-d-card-title" style="color:${ex.color}">📚 Syllabus</div>
+      <div class="exam-syllabus-tabs" id="syl-tabs-${eid}">
+        ${Object.keys(ex.syllabus).map(sub=>`<button class="syl-tab ${sub===currentSylTab[eid]?'on':''}" onclick="switchSylTab('${eid}','${sub}')">${sub}</button>`).join('')}
+      </div>
+      <div class="syl-list" id="syl-content-${eid}">
+        ${ex.syllabus[currentSylTab[eid]].map(t=>`<div class="syl-item">${t}</div>`).join('')}
+      </div>
+    </div>
+
+    <div class="exam-d-grid">
+      <!-- Prep Tips -->
+      <div class="exam-d-card">
+        <div class="exam-d-card-title" style="color:${ex.color}">💡 Preparation Tips</div>
+        <div class="exam-tips">
+          <div class="exam-tips-title">Insider Advice</div>
+          <ul class="exam-tips-list">
+            ${ex.tips.map(t=>`<li>${t}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+      <!-- Key Stats -->
+      <div class="exam-d-card">
+        <div class="exam-d-card-title" style="color:${ex.color}">📊 Key Stats</div>
+        ${ex.stats.map(s=>`<div class="exam-pattern-row"><span>${s.l}</span><span style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:${ex.color}">${s.v}</span></div>`).join('')}
+        ${linkedColleges.length?`<div style="margin-top:16px"><div class="exam-d-card-title" style="font-size:12px;margin-bottom:10px">🏫 Colleges via ${ex.name}</div><div class="exam-colleges-list">${linkedColleges.map(c=>`<div class="ecl-item" onclick="openDetail(${c.id})"><div><div class="ecl-name">${c.short}</div><div class="ecl-loc">📍 ${c.city}</div></div><span class="ecl-arrow">→</span></div>`).join('')}</div></div>`:''}
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:8px">
+      <button class="btn-g" onclick="go('predict')">🎯 Try Rank Predictor</button>
+      <button class="btn-o" onclick="go('exams')">← All Exams</button>
+    </div>`;
+  go('examdetail');
+}
+function switchSylTab(eid, sub){
+  currentSylTab[eid]=sub;
+  const ex=EXAMS.find(e=>e.id===eid);
+  document.querySelectorAll(`#syl-tabs-${eid} .syl-tab`).forEach(b=>{b.classList.toggle('on',b.textContent===sub);});
+  document.getElementById(`syl-content-${eid}`).innerHTML=ex.syllabus[sub].map(t=>`<div class="syl-item">${t}</div>`).join('');
 }
 
-/* ══════════════ UTILS ══════════════ */
-function ff(f){
-  if(f<1000) return '₹'+f.toLocaleString('en-IN');
-  if(f>=100000) return '₹'+(f/100000).toFixed(f%100000===0?0:1)+'L';
-  return '₹'+(f/1000).toFixed(0)+'K';
-}
+/* ══════════ UTILS ══════════ */
+function ff(f){if(f<1000) return '₹'+f.toLocaleString('en-IN');if(f>=100000) return '₹'+(f/100000).toFixed(f%100000===0?0:1)+'L';return '₹'+(f/1000).toFixed(0)+'K';}
 let toastTimer;
-function showToast(msg,type=''){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.className='on'+(type?' '+type:'');
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>t.className='',2500);
-}
+function showToast(msg,type=''){const t=document.getElementById('toast');t.textContent=msg;t.className='on'+(type?' '+type:'');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.className='',2500);}
 
-/* ══════════════ INIT ══════════════ */
-window.history.pushState=new Proxy(window.history.pushState,{apply:(t,th,a)=>{t.apply(th,a);}});
-window.addEventListener('popstate',()=>{if(curPage==='detail') go('explore');});
-document.addEventListener('click',e=>{if(e.target.closest('.bk-btn')){e.preventDefault();go('explore');}});
-renderHome();renderSidebar();renderExplore();
+/* ══════════ INIT ══════════ */
+renderHome();renderSidebar();renderExplore();renderExams();
 </script>
 </body>
 </html>
