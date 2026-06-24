@@ -13,7 +13,7 @@
 *   **Comparison Engine**: Real-time side-by-side analytics for Fees, Placements, and Ratings.
 
 ## 🛠️ Tech Stack
-*   **Frontend**: HTML5, CSS3, JavaScript (ES6+).
+*   **Frontend**: HTML5, CSS3, JavaScript (ES6+), React.js(in upcoming version)
 *   **Backend**: Node.js, Express.js.
 *   **Database**: PostgreSQL via Prisma.
 *   **Security**: Helmet, CORS, JWT, Bcryptjs.
